@@ -2,22 +2,15 @@
 description: 'Activates the Dev agent persona.'
 tools:
   [
-    'execute/testFailure',
-    'execute/getTerminalOutput',
-    'execute/runTask',
-    'execute/createAndRunTask',
-    'execute/runTests',
-    'execute/runInTerminal',
-    'read/problems',
-    'read/readFile',
-    'read/terminalSelection',
-    'read/terminalLastCommand',
+    'execute',
+    'read',
     'edit',
     'search',
     'web',
-    'agent',
     'firecrawl-mcp/*',
     'supabase/*',
+    'agent',
+    'memory',
     'todo',
   ]
 ---

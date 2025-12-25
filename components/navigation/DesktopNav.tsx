@@ -23,8 +23,8 @@ import {
   UserIcon,
   Login01Icon,
   Building06Icon,
-  Leaf01Icon,
 } from '@hugeicons/core-free-icons';
+import { EcoPulseLogo } from '@/components/brand';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { cn } from '@/lib/utils';
 import { useAuthStore } from '@/stores/authStore';
@@ -43,7 +43,13 @@ interface NavItem {
 }
 
 const allNavItems: NavItem[] = [
-  { href: '/', labelKey: 'map', icon: Home03Icon, ariaLabel: 'Navigate to Map', visibility: 'all' },
+  {
+    href: '/map',
+    labelKey: 'map',
+    icon: Home03Icon,
+    ariaLabel: 'Navigate to Map',
+    visibility: 'all',
+  },
   {
     href: '/profile/reports',
     labelKey: 'myReports',
@@ -83,8 +89,8 @@ export function DesktopNav() {
   const pathnameWithoutLocale = pathname.replace(/^\/[a-z]{2}(?:\/|$)/, '/');
 
   const isActive = (href: string) => {
-    if (href === '/') {
-      return pathnameWithoutLocale === '/' || pathnameWithoutLocale === '';
+    if (href === '/map') {
+      return pathnameWithoutLocale === '/map' || pathnameWithoutLocale.startsWith('/map/');
     }
     return pathnameWithoutLocale.startsWith(href);
   };
@@ -116,19 +122,13 @@ export function DesktopNav() {
       aria-label="Main navigation"
     >
       <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-4">
-        {/* Logo with Professional Icon */}
+        {/* Logo with Official Brand Mark */}
         <Link
           href="/"
-          className="flex min-h-11 min-w-11 items-center gap-2 text-xl font-semibold text-green-600"
+          className="flex min-h-11 min-w-11 items-center"
           aria-label="EcoPulse - Go to homepage"
         >
-          <HugeiconsIcon
-            icon={Leaf01Icon}
-            size={28}
-            aria-hidden="true"
-            className="text-green-600"
-          />
-          <span>EcoPulse</span>
+          <EcoPulseLogo size="sm" />
         </Link>
 
         {/* Navigation Items */}

@@ -1,10 +1,7 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { Toaster } from 'sonner';
 import { routing } from '@/i18n/routing';
-import { DesktopNav, MobileHeader } from '@/components/navigation';
-import { AuthProvider } from '@/components/auth';
 
 type Props = {
   children: React.ReactNode;
@@ -29,21 +26,5 @@ export default async function LocaleLayout({ children, params }: Props) {
   // Providing all messages to the client side
   const messages = await getMessages();
 
-  return (
-    <NextIntlClientProvider messages={messages}>
-      <AuthProvider>
-        {/* Desktop Navigation - hidden on mobile */}
-        <DesktopNav />
-
-        {/* Mobile Header with navigation and auth */}
-        <MobileHeader />
-
-        {/* Main content */}
-        <main>{children}</main>
-
-        {/* Toast notifications */}
-        <Toaster position="top-center" richColors />
-      </AuthProvider>
-    </NextIntlClientProvider>
-  );
+  return <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>;
 }

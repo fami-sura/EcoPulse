@@ -1,0 +1,1605 @@
+{
+  "marketing": {
+    "nav": {
+      "home": "Accueil",
+      "about": "À propos",
+      "mission": "Mission",
+      "pilot": "Programme Pilote",
+      "faq": "FAQ",
+      "contact": "Contact",
+      "viewMap": "Voir la Carte",
+      "reports": "Signalements",
+      "privacy": "Confidentialité",
+      "terms": "Conditions"
+    },
+    "landing": {
+      "meta": {
+        "title": "EcoPulse — Signalement Environnemental Vérifié par la Communauté",
+        "description": "EcoPulse permet aux communautés de signaler et vérifier les problèmes de déchets et de drainage avec des preuves photo—soutenant un pilote mesurable et une réponse coordonnée."
+      },
+      "hero": {
+        "badge": "Programme Pilote • Recherche de Partenaires",
+        "emotionalHook": "Parce que les communautés ne devraient pas attendre que quelqu'un d'autre remarque.",
+        "title": "Données Environnementales Vérifiées pour les Communautés Qui Ont Besoin d'Action",
+        "subtitle": "EcoPulse transforme les signalements communautaires dispersés en preuves structurées et vérifiées auxquelles les ONG, les bailleurs de fonds et les intervenants civiques peuvent faire confiance et agir.",
+        "primaryCta": "Voir la Carte",
+        "secondaryCta": "Devenez Partenaire",
+        "tertiaryCta": "Voir le Plan Pilote",
+        "trustTitle": "Construit sur la confiance et la transparence",
+        "trust": {
+          "verification": "Vérification Communautaire",
+          "privacy": "Confidentialité d'Abord",
+          "exports": "Exports Prêts pour ONG",
+          "mobile": "Optimisé Mobile",
+          "openData": "Données Ouvertes"
+        }
+      },
+      "valuePillars": {
+        "eyebrow": "Pourquoi EcoPulse",
+        "title": "Construit pour la Confiance, Conçu pour l'Impact",
+        "privacy": {
+          "title": "Confidentialité par Conception",
+          "description": "Suppression EXIF, collecte minimale de données, pas d'empreinte digitale. Nous protégeons les contributeurs tout en permettant la coordination."
+        },
+        "verification": {
+          "title": "Vérifié par la Communauté",
+          "description": "Seuil de vérification à 2 personnes, règles anti-auto-vérification et détection des doublons garantissent la qualité des données."
+        },
+        "actionable": {
+          "title": "Intelligence Actionnable",
+          "description": "Exports CSV prêts pour ONG, données structurées et preuves photo pour les rapports aux donateurs et l'allocation des ressources."
+        },
+        "africaNative": {
+          "title": "Conception Native Africaine",
+          "description": "Optimisé 3G, mobile-first, piloté par icônes pour tous les niveaux d'alphabétisation. Aucun téléchargement d'application requis."
+        }
+      },
+      "stakes": {
+        "eyebrow": "Le Défi",
+        "title": "Le Fossé de Responsabilité",
+        "quote": "Les problèmes environnementaux dans les communautés africaines restent souvent non signalés, non vérifiés ou ignorés—non pas parce que les gens ne s'en soucient pas, mais parce qu'il n'y a pas de système de confiance pour faire compter leurs voix.",
+        "challenges": {
+          "flooding": "Les inondations touchent des millions de personnes chaque année, le drainage bloqué étant une cause principale",
+          "health": "Les points chauds de déchets créent des risques sanitaires pour les enfants et les familles",
+          "scattered": "Les efforts de réponse sont dispersés et inefficaces sans données vérifiées"
+        },
+        "solution": {
+          "title": "EcoPulse Change Cela",
+          "description": "En mettant le pouvoir de vérification entre les mains de la communauté, nous créons des preuves qui exigent l'attention—et permettent une réponse coordonnée.",
+          "bullet1": "La vérification communautaire construit une confiance distribuée",
+          "bullet2": "Les données structurées permettent une réponse efficace",
+          "bullet3": "Les preuves photo créent des enregistrements irréfutables"
+        }
+      },
+      "different": {
+        "eyebrow": "Notre Approche",
+        "title": "Pas Une Autre Plateforme 311",
+        "subtitle": "La technologie civique occidentale suppose un internet constant, la confiance du gouvernement et une réponse institutionnelle. EcoPulse est construit différemment.",
+        "columns": {
+          "western": "Tech Civique Occidentale",
+          "ecopulse": "EcoPulse"
+        },
+        "rows": {
+          "government": {
+            "label": "Modèle de Réponse",
+            "western": "Suppose une réponse gouvernementale",
+            "ecopulse": "Vérification pilotée par la communauté"
+          },
+          "design": {
+            "label": "Priorité de Conception",
+            "western": "Conception desktop-first",
+            "ecopulse": "Mobile-first, optimisé 3G"
+          },
+          "workflow": {
+            "label": "Flux Utilisateur",
+            "western": "Signaler et attendre",
+            "ecopulse": "Signaler, vérifier et agir"
+          },
+          "trust": {
+            "label": "Modèle de Confiance",
+            "western": "Confiance institutionnelle",
+            "ecopulse": "Modèle de confiance sociale"
+          },
+          "pricing": {
+            "label": "Accessibilité",
+            "western": "50K$+/an entreprise",
+            "ecopulse": "Accessible pour les ONG"
+          }
+        },
+        "tagline": "Construit pour les communautés où le changement vient de l'intérieur."
+      },
+      "howItWorks": {
+        "eyebrow": "La Boucle de Vérification",
+        "title": "Du Signalement Non Vérifié à la Preuve Actionnable",
+        "subtitle": "Un processus transparent, piloté par la communauté qui crée la confiance et permet une réponse coordonnée.",
+        "whyMattersLabel": "Pourquoi c'est important",
+        "step1": {
+          "title": "Signaler",
+          "description": "Partagez une photo, un emplacement et une description claire du problème.",
+          "whyMatters": "Crée des données structurées à partir de l'observation communautaire"
+        },
+        "step2": {
+          "title": "Vérifier",
+          "description": "Les membres de la communauté à proximité confirment ce qu'ils voient.",
+          "whyMatters": "Construit une confiance distribuée sans bureaucratie"
+        },
+        "step3": {
+          "title": "Agir",
+          "description": "Les partenaires priorisent les problèmes vérifiés pour la réponse.",
+          "whyMatters": "Permet une allocation des ressources basée sur les preuves"
+        },
+        "step4": {
+          "title": "Clôturer",
+          "description": "Documentez les résultats avec des photos de preuve.",
+          "whyMatters": "Crée une responsabilité et des preuves prêtes pour les donateurs"
+        }
+      },
+      "useCases": {
+        "eyebrow": "Focus Pilote",
+        "title": "Ce Que le Pilote Abordera",
+        "subtitle": "Commençant par deux catégories à fort impact qui sont visibles, vérifiables et ont des états avant/après clairs.",
+        "examplesLabel": "Exemples",
+        "workflowLabel": "Flux Attendu",
+        "workflow": {
+          "report": "Signalements communautaires",
+          "verify": "Vérification",
+          "respond": "Réponse coordonnée"
+        },
+        "waste": {
+          "title": "Déchets et Ordures",
+          "description": "Déversement illégal, accumulation de déchets et déchets de marché affectant la santé communautaire.",
+          "examples": {
+            "1": "Déversement illégal",
+            "2": "Déchets de marché",
+            "3": "Accumulation de déchets"
+          }
+        },
+        "drainage": {
+          "title": "Drainage et Risque d'Inondation",
+          "description": "Drains bloqués, zones sujettes aux inondations et accumulation d'eau créant des risques de sécurité.",
+          "examples": {
+            "1": "Drains bloqués",
+            "2": "Zones sujettes aux inondations",
+            "3": "Accumulation d'eau"
+          }
+        },
+        "phase2Label": "Catégories Phase 2 :",
+        "phase2Categories": "Chaleur Urbaine, Qualité de l'Eau, Air/Fumée"
+      },
+      "pilotFramework": {
+        "badge": "Objectifs Pilotes — Pas des Réalisations",
+        "title": "Cadre Pilote de 90 Jours",
+        "subtitle": "Notre pilote est conçu pour tester, apprendre et améliorer—pas pour prouver la perfection. Nous mesurons ce qui compte.",
+        "timelineLabel": "Chronologie",
+        "metricsLabel": "Métriques de Succès (Objectifs)",
+        "targetLabel": "Objectif",
+        "timeline": {
+          "phase1": {
+            "title": "Intégration",
+            "item1": "Configuration et formation des partenaires",
+            "item2": "Intégration communautaire",
+            "item3": "Premiers signalements et vérifications"
+          },
+          "phase2": {
+            "title": "Optimisation",
+            "item1": "Affinement du flux de travail",
+            "item2": "Revue de la qualité de vérification",
+            "item3": "Playbooks de coordination des réponses"
+          },
+          "phase3": {
+            "title": "Mesure",
+            "item1": "Analyse des résultats",
+            "item2": "Documentation des apprentissages",
+            "item3": "Publication du résumé pilote"
+          }
+        },
+        "metrics": {
+          "verifiedReports": "Signalements vérifiés/semaine",
+          "timeToVerified": "Temps jusqu'à vérification",
+          "timeToResponse": "Initiation de réponse",
+          "resolutionRate": "Taux de résolution"
+        }
+      },
+      "whoItsFor": {
+        "eyebrow": "Construit pour Votre Flux de Travail",
+        "title": "Adapté à l'Écosystème",
+        "subtitle": "Différentes parties prenantes, différents besoins—une plateforme qui les sert tous.",
+        "benefitsLabel": "Ce Que Vous Obtenez",
+        "outcomeLabel": "Le Résultat",
+        "communities": {
+          "title": "Pour les Communautés",
+          "description": "Transformez les préoccupations locales en données vérifiables. Documentez les dangers, validez-les collectivement et présentez des preuves indéniables qui exigent une résolution.",
+          "features": {
+            "1": "Outils de signalement basés sur les preuves",
+            "2": "Protocoles de vérification communautaire",
+            "3": "Suivi transparent des problèmes"
+          },
+          "outcome": "Transformez les plaintes dispersées en cas qui exigent attention.",
+          "cta": "Voir comment ça marche →"
+        },
+        "ngos": {
+          "title": "Pour les ONG et Donateurs",
+          "description": "Éliminez les conjectures dans l'allocation des ressources. Accédez à la vérité terrain vérifiée par la communauté pour cibler précisément les interventions et rapporter sur des résultats mesurables.",
+          "features": {
+            "1": "Évaluation des besoins en temps réel",
+            "2": "Surveillance d'impact à distance",
+            "3": "Exports CSV prêts pour donateurs"
+          },
+          "outcome": "Ciblez les interventions avec une vérité terrain vérifiée.",
+          "cta": "Explorer le partenariat →"
+        },
+        "civic": {
+          "title": "Pour les Autorités Civiques",
+          "description": "Modernisez la gestion urbaine avec l'intelligence citoyenne. Recevez des données structurées et dédupliquées sur les problèmes d'infrastructure pour une priorisation efficace.",
+          "features": {
+            "1": "Données d'infrastructure structurées",
+            "2": "Signalements de problèmes dédupliqués",
+            "3": "Confiance publique et engagement"
+          },
+          "outcome": "Priorisez les réparations avec l'intelligence citoyenne.",
+          "cta": "Démarrer un pilote →"
+        }
+      },
+      "faq": {
+        "eyebrow": "Questions Répondues",
+        "title": "Questions Fréquemment Posées",
+        "subtitle": "Questions courantes des partenaires, bailleurs de fonds et membres de la communauté.",
+        "viewAll": "Voir toutes les FAQ →",
+        "q1": {
+          "question": "Comment empêchez-vous les faux signalements ou le spam ?",
+          "answer": "EcoPulse utilise la vérification communautaire avec un seuil de 2 personnes, des règles anti-auto-vérification et la détection des doublons. Les signalements doivent être vérifiés par des membres indépendants de la communauté avant d'être priorisés."
+        },
+        "q2": {
+          "question": "Comment fonctionne la vérification ?",
+          "answer": "Les membres de la communauté à proximité confirment ce qu'ils voient en visitant l'emplacement. Un signalement est promu au statut 'vérifié' lorsqu'il atteint le seuil de vérification (2 vérifications indépendantes). Les vérificateurs ne peuvent pas vérifier leurs propres signalements."
+        },
+        "q3": {
+          "question": "Qu'en est-il de la confidentialité ?",
+          "answer": "Confidentialité d'abord : nous supprimons les métadonnées EXIF des photos, minimisons la collecte de données personnelles et évitons l'empreinte digitale des appareils. Nous encourageons les utilisateurs à ne pas inclure d'informations personnelles sensibles dans les signalements."
+        },
+        "q4": {
+          "question": "Comment les données sont-elles exportées pour les rapports aux donateurs ?",
+          "answer": "Les tableaux de bord ONG incluent l'export CSV avec preuves photo, horodatages, statut de vérification et données de localisation. Cela permet des rapports d'impact prêts pour les donateurs avec des preuves vérifiables."
+        },
+        "q5": {
+          "question": "Quelle est votre structure de gouvernance ?",
+          "answer": "EcoPulse est construit par une petite équipe principale avec de l'expérience en produit, opérations communautaires et ingénierie. Le parrainage fiscal est en cours. Nous mettons en place une gouvernance responsable et des partenariats opérationnels pour le pilote."
+        },
+        "q6": {
+          "question": "Comment une ONG ou un partenaire civique peut-il aider ?",
+          "answer": "Les partenaires peuvent soutenir l'intégration communautaire, participer à la formation de vérification et aider à coordonner les flux de réponse pendant le pilote. Nous recherchons activement des partenaires pilotes au Nigeria."
+        }
+      },
+      "cta": {
+        "urgencyBadge": "Formation de Cohorte Pilote • T1 2026 • Places de Partenaires Limitées",
+        "title": "Prêt à Devenir Partenaire ?",
+        "description": "Rejoignez un réseau d'organisations avant-gardistes utilisant des données vérifiées pour résoudre les défis environnementaux de l'Afrique.",
+        "paths": {
+          "ngos": {
+            "audience": "Pour les ONG",
+            "action": "Rejoindre le Pilote",
+            "cta": "Contactez-nous"
+          },
+          "funders": {
+            "audience": "Pour les Bailleurs de Fonds",
+            "action": "Revoir le Plan Pilote",
+            "cta": "Voir les détails"
+          },
+          "communities": {
+            "audience": "Pour les Communautés",
+            "action": "Voir la Plateforme",
+            "cta": "Voir la carte"
+          }
+        },
+        "preferContact": "Préférez nous contacter directement ?",
+        "mainCta": "Contactez-Nous"
+      },
+      "governance": {
+        "title": "Construit de Manière Responsable",
+        "description": "EcoPulse est construit par une équipe concentrée avec de l'expérience en développement de produits, opérations communautaires et ingénierie. Nous mettons en place une gouvernance responsable pour le pilote.",
+        "signals": {
+          "fiscal": "Parrainage fiscal : En cours",
+          "dataSovereignty": "Souveraineté des données : Auto-hébergement possible",
+          "transparency": "Approche ouverte : Transparence par défaut"
+        }
+      }
+    },
+    "about": {
+      "meta": {
+        "title": "EcoPulse — À Propos de Nous",
+        "description": "Découvrez pourquoi EcoPulse a été créé et rencontrez l'équipe derrière le signalement environnemental vérifié par la communauté pour les communautés africaines."
+      },
+      "hero": {
+        "badge": "Notre Histoire",
+        "title": "Né du Besoin Communautaire",
+        "originStory": "Nous avons vu des communautés frustrées par des problèmes environnementaux non signalés—non pas parce que les gens ne s'en souciaient pas, mais parce qu'il n'y avait pas de système de confiance pour faire compter leurs voix. EcoPulse est né de ce vide.",
+        "intro": "EcoPulse est une plateforme alimentée par la communauté pour signaler et vérifier les problèmes de déchets et de drainage avec des preuves photo. Nous ajoutons la vérification communautaire pour améliorer la confiance, réduire le bruit et permettre une action coordonnée—en commençant par un pilote mesurable dans les communautés africaines."
+      },
+      "values": {
+        "eyebrow": "Ce Qui Nous Guide",
+        "title": "Nos Valeurs Fondamentales",
+        "communityFirst": {
+          "title": "Communauté d'Abord",
+          "description": "Nous construisons avec les communautés, pas pour elles. Le savoir local est le fondement de tout ce que nous faisons."
+        },
+        "privacyByDesign": {
+          "title": "Confidentialité par Conception",
+          "description": "Collecte minimale de données, suppression EXIF, pas d'empreinte digitale. La protection est intégrée dans chaque fonctionnalité."
+        },
+        "verifiedTrust": {
+          "title": "Confiance Vérifiée",
+          "description": "Seuil de vérification à 2 personnes, règles anti-auto-vérification et détection des doublons garantissent la qualité des données."
+        },
+        "accessibleDesign": {
+          "title": "Radicalement Accessible",
+          "description": "Mobile-first, optimisé 3G, piloté par icônes pour tous les niveaux d'alphabétisation. Aucun téléchargement d'application requis."
+        }
+      },
+      "different": {
+        "eyebrow": "Pourquoi Nous Sommes Différents",
+        "title": "Construit pour les Réalités Africaines",
+        "intro": "La technologie civique occidentale suppose un internet constant, la confiance du gouvernement et une réponse institutionnelle. EcoPulse est construit différemment—conçu pour l'infrastructure et les dynamiques sociales des communautés africaines.",
+        "localContext": {
+          "title": "Contexte Local",
+          "description": "Conçu pour les réalités d'infrastructure africaines : réseaux 3G, utilisateurs mobile-first, niveaux d'alphabétisation variés."
+        },
+        "communityOwned": {
+          "title": "Données Propriété de la Communauté",
+          "description": "Les communautés maintiennent la propriété de leurs signalements. Nous fournissons les outils ; elles possèdent les preuves."
+        },
+        "privacyFirst": {
+          "title": "Confidentialité d'Abord",
+          "description": "Pas de surveillance, pas de monétisation des données. Nous supprimons EXIF, minimisons la collecte et protégeons les contributeurs."
+        },
+        "comparisonLabel": "Comment Nous Comparons",
+        "comparison": {
+          "western": "Tech Civique Occidentale",
+          "ecopulse": "EcoPulse",
+          "topDown": "Focus gouvernemental descendant",
+          "communityDriven": "Action pilotée par la communauté",
+          "dataExtract": "Modèle d'extraction de données",
+          "dataEmpower": "Modèle d'autonomisation par les données"
+        }
+      },
+      "team": {
+        "eyebrow": "L'Équipe",
+        "title": "Rencontrez les Personnes Derrière EcoPulse",
+        "description": "Une petite équipe motivée par la mission avec de l'expérience en produit, opérations communautaires et ingénierie—construisant des outils pour les communautés qui en ont le plus besoin.",
+        "members": {
+          "founder": {
+            "initials": "AA",
+            "name": "Ali Ahmad",
+            "bio": "Stratège produit passionné par la technologie civique et l'autonomisation communautaire. Dirige la vision et le développement produit."
+          },
+          "community": {
+            "initials": "EC",
+            "name": "Équipe Communauté",
+            "bio": "Construction de partenariats et soutien à l'intégration communautaire pendant la phase pilote."
+          },
+          "engineering": {
+            "initials": "EI",
+            "name": "Équipe Ingénierie",
+            "bio": "Conception et construction de l'infrastructure mobile-first, respectueuse de la vie privée."
+          }
+        },
+        "fiscalStatus": "Parrainage fiscal : En discussion active avec des sponsors"
+      },
+      "cta": {
+        "title": "Prêt à Devenir Partenaire ?",
+        "description": "Nous recherchons des partenaires ONG, des intervenants civiques et des bailleurs de fonds qui partagent notre vision d'une action environnementale pilotée par la communauté.",
+        "pilotButton": "Explorer le Plan Pilote",
+        "contactButton": "Contactez-Nous"
+      }
+    },
+    "mission": {
+      "meta": {
+        "title": "EcoPulse — Mission et Vision",
+        "description": "Notre mission est de construire une infrastructure de données environnementales de confiance qui permet aux communautés africaines de documenter, vérifier et résoudre les défis environnementaux par l'action collective."
+      },
+      "hero": {
+        "badge": "Notre Mission",
+        "vision": "La justice environnementale commence par des données de confiance.",
+        "mission": "Nous croyons que chaque communauté mérite les outils pour documenter les problèmes environnementaux avec dignité, les vérifier par la confiance collective et transformer les preuves en action coordonnée. EcoPulse construit l'infrastructure pour rendre cela possible—un signalement vérifié à la fois."
+      },
+      "beliefs": {
+        "eyebrow": "Ce Que Nous Croyons",
+        "title": "Notre Manifeste",
+        "belief1": "Les communautés sont expertes de leurs propres quartiers. Le savoir local est le fondement des données de confiance.",
+        "belief2": "La vie privée est un droit, pas un privilège. Nous protégeons les contributeurs parce que la confiance permet l'action.",
+        "belief3": "La technologie doit s'adapter aux communautés, pas l'inverse. Mobile-first, basse bande passante, accessible.",
+        "belief4": "Vérification sans bureaucratie. Les voisins validant les voisins créent une confiance distribuée à l'échelle."
+      },
+      "principles": {
+        "eyebrow": "Comment Nous Travaillons",
+        "title": "Principes Directeurs",
+        "subtitle": "Ces principes façonnent chaque décision que nous prenons—de la conception du produit aux relations avec les partenaires.",
+        "communityLed": {
+          "title": "Piloté par la Communauté",
+          "description": "La confiance vient du savoir local. Nous construisons avec les communautés, pas pour elles."
+        },
+        "privacy": {
+          "title": "Confidentialité par Conception",
+          "description": "Collecte minimale de données, suppression EXIF, pas d'empreinte digitale. La protection est intégrée."
+        },
+        "accessibility": {
+          "title": "Accessibilité Radicale",
+          "description": "Mobile-first, optimisé 3G, piloté par icônes pour tous les niveaux d'alphabétisation. Aucun téléchargement d'application requis."
+        },
+        "transparency": {
+          "title": "Processus Transparent",
+          "description": "Mises à jour de statut claires, apprentissage ouvert pendant le pilote, honnêteté sur ce que nous savons et ne savons pas."
+        },
+        "safety": {
+          "title": "Sécurité et Dignité",
+          "description": "Conception respectueuse qui honore les communautés que nous servons. La sécurité n'est pas négociable."
+        }
+      },
+      "impact": {
+        "eyebrow": "Mesurer Ce Qui Compte",
+        "title": "Comment Nous Définissons le Succès",
+        "description": "Nous mesurons l'impact par les résultats communautaires, pas les métriques de vanité de plateforme. Notre succès est défini par le changement que nous permettons, pas les données que nous collectons.",
+        "notLabel": "Ce Que Nous N'Optimisons Pas",
+        "not": {
+          "vanity": "Comptes d'utilisateurs ou métriques d'engagement",
+          "extraction": "Monétisation des données ou surveillance",
+          "dependency": "Création de dépendance à la plateforme"
+        },
+        "metrics": {
+          "reports": {
+            "title": "Qualité de Vérification",
+            "description": "Le pourcentage de signalements qui atteignent la vérification communautaire, indiquant la fiabilité des données."
+          },
+          "verification": {
+            "title": "Temps jusqu'à Vérification",
+            "description": "Rapidité avec laquelle les signalements atteignent la vérification, mesurant l'engagement communautaire et l'efficacité du processus."
+          },
+          "response": {
+            "title": "Résultats de Réponse",
+            "description": "Ce qui se passe après la vérification—tentatives de réponse documentées et taux de résolution, définis avec les partenaires."
+          }
+        },
+        "philosophy": "Nous réussissons quand les communautés peuvent faire confiance à leurs propres données et que les partenaires peuvent agir dessus."
+      },
+      "cta": {
+        "title": "Rejoignez Notre Mission",
+        "description": "Nous recherchons des partenaires ONG, des intervenants civiques et des bailleurs de fonds qui partagent notre vision d'une action environnementale pilotée par la communauté.",
+        "pilotButton": "Explorer le Plan Pilote",
+        "aboutButton": "Rencontrer l'Équipe"
+      }
+    },
+    "pilot": {
+      "meta": {
+        "title": "EcoPulse — Plan Pilote de 90 Jours",
+        "description": "Un pilote structuré de 90 jours pour évaluer le signalement communautaire, la qualité de vérification et la coordination des réponses pour les problèmes de déchets et de drainage dans les communautés africaines."
+      },
+      "hero": {
+        "badge": "Recherche de Partenaires",
+        "title": "Cadre Pilote de 90 Jours",
+        "intro": "Un pilote structuré conçu pour tester l'adoption, la qualité de vérification et la coordination des réponses pour les problèmes de déchets et de drainage. Nous mesurons ce qui compte et partageons les apprentissages ouvertement.",
+        "stats": {
+          "duration": "90",
+          "durationLabel": "Jours",
+          "locations": "2-3",
+          "locationsLabel": "Communautés",
+          "categories": "2",
+          "categoriesLabel": "Types de Problèmes"
+        }
+      },
+      "scope": {
+        "eyebrow": "Ce Que Nous Testons",
+        "title": "Portée du Pilote",
+        "description": "Ce pilote se concentre sur la preuve de l'hypothèse centrale : la vérification communautaire peut créer des données environnementales de confiance qui permettent une réponse coordonnée.",
+        "geography": {
+          "title": "Communautés Cibles",
+          "description": "Communautés sélectionnées au Nigeria (finalisation avec partenaires ONG). Focus urbain et péri-urbain."
+        },
+        "verification": {
+          "title": "Modèle de Vérification",
+          "description": "Seuil de vérification à 2 personnes avec règles anti-auto-vérification et détection des doublons."
+        },
+        "success": {
+          "title": "Définition du Succès",
+          "description": "Les problèmes vérifiés reçoivent des tentatives de réponse documentées. Résultats de résolution mesurés avec les partenaires."
+        },
+        "focus": {
+          "title": "Catégories de Problèmes",
+          "waste": {
+            "title": "Déchets et Ordures",
+            "description": "Déversement illégal, accumulation de déchets, déchets de marché affectant la santé communautaire."
+          },
+          "drainage": {
+            "title": "Drainage et Risque d'Inondation",
+            "description": "Drains bloqués, zones sujettes aux inondations, accumulation d'eau créant des risques de sécurité."
+          },
+          "note": "La Phase 2 s'étendra à la chaleur urbaine, la qualité de l'eau et les problèmes d'air/fumée."
+        }
+      },
+      "timeline": {
+        "eyebrow": "Phases de Mise en Œuvre",
+        "title": "Chronologie de 90 Jours",
+        "phase1": {
+          "days": "Jours 0–30",
+          "title": "Intégration et Lancement",
+          "description": "Intégration des partenaires, intégration communautaire et premiers signalements/vérifications.",
+          "activity1": "Configuration et formation des partenaires",
+          "activity2": "Recrutement de champions communautaires",
+          "activity3": "Premiers signalements et vérifications"
+        },
+        "phase2": {
+          "days": "Jours 31–60",
+          "title": "Optimiser et Apprendre",
+          "description": "Affinement du flux de travail basé sur les premières données, surveillance de la qualité de vérification.",
+          "activity1": "Affinement du flux basé sur les données",
+          "activity2": "Revue de la qualité de vérification",
+          "activity3": "Playbooks de coordination des réponses"
+        },
+        "phase3": {
+          "days": "Jours 61–90",
+          "title": "Mesurer et Rapporter",
+          "description": "Analyse des résultats, documentation et résumé pilote public.",
+          "activity1": "Analyse complète des résultats",
+          "activity2": "Documentation des apprentissages et insights",
+          "activity3": "Publication du rapport résumé pilote"
+        }
+      },
+      "metrics": {
+        "eyebrow": "Ce Que Nous Mesurons",
+        "title": "Métriques de Succès",
+        "subtitle": "Objectifs, pas réalisations. Nous sommes transparents sur ce que nous testons et ce que nous apprenons.",
+        "reports": {
+          "title": "Signalements Vérifiés",
+          "target": "50+/semaine",
+          "description": "Signalements atteignant la vérification communautaire"
+        },
+        "verification": {
+          "title": "Temps jusqu'à Vérification",
+          "target": "<24h",
+          "description": "Temps médian du signalement à la vérification"
+        },
+        "response": {
+          "title": "Initiation de Réponse",
+          "target": "<72h",
+          "description": "Problèmes vérifiés recevant une tentative de réponse"
+        },
+        "resolution": {
+          "title": "Taux de Résolution",
+          "target": "À définir",
+          "description": "Défini avec les partenaires pendant le pilote"
+        },
+        "disclaimer": "Ce sont des objectifs pour le pilote, pas des revendications de performance actuelle. Nous partagerons les résultats réels de manière transparente."
+      },
+      "risks": {
+        "eyebrow": "Transparence",
+        "title": "Risques et Atténuations",
+        "subtitle": "Nous sommes honnêtes sur les défis. Voici comment nous abordons les risques connus.",
+        "riskLabel": "Risque",
+        "mitigationLabel": "Atténuation",
+        "falseReports": {
+          "risk": "Les faux signalements ou trompeurs pourraient saper la confiance dans les données.",
+          "mitigation": "Seuil de vérification à 2 personnes, déduplication, règles anti-auto-vérification et exigences de preuves photo."
+        },
+        "privacy": {
+          "risk": "Les préoccupations de confidentialité pourraient limiter la participation communautaire.",
+          "mitigation": "Suppression EXIF, collecte minimale de données, pas d'empreinte digitale et option de signalement anonyme."
+        },
+        "adoption": {
+          "risk": "Une faible adoption pourrait limiter le volume de données et la qualité de vérification.",
+          "mitigation": "Intégration communautaire pilotée par les partenaires, champions locaux, UX mobile-first et aucun téléchargement d'application requis."
+        }
+      },
+      "partners": {
+        "eyebrow": "Qui Nous Recherchons",
+        "title": "Devenez Partenaire",
+        "whatYouGetLabel": "Ce que vous obtenez",
+        "ngos": {
+          "title": "Partenaires ONG",
+          "description": "Organisations travaillant sur les problèmes environnementaux dans les communautés africaines qui peuvent aider avec l'accès communautaire et l'intégration.",
+          "benefit1": "Accès aux données communautaires vérifiées",
+          "benefit2": "Exports CSV pour rapports aux donateurs",
+          "benefit3": "Co-auteur sur les résultats du pilote"
+        },
+        "responders": {
+          "title": "Intervenants Civiques",
+          "description": "Gouvernement local, gestion des déchets ou organisations communautaires qui peuvent coordonner la réponse aux problèmes vérifiés.",
+          "benefit1": "Alertes de problèmes vérifiés et priorisés",
+          "benefit2": "Outils de coordination des réponses",
+          "benefit3": "Suivi documenté des résultats"
+        },
+        "funders": {
+          "title": "Bailleurs de Fonds et Sponsors",
+          "description": "Organisations soutenant la technologie civique, la justice environnementale ou l'innovation africaine qui veulent soutenir un pilote mesurable.",
+          "benefit1": "Métriques pilotes transparentes",
+          "benefit2": "Rapports de progrès réguliers",
+          "benefit3": "Documentation d'impact"
+        }
+      },
+      "cta": {
+        "title": "Prêt à Devenir Partenaire ?",
+        "description": "Nous recherchons activement des partenaires ONG, des intervenants civiques et des bailleurs de fonds pour le pilote. Discutons de comment nous pouvons travailler ensemble.",
+        "contactButton": "Contactez-Nous",
+        "faqButton": "Lire la FAQ"
+      }
+    },
+    "faq": {
+      "meta": {
+        "title": "EcoPulse — FAQ",
+        "description": "Réponses aux questions courantes sur le signalement, la vérification, la confidentialité, les partenariats et l'impact avec EcoPulse."
+      },
+      "hero": {
+        "badge": "Des Questions ?",
+        "title": "Questions Fréquemment Posées",
+        "subtitle": "Tout ce que vous devez savoir sur EcoPulse—du fonctionnement du signalement aux opportunités de partenariat."
+      },
+      "categories": {
+        "howItWorks": {
+          "title": "Comment Ça Marche",
+          "description": "Comprendre le processus de signalement et de vérification",
+          "questions": {
+            "reporting": {
+              "q": "Comment signaler un problème environnemental ?",
+              "a": "Prenez une photo du problème, partagez votre emplacement, sélectionnez une catégorie (déchets ou drainage) et ajoutez une brève description d'au moins 60 caractères. Vous pouvez signaler anonymement ou créer un compte pour suivre vos contributions."
+            },
+            "verification": {
+              "q": "Comment fonctionne la vérification communautaire ?",
+              "a": "Une fois un signalement soumis, les membres de la communauté à proximité peuvent confirmer ce qu'ils voient. Quand un signalement atteint 2 vérifications de personnes différentes, il est promu au statut 'vérifié'. Cela crée une confiance distribuée sans bureaucratie."
+            },
+            "anonymous": {
+              "q": "Puis-je signaler anonymement ?",
+              "a": "Oui. Le signalement anonyme est entièrement pris en charge. Nous utilisons un ID de session temporaire (stocké localement) pour suivre vos signalements—pas d'empreinte digitale. Si vous créez un compte plus tard, vous pouvez réclamer vos signalements anonymes."
+            }
+          }
+        },
+        "privacy": {
+          "title": "Confidentialité et Données",
+          "description": "Comment nous protégeons les contributeurs et gérons les données",
+          "questions": {
+            "dataCollection": {
+              "q": "Quelles données collectez-vous ?",
+              "a": "Nous collectons seulement ce qui est nécessaire : photo, emplacement, catégorie et description. Nous supprimons les données EXIF des photos, n'utilisons pas d'empreinte digitale et ne vendons ni ne monétisons vos données. Voir notre Politique de Confidentialité pour tous les détails."
+            },
+            "photoPrivacy": {
+              "q": "Que se passe-t-il avec mes photos ?",
+              "a": "Les photos sont traitées pour supprimer les métadonnées EXIF (qui peuvent contenir GPS, infos appareil et horodatages), redimensionnées pour l'efficacité et compressées. Nous ne partageons jamais de photos brutes non traitées."
+            },
+            "deletion": {
+              "q": "Puis-je supprimer mes signalements ?",
+              "a": "Les utilisateurs authentifiés peuvent supprimer leurs propres signalements. Pour les signalements anonymes, contactez-nous avec votre ID de session (trouvé dans le stockage local de votre navigateur). Nous travaillons sur une fonctionnalité de suppression en libre-service."
+            }
+          }
+        },
+        "pilot": {
+          "title": "Programme Pilote",
+          "description": "À propos de notre pilote de 90 jours et des opportunités de partenariat",
+          "questions": {
+            "pilotScope": {
+              "q": "Qu'est-ce que le pilote de 90 jours ?",
+              "a": "Le pilote est un test structuré d'EcoPulse dans 2-3 communautés nigérianes. Nous mesurons la qualité de vérification, le temps de réponse et les résultats de résolution. Nous partageons les apprentissages ouvertement, y compris ce qui ne fonctionne pas."
+            },
+            "partnership": {
+              "q": "Comment mon organisation peut-elle s'associer à EcoPulse ?",
+              "a": "Nous recherchons des partenaires ONG (pour l'accès communautaire), des intervenants civiques (pour la réponse aux problèmes) et des bailleurs de fonds (pour le soutien au pilote). Contactez-nous pour discuter de comment nous pouvons travailler ensemble."
+            },
+            "metrics": {
+              "q": "Quelles métriques suivez-vous ?",
+              "a": "Nous suivons le taux de vérification, le temps jusqu'à vérification, le taux d'initiation de réponse et les résultats de résolution. Ce sont des objectifs, pas des réalisations—nous partageons les résultats réels de manière transparente tout au long du pilote."
+            }
+          }
+        },
+        "impact": {
+          "title": "Impact et Durabilité",
+          "description": "Notre approche pour créer un changement durable",
+          "questions": {
+            "resolution": {
+              "q": "EcoPulse garantit-il la résolution des problèmes ?",
+              "a": "Non. EcoPulse fournit des preuves vérifiées et des outils de coordination—mais la résolution dépend des partenaires et de l'action communautaire. Notre rôle est de renforcer les données et réduire les frictions, pas de remplacer les systèmes de réponse."
+            },
+            "sustainability": {
+              "q": "Comment EcoPulse se maintiendra-t-il ?",
+              "a": "Nous explorons le statut d'organisation à but non lucratif avec parrainage fiscal et financement par subventions pour le pilote. À long terme, nous considérons des abonnements partenaires pour des fonctionnalités avancées et un accès API—jamais de monétisation des données."
+            },
+            "expansion": {
+              "q": "EcoPulse s'étendra-t-il au-delà du Nigeria ?",
+              "a": "Si le pilote valide notre approche, nous prévoyons de nous étendre à d'autres communautés africaines. Notre conception mobile-first, basse bande passante est construite pour fonctionner dans divers contextes d'infrastructure."
+            }
+          }
+        }
+      },
+      "cta": {
+        "title": "Encore des Questions ?",
+        "description": "Nous sommes heureux de répondre aux questions des partenaires potentiels, bailleurs de fonds ou membres de la communauté.",
+        "contactButton": "Contactez-Nous",
+        "pilotButton": "Explorer le Plan Pilote"
+      }
+    },
+    "contact": {
+      "meta": {
+        "title": "EcoPulse — Contactez-Nous",
+        "description": "Contactez EcoPulse pour discuter de partenariats, participation au pilote ou opportunités de financement. Nous répondons aux demandes sérieuses dans les 48 heures."
+      },
+      "hero": {
+        "badge": "Connectons-Nous",
+        "title": "Devenez Partenaire",
+        "subtitle": "Nous recherchons activement des partenaires ONG, des intervenants civiques et des bailleurs de fonds pour notre pilote de 90 jours. Que vous ayez des questions ou souhaitiez collaborer, nous aimerions avoir de vos nouvelles."
+      },
+      "partnerTypes": {
+        "eyebrow": "Qui Nous Recherchons",
+        "title": "Comment Vous Pouvez Aider",
+        "ngo": {
+          "title": "Partenaires ONG",
+          "description": "Accès communautaire, soutien à l'intégration et expertise locale"
+        },
+        "responder": {
+          "title": "Intervenants Civiques",
+          "description": "Coordination de réponse aux problèmes et suivi des résultats"
+        },
+        "funder": {
+          "title": "Bailleurs de Fonds et Sponsors",
+          "description": "Financement pilote et soutien à la durabilité"
+        }
+      },
+      "form": {
+        "title": "Envoyez-Nous un Message",
+        "description": "Parlez-nous de votre organisation et comment vous aimeriez travailler ensemble.",
+        "name": "Nom",
+        "namePlaceholder": "Votre nom",
+        "email": "Email",
+        "emailPlaceholder": "vous@exemple.com",
+        "organization": "Organisation (optionnel)",
+        "organizationPlaceholder": "Votre organisation",
+        "message": "Message",
+        "messagePlaceholder": "Parlez-nous de votre intérêt pour EcoPulse et comment vous aimeriez vous associer...",
+        "submit": "Envoyer le Message",
+        "submitting": "Envoi en cours..."
+      },
+      "emails": {
+        "title": "Annuaire de Contact",
+        "description": "Contactez directement la bonne équipe",
+        "general": {
+          "label": "Demandes Générales",
+          "description": "Questions, commentaires & informations"
+        },
+        "community": {
+          "label": "ONG & Partenaires Communautaires",
+          "description": "Partenariat & collaboration"
+        },
+        "sponsor": {
+          "label": "Sponsors & Bailleurs",
+          "description": "Opportunités de sponsoring & subventions"
+        },
+        "finance": {
+          "label": "Finance & Subventions",
+          "description": "Administration financière & subventions"
+        }
+      },
+      "responseTime": {
+        "title": "Temps de Réponse",
+        "description": "Nous répondons aux demandes de partenariat dans les 48 heures. Pour les questions générales, consultez d'abord notre FAQ—de nombreuses questions courantes y sont répondues."
+      },
+      "quickLinks": {
+        "title": "Avant de Nous Contacter",
+        "pilot": "Explorer le Plan Pilote",
+        "faq": "Lire la FAQ",
+        "about": "En Savoir Plus Sur Nous"
+      },
+      "success": "Merci ! Votre message a été envoyé. Nous répondrons dans les 48 heures.",
+      "error": "Nous n'avons pas pu envoyer votre message. Veuillez réessayer ou nous envoyer un email directement."
+    },
+    "privacy": {
+      "meta": {
+        "title": "EcoPulse — Politique de Confidentialité",
+        "description": "Découvrez comment EcoPulse protège vos données avec une conception axée sur la confidentialité, une collecte minimale et des pratiques transparentes. Conforme au RGPD."
+      },
+      "badge": "Politique de Confidentialité",
+      "title": "Politique de Confidentialité",
+      "subtitle": "Votre confidentialité est fondamentale pour notre mission. Nous ne collectons que le nécessaire, le protégeons rigoureusement et vous donnons le contrôle de vos données.",
+      "effectiveDate": "Date d'effet : 25 décembre 2024 | Dernière mise à jour : 25 décembre 2024",
+      "principles": {
+        "title": "Nos Principes de Confidentialité",
+        "minimal": {
+          "title": "Collecte Minimale",
+          "description": "Nous ne collectons que les données essentielles au fonctionnement de la plateforme—rien de plus."
+        },
+        "transparent": {
+          "title": "Transparence Totale",
+          "description": "Explications claires de ce que nous collectons, pourquoi et combien de temps nous le conservons."
+        },
+        "secure": {
+          "title": "Sécurité Prioritaire",
+          "description": "Chiffrement aux normes de l'industrie et contrôles d'accès protègent vos informations."
+        },
+        "respectful": {
+          "title": "Contrôle Utilisateur",
+          "description": "Vous avez des droits sur vos données—accès, correction, suppression ou export à tout moment."
+        }
+      },
+      "dataCollection": {
+        "title": "Données que Nous Collectons",
+        "intro": "Nous collectons différents types de données selon votre utilisation d'EcoPulse. Voici une ventilation claire :",
+        "reports": {
+          "title": "Signalements Environnementaux",
+          "content": "Photos, coordonnées GPS, sélection de catégorie et descriptions écrites des problèmes environnementaux. Les données de localisation sont essentielles pour la cartographie et la vérification."
+        },
+        "verification": {
+          "title": "Données de Vérification",
+          "content": "Votre statut de vérification (confirmer, contester ou impossible de vérifier), notes optionnelles et horodatage. Cela renforce la confiance communautaire et valide les signalements."
+        },
+        "account": {
+          "title": "Informations de Compte",
+          "content": "Adresse email et données d'authentification pour les utilisateurs inscrits. Les utilisateurs anonymes peuvent soumettre des signalements sans compte en utilisant un suivi basé sur la session."
+        },
+        "technical": {
+          "title": "Données Techniques",
+          "content": "Type d'appareil, version du navigateur et localisation générale (pays/région) pour l'optimisation de la plateforme. Nous n'utilisons PAS d'empreinte d'appareil ou de suivi invasif."
+        }
+      },
+      "photoHandling": {
+        "title": "Confidentialité et Gestion des Photos",
+        "intro": "Les photos sont des preuves essentielles, mais nous les traitons avec la confidentialité à l'esprit :",
+        "exif": "Les métadonnées EXIF sont automatiquement supprimées de toutes les photos, éliminant les informations de l'appareil, horodatages et données GPS intégrées",
+        "resize": "Les images sont redimensionnées et compressées pour un stockage efficace tout en maintenant la qualité pour la vérification",
+        "storage": "Les photos sont stockées de manière sécurisée sur une infrastructure chiffrée avec contrôles d'accès",
+        "access": "Seuls les signalements vérifiés sont publiquement visibles; les signalements en attente ont un accès restreint"
+      },
+      "dataUsage": {
+        "title": "Comment Nous Utilisons Vos Données",
+        "intro": "Vos données servent des objectifs spécifiques et légitimes :",
+        "platform": {
+          "title": "Fonctionnement de la Plateforme",
+          "description": "Afficher les signalements sur les cartes, permettre la vérification et coordonner les réponses"
+        },
+        "partners": {
+          "title": "Coordination Partenaires",
+          "description": "Partager les données vérifiées avec les partenaires ONG pour la résolution des problèmes"
+        },
+        "analytics": {
+          "title": "Analyses Agrégées",
+          "description": "Comprendre les modèles d'utilisation pour améliorer la plateforme (anonymisées)"
+        },
+        "improvement": {
+          "title": "Amélioration du Service",
+          "description": "Identifier les bugs, optimiser les performances et développer de nouvelles fonctionnalités"
+        }
+      },
+      "dataSharing": {
+        "title": "Partage de Données et Tiers",
+        "commitment": "Nous ne vendons jamais vos données. Point final.",
+        "never": "Vos informations personnelles ne sont pas vendues, louées ou échangées à des annonceurs, courtiers en données ou tout tiers à des fins commerciales.",
+        "exceptions": "Nous pouvons partager des données avec : (1) Partenaires ONG et gouvernementaux pour la résolution des problèmes (signalements vérifiés uniquement), (2) Fournisseurs d'infrastructure essentiels au fonctionnement de la plateforme (Supabase, Vercel) sous accords stricts de traitement des données, (3) Autorités légales lorsque requis par la loi ou pour protéger la sécurité."
+      },
+      "retention": {
+        "title": "Conservation des Données",
+        "intro": "Nous conservons les données uniquement aussi longtemps que nécessaire pour les objectifs déclarés :",
+        "table": {
+          "dataType": "Type de Données",
+          "period": "Période de Conservation"
+        },
+        "reports": {
+          "type": "Signalements Environnementaux",
+          "period": "Conservés tant que le problème est actif; archivés après résolution"
+        },
+        "account": {
+          "type": "Données de Compte",
+          "period": "Jusqu'à suppression du compte ou 2 ans d'inactivité"
+        },
+        "session": {
+          "type": "Sessions Anonymes",
+          "period": "7 jours après la dernière activité"
+        },
+        "analytics": {
+          "type": "Données Analytiques",
+          "period": "12 mois (anonymisées et agrégées)"
+        }
+      },
+      "rights": {
+        "title": "Vos Droits sur les Données",
+        "intro": "Vous disposez des droits suivants concernant vos données personnelles, conformément aux principes du RGPD et du NDPR :",
+        "access": {
+          "title": "Droit d'Accès",
+          "description": "Demander une copie de toutes les données que nous détenons sur vous"
+        },
+        "correction": {
+          "title": "Droit de Rectification",
+          "description": "Mettre à jour ou corriger des informations personnelles inexactes"
+        },
+        "deletion": {
+          "title": "Droit à l'Effacement",
+          "description": "Demander la suppression de vos données (sous réserve des exigences légales)"
+        },
+        "portability": {
+          "title": "Portabilité des Données",
+          "description": "Exporter vos données dans un format lisible par machine"
+        },
+        "objection": {
+          "title": "Droit d'Opposition",
+          "description": "S'opposer à certains types de traitement de données"
+        },
+        "withdraw": {
+          "title": "Retirer le Consentement",
+          "description": "Révoquer un consentement précédemment donné à tout moment"
+        }
+      },
+      "security": {
+        "title": "Mesures de Sécurité",
+        "intro": "Nous mettons en œuvre des mesures de sécurité complètes pour protéger vos données :",
+        "encryption": "Chiffrement TLS pour toutes les données en transit; chiffrement AES-256 pour les données au repos",
+        "access": "Contrôles d'accès basés sur les rôles limitant qui peut voir les données personnelles",
+        "audit": "Audits de sécurité réguliers et évaluations de vulnérabilité",
+        "rls": "Sécurité au Niveau des Lignes (RLS) garantissant que les utilisateurs ne peuvent accéder qu'à leurs propres données"
+      },
+      "international": {
+        "title": "Transferts Internationaux de Données",
+        "content": "Vos données peuvent être traitées dans des pays en dehors de votre résidence pour le fonctionnement de la plateforme. Nous assurons des garanties appropriées par des accords de traitement des données et la conformité aux lois applicables de protection des données, y compris le RGPD et le NDPR du Nigeria."
+      },
+      "children": {
+        "title": "Confidentialité des Enfants",
+        "content": "EcoPulse n'est pas destiné aux enfants de moins de 13 ans. Nous ne collectons pas sciemment d'informations personnelles d'enfants. Si vous pensez qu'un enfant nous a fourni des données personnelles, veuillez nous contacter immédiatement pour suppression."
+      },
+      "updates": {
+        "title": "Mises à Jour de la Politique",
+        "content": "Nous pouvons mettre à jour cette Politique de Confidentialité pour refléter les changements dans nos pratiques ou les exigences légales. Les changements importants seront notifiés par email (pour les utilisateurs inscrits) ou par avis visible sur la plateforme. L'utilisation continue après les mises à jour constitue l'acceptation de la politique révisée."
+      },
+      "contact": {
+        "title": "Questions de Confidentialité ?",
+        "intro": "Pour toute question liée à la confidentialité, demandes d'accès aux données ou préoccupations, veuillez contacter notre équipe confidentialité :",
+        "form": "Utiliser le Formulaire de Contact"
+      }
+    },
+    "terms": {
+      "meta": {
+        "title": "EcoPulse — Conditions d'Utilisation",
+        "description": "Conditions d'utilisation régissant l'utilisation de la plateforme EcoPulse pour le signalement et la vérification environnementaux communautaires."
+      },
+      "badge": "Accord Juridique",
+      "title": "Conditions d'Utilisation",
+      "subtitle": "Ces conditions régissent votre utilisation d'EcoPulse. Veuillez les lire attentivement avant d'utiliser notre plateforme.",
+      "effectiveDate": "Date d'effet : 25 décembre 2024 | Dernière mise à jour : 25 décembre 2024",
+      "summary": {
+        "title": "Résumé Rapide",
+        "access": "Accès gratuit pour signaler et vérifier les problèmes environnementaux dans votre communauté",
+        "content": "Vous conservez la propriété de votre contenu mais nous accordez une licence pour l'afficher",
+        "conduct": "Soyez honnête, respectueux et n'abusez pas de la plateforme",
+        "liability": "Nous facilitons la coordination mais ne garantissons pas la résolution des problèmes"
+      },
+      "acceptance": {
+        "title": "Acceptation des Conditions",
+        "intro": "En accédant ou en utilisant EcoPulse ('la Plateforme'), vous acceptez d'être lié par ces Conditions d'Utilisation ('Conditions'). Ces Conditions constituent un accord juridiquement contraignant entre vous et EcoPulse.",
+        "warning": "Si vous n'acceptez pas ces Conditions, n'utilisez pas la Plateforme. Votre utilisation continue constitue l'acceptation de toute mise à jour de ces Conditions."
+      },
+      "service": {
+        "title": "Description du Service",
+        "intro": "EcoPulse est une plateforme communautaire pour le signalement, la vérification et la coordination des problèmes environnementaux. Nos services incluent :",
+        "reporting": "Soumettre des signalements de problèmes environnementaux avec photos, localisation et descriptions",
+        "verification": "Vérification communautaire des problèmes signalés pour construire des données fiables",
+        "coordination": "Connecter les signalements vérifiés avec les partenaires ONG et les intervenants civiques",
+        "exports": "Exports de données pour les partenaires afin de permettre l'allocation des ressources et la réponse"
+      },
+      "accounts": {
+        "title": "Comptes Utilisateurs",
+        "intro": "Vous pouvez utiliser EcoPulse avec ou sans compte enregistré :",
+        "registration": {
+          "title": "Inscription au Compte",
+          "content": "Vous devez fournir des informations exactes et garder vos identifiants de compte sécurisés. Vous êtes responsable de toute activité sous votre compte."
+        },
+        "security": {
+          "title": "Sécurité du Compte",
+          "content": "Choisissez un mot de passe fort et informez-nous immédiatement si vous soupçonnez un accès non autorisé. Nous ne sommes pas responsables des pertes dues à une utilisation non autorisée du compte."
+        },
+        "anonymous": {
+          "title": "Accès Anonyme",
+          "content": "Vous pouvez soumettre des signalements anonymement. Les signalements anonymes utilisent un suivi basé sur la session et peuvent être réclamés en inscrivant un compte dans les 7 jours."
+        },
+        "termination": {
+          "title": "Résiliation du Compte",
+          "content": "Nous pouvons suspendre ou résilier les comptes qui violent ces Conditions. Vous pouvez supprimer votre compte à tout moment via les paramètres du compte."
+        }
+      },
+      "userContent": {
+        "title": "Contenu Utilisateur",
+        "intro": "Vous êtes responsable de tout le contenu que vous soumettez à EcoPulse, y compris les signalements, photos et vérifications.",
+        "license": {
+          "title": "Octroi de Licence",
+          "content": "En soumettant du contenu, vous accordez à EcoPulse une licence mondiale, non exclusive, libre de redevances pour utiliser, afficher, reproduire et distribuer votre contenu dans le but d'exploiter la Plateforme et de coordonner les réponses environnementales. Cette licence continue même si vous supprimez votre compte, pour le contenu déjà partagé avec les partenaires."
+        },
+        "responsibility": {
+          "title": "Responsabilité du Contenu",
+          "content": "Vous déclarez que vous possédez ou avez le droit de soumettre tout le contenu, et qu'il ne viole aucun droit de tiers, y compris la vie privée, la propriété intellectuelle ou d'autres droits légaux."
+        },
+        "moderation": {
+          "title": "Modération du Contenu",
+          "content": "Nous nous réservons le droit de supprimer, modifier ou restreindre l'accès à tout contenu qui viole ces Conditions ou est jugé nuisible, à notre seule discrétion et sans préavis."
+        }
+      },
+      "acceptable": {
+        "title": "Politique d'Utilisation Acceptable",
+        "intro": "Vous acceptez d'utiliser EcoPulse de manière légale, éthique et respectueuse.",
+        "prohibited": {
+          "title": "Activités Interdites",
+          "illegal": "Télécharger du contenu illégal ou utiliser la Plateforme à des fins illicites",
+          "harassment": "Harceler, menacer ou intimider d'autres utilisateurs ou membres de la communauté",
+          "falseReports": "Soumettre des signalements intentionnellement faux, trompeurs ou frauduleux",
+          "personalData": "Inclure des informations personnelles sensibles sur d'autres personnes (visages, adresses, pièces d'identité) dans les signalements",
+          "spam": "Spam, soumissions automatisées ou manipulation du système de vérification",
+          "interference": "Tenter d'interférer avec le fonctionnement de la Plateforme, la sécurité ou l'accès des autres utilisateurs"
+        }
+      },
+      "verification": {
+        "title": "Directives de Vérification",
+        "intro": "La vérification est au cœur du modèle de confiance d'EcoPulse. Lors de la vérification des signalements, vous acceptez de :",
+        "honesty": "Vérifier honnêtement sur la base de votre observation directe ou de vos connaissances",
+        "noSelf": "Ne pas vérifier vos propres signalements (le système empêche l'auto-vérification)",
+        "proximity": "Ne vérifier que les signalements dans des zones que vous pouvez raisonnablement évaluer",
+        "objectivity": "Rester objectif et ne pas laisser les relations personnelles affecter votre vérification"
+      },
+      "ip": {
+        "title": "Propriété Intellectuelle",
+        "platform": "La plateforme EcoPulse, y compris sa conception, son code, ses logos et son image de marque, est la propriété d'EcoPulse et protégée par les lois sur la propriété intellectuelle. Vous ne pouvez pas copier, modifier ou distribuer une partie de la Plateforme sans autorisation écrite.",
+        "data": "Les données agrégées et anonymisées de la Plateforme peuvent être utilisées à des fins de recherche, de reporting et de plaidoyer. Les données individuelles des utilisateurs sont protégées par notre Politique de Confidentialité."
+      },
+      "disclaimers": {
+        "title": "Avertissements",
+        "noGuarantee": {
+          "title": "Aucune Garantie de Résolution",
+          "content": "EcoPulse facilite le signalement et la coordination mais ne garantit pas qu'un problème signalé sera résolu. La réponse dépend de la disponibilité des partenaires, des ressources et des priorités."
+        },
+        "asIs": {
+          "title": "Service 'Tel Quel'",
+          "content": "La Plateforme est fournie 'telle quelle' sans garanties d'aucune sorte, expresses ou implicites, y compris la qualité marchande, l'adéquation à un usage particulier ou la non-contrefaçon."
+        },
+        "availability": {
+          "title": "Disponibilité du Service",
+          "content": "Nous nous efforçons d'assurer une disponibilité continue mais ne garantissons pas un accès ininterrompu. La Plateforme peut être indisponible en raison de maintenance, mises à jour ou circonstances indépendantes de notre volonté."
+        }
+      },
+      "liability": {
+        "title": "Limitation de Responsabilité",
+        "intro": "Dans la mesure maximale permise par la loi :",
+        "content": "EcoPulse et ses dirigeants, administrateurs, employés et partenaires ne seront pas responsables de tout dommage indirect, accessoire, spécial, consécutif ou punitif, y compris la perte de profits, de données ou de clientèle, découlant de votre utilisation de la Plateforme. Notre responsabilité totale pour toute réclamation ne dépassera pas le montant que vous nous avez payé (le cas échéant) au cours des 12 mois précédant la réclamation."
+      },
+      "indemnification": {
+        "title": "Indemnisation",
+        "content": "Vous acceptez d'indemniser, défendre et dégager de toute responsabilité EcoPulse et ses affiliés, dirigeants, administrateurs, employés et partenaires de toute réclamation, dommage, perte ou dépense (y compris les frais juridiques) découlant de votre utilisation de la Plateforme, violation de ces Conditions ou atteinte aux droits de tiers."
+      },
+      "governing": {
+        "title": "Droit Applicable",
+        "content": "Ces Conditions sont régies et interprétées conformément aux lois de la République Fédérale du Nigeria, sans égard aux principes de conflit de lois. Tout litige sera résolu devant les tribunaux de Lagos, Nigeria, et vous consentez à la juridiction personnelle de ces tribunaux."
+      },
+      "changes": {
+        "title": "Modifications des Conditions",
+        "content": "Nous pouvons modifier ces Conditions à tout moment. Les changements importants seront notifiés par email (pour les utilisateurs inscrits) ou par avis visible sur la Plateforme au moins 14 jours avant d'entrer en vigueur. L'utilisation continue après les modifications constitue l'acceptation des Conditions mises à jour."
+      },
+      "contact": {
+        "title": "Questions Juridiques ?",
+        "intro": "Pour les demandes juridiques, clarifications des Conditions ou avis formels, veuillez contacter notre équipe juridique :",
+        "privacy": "Voir la Politique de Confidentialité"
+      }
+    },
+    "footer": {
+      "tagline": "EcoPulse aide les communautés à signaler, vérifier et coordonner l'action sur les problèmes de déchets et de drainage—transformant les préoccupations dispersées en preuves actionnables.",
+      "mission": "Construction d'une infrastructure de données environnementales de confiance pour les communautés africaines, un signalement vérifié à la fois.",
+      "navTitle": "Navigation",
+      "resourcesTitle": "Ressources",
+      "contactTitle": "Contact",
+      "legalTitle": "Légal",
+      "email": "info@ecopulse.app",
+      "location": "Lagos, Nigeria",
+      "newsletterTitle": "Restez Informé",
+      "newsletterDescription": "Recevez les mises à jour du pilote et les rapports d'impact dans votre boîte de réception.",
+      "subscribeButton": "Recevoir les Mises à Jour",
+      "copyright": "Tous droits réservés.",
+      "madeWith": "Construit avec 💚 pour les communautés africaines"
+    }
+  },
+  "common": {
+    "submit": "Soumettre",
+    "cancel": "Annuler",
+    "close": "Fermer",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "loading": "Chargement...",
+    "retry": "Réessayer",
+    "error": "Une erreur s'est produite. Veuillez réessayer.",
+    "success": "Succès !",
+    "confirm": "Confirmer",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "search": "Rechercher",
+    "clear": "Effacer",
+    "apply": "Appliquer",
+    "reset": "Réinitialiser",
+    "viewAll": "Voir Tout",
+    "learnMore": "En Savoir Plus",
+    "required": "Requis"
+  },
+  "navigation": {
+    "map": "Carte",
+    "reports": "Signalements",
+    "myReports": "Mes Signalements",
+    "actions": "Actions",
+    "profile": "Profil",
+    "dashboard": "Tableau de Bord",
+    "ngoDashboard": "Tableau de Bord ONG",
+    "govDashboard": "Tableau de Bord Gouvernement",
+    "settings": "Paramètres",
+    "help": "Aide",
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "loggingOut": "Déconnexion en cours...",
+    "userMenu": "Menu utilisateur",
+    "skipToContent": "Aller au contenu principal",
+    "mainMenu": "Menu principal",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu"
+  },
+  "auth": {
+    "login": {
+      "title": "Connexion",
+      "email": "Email",
+      "emailPlaceholder": "Entrez votre email",
+      "password": "Mot de passe",
+      "passwordPlaceholder": "Entrez votre mot de passe",
+      "submit": "Se connecter",
+      "submitting": "Connexion en cours...",
+      "redirecting": "Redirection...",
+      "forgotPassword": "Mot de passe oublié ?",
+      "magicLink": "Connexion avec lien magique",
+      "noAccount": "Pas de compte ?",
+      "signupLink": "S'inscrire",
+      "orContinueWith": "Ou continuer avec"
+    },
+    "signup": {
+      "title": "Créer un Compte",
+      "email": "Email",
+      "emailPlaceholder": "Entrez votre email",
+      "password": "Mot de passe",
+      "passwordPlaceholder": "Créez un mot de passe",
+      "passwordHint": "Au moins 8 caractères",
+      "username": "Nom d'utilisateur",
+      "usernamePlaceholder": "Choisissez un nom d'utilisateur",
+      "usernameHint": "3-20 caractères, lettres, chiffres, underscore",
+      "submit": "Créer le Compte",
+      "submitting": "Création du compte...",
+      "hasAccount": "Déjà un compte ?",
+      "loginLink": "Se connecter",
+      "termsAgreement": "En vous inscrivant, vous acceptez nos Conditions d'Utilisation et notre Politique de Confidentialité"
+    },
+    "logout": {
+      "button": "Se Déconnecter",
+      "confirmTitle": "Déconnexion",
+      "confirmMessage": "Êtes-vous sûr de vouloir vous déconnecter ?",
+      "success": "Vous avez été déconnecté"
+    },
+    "magicLink": {
+      "title": "Connexion sans Mot de Passe",
+      "description": "Entrez votre email et nous vous enverrons un lien magique pour vous connecter",
+      "email": "Email",
+      "emailPlaceholder": "Entrez votre email",
+      "submit": "Envoyer le Lien Magique",
+      "submitting": "Envoi...",
+      "sent": "Vérifiez votre email pour le lien de connexion",
+      "sentDescription": "Nous avons envoyé un lien magique à {email}. Le lien expire dans 1 heure.",
+      "resend": "Renvoyer le Lien Magique",
+      "expired": "Lien expiré. Demandez-en un nouveau.",
+      "rateLimited": "Trop de tentatives. Attendez 60 secondes et réessayez.",
+      "backToLogin": "Retour à la connexion"
+    },
+    "resetPassword": {
+      "title": "Réinitialiser le Mot de Passe",
+      "description": "Entrez votre email et nous vous enverrons un lien pour réinitialiser votre mot de passe",
+      "submit": "Envoyer le Lien de Réinitialisation",
+      "sent": "Vérifiez votre email pour le lien de réinitialisation",
+      "newPassword": "Nouveau Mot de Passe",
+      "confirmPassword": "Confirmer le Mot de Passe",
+      "submitNewPassword": "Réinitialiser le Mot de Passe"
+    },
+    "errors": {
+      "invalidCredentials": "Email ou mot de passe incorrect. Veuillez réessayer.",
+      "emailExists": "Email déjà enregistré.",
+      "emailNotVerified": "Email non vérifié. Vérifiez votre boîte de réception.",
+      "weakPassword": "Le mot de passe doit contenir au moins 8 caractères.",
+      "passwordMismatch": "Les mots de passe ne correspondent pas.",
+      "invalidEmail": "Veuillez entrer une adresse email valide.",
+      "usernameExists": "Nom d'utilisateur déjà pris.",
+      "usernameTooShort": "Le nom d'utilisateur doit contenir au moins 3 caractères.",
+      "usernameTooLong": "Le nom d'utilisateur doit contenir 20 caractères ou moins.",
+      "usernameInvalid": "Le nom d'utilisateur peut uniquement contenir des lettres, des chiffres et des underscores.",
+      "networkError": "Échec de connexion. Vérifiez internet et réessayez.",
+      "serverError": "Erreur serveur. Veuillez réessayer plus tard.",
+      "sessionExpired": "Votre session a expiré. Veuillez vous reconnecter."
+    },
+    "conversion": {
+      "title": "Bon Retour !",
+      "success": "Trouvé {count, plural, =1 {# signalement} other {# signalements}} que vous avez fait. Gagné {points} points !",
+      "noReports": "Aucun signalement précédent trouvé.",
+      "linkReports": "Lier mes signalements anonymes"
+    },
+    "verification": {
+      "title": "Vérifiez Votre Email",
+      "description": "Nous avons envoyé un lien de vérification à {email}",
+      "resend": "Renvoyer l'email de vérification",
+      "resent": "Email de vérification envoyé !",
+      "checkSpam": "Vous ne le voyez pas ? Vérifiez votre dossier spam."
+    },
+    "oauth": {
+      "google": "Continuer avec Google",
+      "microsoft": "Continuer avec Microsoft"
+    }
+  },
+  "report": {
+    "title": "Signaler un Problème",
+    "subtitle": "Aidez votre communauté en signalant les problèmes environnementaux",
+    "fab": {
+      "label": "Signaler un problème environnemental",
+      "tooltip": "Signaler un problème"
+    },
+    "steps": {
+      "photo": "Photo",
+      "location": "Emplacement",
+      "details": "Détails",
+      "review": "Révision"
+    },
+    "category": {
+      "label": "Catégorie",
+      "selectPrompt": "Sélectionnez une catégorie",
+      "waste": "Déchets et ordures",
+      "wasteDescription": "Poubelles, ordures, déversement illégal",
+      "drainage": "Drainage ou risque d'inondation",
+      "drainageDescription": "Drains bloqués, inondations, problèmes d'eau"
+    },
+    "severity": {
+      "label": "Gravité",
+      "selectPrompt": "Quelle est l'urgence de ce problème ?",
+      "low": "Faible gravité",
+      "lowDescription": "Problème mineur, pas urgent",
+      "medium": "Gravité moyenne",
+      "mediumDescription": "Nécessite attention bientôt",
+      "high": "Haute gravité - urgent",
+      "highDescription": "Nécessite attention immédiate"
+    },
+    "photo": {
+      "label": "Preuve Photo",
+      "required": "Au moins une photo est requise",
+      "upload": "Télécharger Photo",
+      "takePhoto": "Prendre Photo",
+      "chooseFile": "Choisir dans la galerie",
+      "addAnother": "Ajouter Une Autre Photo",
+      "maxPhotos": "Maximum {max} photos",
+      "photoCount": "{count} sur {max} photos",
+      "uploading": "Téléchargement de la photo...",
+      "processing": "Traitement de la photo...",
+      "success": "Photo téléchargée",
+      "remove": "Supprimer la photo",
+      "tooLarge": "Photo trop grande. Maximum 10MB par photo.",
+      "invalidType": "Veuillez télécharger une image valide (JPG, PNG, HEIC, WebP).",
+      "uploadFailed": "Échec du téléchargement de la photo. Veuillez réessayer.",
+      "processingFailed": "Échec du traitement de la photo. Veuillez essayer une autre photo."
+    },
+    "location": {
+      "label": "Emplacement",
+      "detecting": "Détection de l'emplacement...",
+      "detected": "Emplacement détecté",
+      "permissionDenied": "Accès à l'emplacement refusé",
+      "denied": "Accès à l'emplacement refusé. Veuillez placer l'épingle sur la carte manuellement.",
+      "deniedDescription": "Vous pouvez toujours signaler en plaçant une épingle sur la carte",
+      "accuracy": "Précision à {meters} mètres près",
+      "adjustPin": "Faites glisser l'épingle pour ajuster l'emplacement",
+      "search": "Rechercher une adresse ou un lieu",
+      "searchPlaceholder": "Entrez une adresse ou un point de repère",
+      "noResults": "Aucun résultat trouvé. Veuillez essayer un autre terme de recherche.",
+      "searchError": "Recherche indisponible. Veuillez utiliser la carte pour placer l'épingle.",
+      "useCurrentLocation": "Utiliser l'Emplacement Actuel",
+      "timeout": "Impossible de détecter l'emplacement. Veuillez réessayer ou placer l'épingle manuellement.",
+      "address": "Adresse",
+      "coordinates": "Coordonnées"
+    },
+    "note": {
+      "label": "Description",
+      "placeholder": "Décrivez le problème (minimum 60 caractères)",
+      "hint": "Fournissez des détails sur ce que vous avez observé",
+      "minLength": "La description doit contenir au moins {min} caractères",
+      "charCount": "{count} / {min} caractères minimum"
+    },
+    "submit": {
+      "button": "Soumettre le Signalement",
+      "submitting": "Soumission de votre signalement...",
+      "review": "Vérifiez votre signalement avant de soumettre",
+      "success": "Merci ! Votre signalement a été soumis.",
+      "successDescription": "Votre signalement sera examiné par la communauté.",
+      "reportId": "Signalement #{id}",
+      "viewOnMap": "Voir sur la Carte",
+      "submitAnother": "Soumettre un Autre Signalement",
+      "goHome": "Aller à l'Accueil"
+    },
+    "errors": {
+      "networkTimeout": "Délai réseau dépassé. Vérifiez la connexion et réessayez.",
+      "validationError": "Veuillez remplir tous les champs requis.",
+      "photoRequired": "Veuillez ajouter au moins une photo.",
+      "locationRequired": "Veuillez sélectionner un emplacement.",
+      "categoryRequired": "Veuillez sélectionner une catégorie.",
+      "descriptionTooShort": "La description est trop courte. Minimum 60 caractères.",
+      "submitFailed": "Impossible de soumettre le signalement. Veuillez réessayer.",
+      "retryLimit": "Toujours des problèmes ? Contactez le support."
+    },
+    "anonymous": {
+      "notice": "Signalement anonyme",
+      "description": "Créez un compte pour suivre vos signalements et gagner des points",
+      "signupPrompt": "Inscrivez-vous pour réclamer votre signalement"
+    }
+  },
+  "map": {
+    "title": "Carte des Problèmes Environnementaux",
+    "loading": "Chargement de la carte...",
+    "loadError": "Impossible de charger la carte. Veuillez actualiser la page.",
+    "refresh": "Actualiser",
+    "refreshing": "Actualisation...",
+    "lastUpdated": "Dernière mise à jour : {time}",
+    "filters": {
+      "title": "Filtres",
+      "category": "Catégorie",
+      "status": "Statut",
+      "dateRange": "Période",
+      "all": "Tous",
+      "apply": "Appliquer les Filtres",
+      "clear": "Tout Effacer",
+      "showing": "Affichage de {count} sur {total} problèmes",
+      "noResults": "Aucun problème ne correspond à vos filtres",
+      "adjustFilters": "Essayez d'ajuster vos filtres"
+    },
+    "category": {
+      "all": "Toutes les Catégories",
+      "waste": "Déchets et Ordures",
+      "drainage": "Drainage"
+    },
+    "status": {
+      "all": "Tous les Statuts",
+      "pending": "En Attente de Vérification",
+      "verified": "Vérifié",
+      "inProgress": "En Cours",
+      "resolved": "Résolu"
+    },
+    "dateRange": {
+      "7days": "7 derniers jours",
+      "30days": "30 derniers jours",
+      "90days": "90 derniers jours",
+      "allTime": "Tout le Temps"
+    },
+    "cluster": {
+      "reports": "{count} signalements",
+      "clickToExpand": "Cliquez pour développer"
+    },
+    "issue": {
+      "viewDetails": "Voir les Détails",
+      "reportedBy": "Signalé par {name}",
+      "reportedAnonymously": "Signalé anonymement",
+      "reportedOn": "Signalé le {date}",
+      "verifications": "{count, plural, =0 {Aucune vérification} =1 {# vérification} other {# vérifications}}"
+    },
+    "controls": {
+      "zoomIn": "Zoom avant",
+      "zoomOut": "Zoom arrière",
+      "fullscreen": "Basculer en plein écran",
+      "myLocation": "Aller à ma position",
+      "recenter": "Recentrer la carte"
+    },
+    "error": "Impossible de charger les problèmes. Veuillez réessayer.",
+    "empty": "Aucun problème signalé dans cette zone pour le moment",
+    "emptyPrompt": "Soyez le premier à signaler un problème !"
+  },
+  "profile": {
+    "title": "Mon Profil",
+    "edit": "Modifier le Profil",
+    "editProfile": "Modifier le Profil",
+    "editProfileDescription": "Mettez à jour vos informations de profil",
+    "viewProfile": "Voir et gérer votre profil",
+    "publicProfile": "Profil de {username}",
+    "notFound": "Profil Non Trouvé",
+    "profileError": "Impossible de charger le profil. Veuillez réessayer.",
+    "anonymous": "Utilisateur Anonyme",
+    "noBio": "Pas encore de bio. Ajoutez-en une pour parler de vous.",
+    "memberSince": "Membre depuis {date}",
+    "saveChanges": "Enregistrer les Modifications",
+    "saving": "Enregistrement...",
+    "cancel": "Annuler",
+    "updateSuccess": "Profil Mis à Jour",
+    "updateSuccessDescription": "Votre profil a été mis à jour avec succès.",
+    "updateFailed": "Mise à Jour Échouée",
+    "updateFailedDescription": "Échec de la mise à jour du profil. Veuillez réessayer.",
+    "bioLabel": "Bio",
+    "bioPlaceholder": "Parlez-nous de vous...",
+    "characterCount": "{current}/{max} caractères",
+    "locationLabel": "Emplacement",
+    "locationPlaceholder": "Ville, Pays",
+    "avatar": {
+      "label": "Photo de profil",
+      "change": "Changer la photo",
+      "remove": "Supprimer la photo",
+      "upload": "Télécharger la photo",
+      "updated": "Avatar Mis à Jour",
+      "updatedDescription": "Votre photo de profil a été mise à jour.",
+      "uploadFailed": "Échec du Téléchargement",
+      "tryAgain": "Réessayez ou utilisez la photo par défaut.",
+      "tooLarge": "Fichier Trop Grand",
+      "maxSize": "L'avatar doit faire moins de 2MB.",
+      "hint": "Cliquez pour télécharger une nouvelle photo (max 2MB)"
+    },
+    "stats": {
+      "reports": "Signalements",
+      "verifications": "Vérifications",
+      "points": "Points",
+      "resolved": "Résolu",
+      "impactTitle": "Votre Impact Environnemental",
+      "wasteRemoved": "{amount} kg de déchets retirés",
+      "drainsCleaned": "{count, plural, =1 {# drain} other {# drains}} nettoyé(s)",
+      "neighborHelped": "{count, plural, =1 {# voisin} other {# voisins}} aidé(s)",
+      "totalReports": "Total des Signalements",
+      "verified": "Vérifié",
+      "verificationRate": "Taux de Vérification",
+      "avgTime": "Temps Moyen"
+    },
+    "tabs": {
+      "activity": "Activité",
+      "reports": "Mes Signalements",
+      "verifications": "Vérifications",
+      "settings": "Paramètres"
+    },
+    "settings": {
+      "title": "Paramètres",
+      "description": "Gérez votre compte et vos préférences de notification",
+      "notifications": "Notifications",
+      "notificationsDescription": "Choisissez comment vous souhaitez recevoir les mises à jour",
+      "emailNotifications": "Notifications par email",
+      "pushNotifications": "Notifications push",
+      "language": "Langue",
+      "privacy": "Confidentialité",
+      "deleteAccount": "Supprimer le Compte",
+      "emailVerifiedReports": "Vérifications de Signalements",
+      "emailVerifiedReportsDescription": "Soyez notifié lorsque vos signalements sont vérifiés par la communauté",
+      "emailActionCards": "Rappels de Cartes d'Action",
+      "emailActionCardsDescription": "Recevez des rappels sur les problèmes à proximité que vous pouvez aider",
+      "emailMonthlySummary": "Résumé Mensuel d'Impact",
+      "emailMonthlySummaryDescription": "Recevez un email mensuel résumant vos contributions environnementales",
+      "profileVisibility": "Visibilité du Profil",
+      "profileVisibilityDescription": "Rendez votre profil et votre activité visibles aux autres membres de la communauté",
+      "profilePublic": "Profil Public",
+      "profilePrivate": "Profil Privé",
+      "saved": "Paramètres Enregistrés",
+      "savedDescription": "Vos préférences ont été mises à jour",
+      "saveFailed": "Échec de l'Enregistrement",
+      "saveFailedDescription": "Impossible d'enregistrer vos paramètres. Veuillez réessayer.",
+      "saving": "Enregistrement...",
+      "comingSoon": "Bientôt Disponible",
+      "comingSoonDescription": "Cette fonctionnalité arrivera dans une prochaine mise à jour"
+    },
+    "impact": {
+      "title": "Votre Impact Environnemental",
+      "comingSoon": "Métriques d'impact bientôt disponibles ! Suivez vos contributions environnementales.",
+      "emptyState": "Commencez à contribuer pour voir votre impact environnemental !"
+    },
+    "activity": {
+      "title": "Activité Récente",
+      "comingSoon": "Chronologie d'activité bientôt disponible ! Voyez vos contributions récentes.",
+      "emptyState": "Pas encore d'activité. Commencez par signaler un problème !"
+    },
+    "reports": {
+      "title": "Mes Signalements",
+      "description": "Consultez et gérez vos signalements environnementaux soumis",
+      "emptyTitle": "Pas Encore de Signalements",
+      "emptyDescription": "Vous n'avez pas encore soumis de signalements environnementaux. Commencez à contribuer à votre communauté !",
+      "reportIssue": "Signaler un Problème",
+      "noResults": "Aucun signalement ne correspond à vos filtres actuels",
+      "showing": "{count, plural, =1 {# signalement} other {# signalements}} trouvé(s)",
+      "filterBy": "Filtrer par statut",
+      "filterAll": "Tous les Signalements",
+      "filterPending": "En Attente",
+      "filterVerified": "Vérifié",
+      "filterResolved": "Résolu",
+      "sortBy": "Trier par",
+      "sortRecent": "Plus Récent",
+      "sortVerified": "Plus Vérifié",
+      "sortPending": "En Attente en Premier",
+      "previous": "Précédent",
+      "next": "Suivant",
+      "previousPage": "Aller à la page précédente",
+      "nextPage": "Aller à la page suivante",
+      "pageOf": "Page {current} sur {total}",
+      "verified": "Vérifié",
+      "pending": "En Attente ({count}/2)",
+      "verifiedBy": "Vérifié par",
+      "categoryWaste": "Déchets/Ordures",
+      "categoryDrainage": "Drainage",
+      "photoAlt": "Photo du problème de {category}"
+    }
+  },
+  "verification": {
+    "title": "Vérifier le Signalement",
+    "description": "Aidez à confirmer ce problème en vérifiant qu'il existe",
+    "alreadyVerified": "Vous avez déjà vérifié ce signalement",
+    "cannotVerifyOwn": "Vous ne pouvez pas vérifier votre propre signalement",
+    "confirm": "Je confirme que ce problème existe",
+    "confirmLocation": "J'étais à cet emplacement",
+    "addPhoto": "Ajouter une photo de vérification (optionnel)",
+    "submit": "Soumettre la Vérification",
+    "success": "Merci d'avoir vérifié ce signalement !",
+    "pointsEarned": "Vous avez gagné {points} points"
+  },
+  "errors": {
+    "generic": "Une erreur s'est produite. Veuillez réessayer.",
+    "network": "Erreur réseau. Vérifiez votre connexion.",
+    "timeout": "Délai d'attente dépassé. Veuillez réessayer.",
+    "unauthorized": "Vous devez être connecté pour effectuer cette action.",
+    "forbidden": "Vous n'avez pas la permission d'effectuer cette action.",
+    "notFound": "Page non trouvée.",
+    "serverError": "Erreur serveur. Veuillez réessayer plus tard.",
+    "maintenance": "Le système est en maintenance. Veuillez réessayer plus tard.",
+    "offline": "Vous semblez être hors ligne. Veuillez vérifier votre connexion.",
+    "tryAgain": "Réessayer",
+    "goHome": "Aller à l'Accueil",
+    "contactSupport": "Contacter le Support"
+  },
+  "issues": {
+    "title": "Détails du Problème",
+    "notFound": "Problème Non Trouvé",
+    "notFoundDescription": "Ce problème a peut-être été supprimé ou n'existe pas.",
+    "backToMap": "Retour à la Carte",
+    "description": "Description",
+    "location": "Emplacement",
+    "timeline": "Chronologie",
+    "reported": "Signalé",
+    "updated": "Mis à jour",
+    "verifications": "Vérifications",
+    "verificationCount": "{count, plural, =1 {# personne a} other {# personnes ont}} vérifié ce problème",
+    "viewOnMap": "Voir sur la Carte",
+    "share": "Partager",
+    "category": {
+      "waste": "Déchets/Ordures",
+      "drainage": "Drainage"
+    },
+    "severity": {
+      "low": "Faible Gravité",
+      "medium": "Gravité Moyenne",
+      "high": "Haute Gravité"
+    },
+    "status": {
+      "pending": "En Attente de Vérification",
+      "verified": "Vérifié",
+      "in_progress": "En Cours",
+      "resolved": "Résolu"
+    }
+  },
+  "reports": {
+    "title": "Mes Signalements",
+    "publicTitle": "Signalements",
+    "totalReports": "{count, plural, =0 {Aucun signalement} =1 {# signalement} other {# signalements}} soumis",
+    "newReport": "Nouveau Signalement",
+    "noReports": "Pas Encore de Signalements",
+    "noReportsDescription": "Vous n'avez pas encore soumis de signalements environnementaux. Commencez par signaler un problème que vous voyez dans votre communauté.",
+    "noFilteredReports": "Aucun Signalement Correspondant",
+    "noFilteredReportsDescription": "Aucun signalement ne correspond au filtre sélectionné. Essayez un autre statut.",
+    "submitFirstReport": "Signalez Votre Premier Problème",
+    "loginRequired": "Connexion Requise",
+    "loginDescription": "Veuillez vous connecter pour voir vos signalements soumis et suivre leur statut.",
+    "viewDetails": "Voir les Détails"
+  },
+  "accessibility": {
+    "loading": "Chargement, veuillez patienter",
+    "loadingComplete": "Chargement terminé",
+    "menuExpanded": "Menu développé",
+    "menuCollapsed": "Menu réduit",
+    "dialogOpened": "Dialogue ouvert",
+    "dialogClosed": "Dialogue fermé",
+    "formError": "Le formulaire contient des erreurs. Veuillez vérifier et corriger.",
+    "formSuccess": "Formulaire soumis avec succès",
+    "imageAlt": {
+      "issuePhoto": "Photo du problème signalé",
+      "verificationPhoto": "Photo de vérification",
+      "userAvatar": "Photo de profil de l'utilisateur",
+      "mapMarker": "Marqueur de carte"
+    }
+  },
+  "meta": {
+    "title": "ecoPulse - Action Environnementale Communautaire",
+    "description": "Signaler, vérifier et suivre les problèmes environnementaux dans votre communauté",
+    "keywords": "environnement, communauté, signalement, déchets, drainage, nettoyage"
+  }
+}

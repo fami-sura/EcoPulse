@@ -1,4 +1,1094 @@
 {
+  "marketing": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "mission": "Mission",
+      "pilot": "Pilot Plan",
+      "faq": "FAQ",
+      "contact": "Contact",
+      "viewMap": "View Map",
+      "reports": "Reports",
+      "privacy": "Privacy",
+      "terms": "Terms"
+    },
+    "landing": {
+      "meta": {
+        "title": "EcoPulse — Community-Verified Environmental Reporting",
+        "description": "EcoPulse enables communities to report and verify waste and drainage issues with photo evidence—supporting a measurable pilot and coordinated response."
+      },
+      "hero": {
+        "badge": "Pilot Program • Seeking Partners",
+        "emotionalHook": "Because communities shouldn't have to wait for someone else to notice.",
+        "title": "Verified Environmental Data for Communities That Need Action",
+        "subtitle": "EcoPulse transforms scattered community reports into structured, verified evidence that NGOs, funders, and civic responders can trust and act upon.",
+        "primaryCta": "View Live Map",
+        "secondaryCta": "Partner With Us",
+        "tertiaryCta": "View Pilot Plan",
+        "trustTitle": "Built on trust and transparency",
+        "trust": {
+          "verification": "Community Verification",
+          "privacy": "Privacy-First",
+          "exports": "NGO-Ready Exports",
+          "mobile": "Mobile-Optimized",
+          "openData": "Open Data"
+        }
+      },
+      "valuePillars": {
+        "eyebrow": "Why EcoPulse",
+        "title": "Built for Trust, Designed for Impact",
+        "privacy": {
+          "title": "Privacy by Design",
+          "description": "EXIF stripping, minimal data collection, no device fingerprinting. We protect contributors while enabling coordination."
+        },
+        "verification": {
+          "title": "Verified by Community",
+          "description": "2-person verification threshold, anti-self-verification rules, and duplicate detection ensure data quality."
+        },
+        "actionable": {
+          "title": "Actionable Intelligence",
+          "description": "NGO-ready CSV exports, structured data, and photo evidence for donor reporting and resource allocation."
+        },
+        "africaNative": {
+          "title": "Africa-Native Design",
+          "description": "3G-optimized, mobile-first, icon-driven for all literacy levels. No app download required."
+        }
+      },
+      "stakes": {
+        "eyebrow": "The Challenge",
+        "title": "The Accountability Gap",
+        "quote": "Environmental issues in African communities often go unreported, unverified, or ignored—not because people don't care, but because there's no trusted system to make their voices count.",
+        "challenges": {
+          "flooding": "Flooding affects millions annually, with blocked drainage a leading cause",
+          "health": "Waste hotspots create health risks for children and families",
+          "scattered": "Response efforts are scattered and inefficient without verified data"
+        },
+        "solution": {
+          "title": "EcoPulse Changes This",
+          "description": "By putting verification power in the community's hands, we create evidence that demands attention—and enables coordinated response.",
+          "bullet1": "Community verification builds distributed trust",
+          "bullet2": "Structured data enables efficient response",
+          "bullet3": "Photo evidence creates irrefutable records"
+        }
+      },
+      "different": {
+        "eyebrow": "Our Approach",
+        "title": "Not Another 311 Platform",
+        "subtitle": "Western civic tech assumes constant internet, government trust, and institutional response. EcoPulse is built differently.",
+        "columns": {
+          "western": "Western Civic Tech",
+          "ecopulse": "EcoPulse"
+        },
+        "rows": {
+          "government": {
+            "label": "Response Model",
+            "western": "Assumes government response",
+            "ecopulse": "Community-driven verification"
+          },
+          "design": {
+            "label": "Design Priority",
+            "western": "Desktop-first design",
+            "ecopulse": "Mobile-first, 3G-optimized"
+          },
+          "workflow": {
+            "label": "User Workflow",
+            "western": "Report and wait",
+            "ecopulse": "Report, verify, and act"
+          },
+          "trust": {
+            "label": "Trust Model",
+            "western": "Institutional trust",
+            "ecopulse": "Social trust model"
+          },
+          "pricing": {
+            "label": "Accessibility",
+            "western": "$50K+/year enterprise",
+            "ecopulse": "Accessible for NGOs"
+          }
+        },
+        "tagline": "Built for communities where change comes from within."
+      },
+      "howItWorks": {
+        "eyebrow": "The Verification Loop",
+        "title": "From Unverified Report to Actionable Evidence",
+        "subtitle": "A transparent, community-driven process that creates trust and enables coordinated response.",
+        "whyMattersLabel": "Why this matters",
+        "step1": {
+          "title": "Report",
+          "description": "Share a photo, location, and clear description of the issue.",
+          "whyMatters": "Creates structured data from community observation"
+        },
+        "step2": {
+          "title": "Verify",
+          "description": "Nearby community members confirm what they see.",
+          "whyMatters": "Builds distributed trust without bureaucracy"
+        },
+        "step3": {
+          "title": "Act",
+          "description": "Partners prioritize verified issues for response.",
+          "whyMatters": "Enables evidence-based resource allocation"
+        },
+        "step4": {
+          "title": "Close",
+          "description": "Document outcomes with proof photos.",
+          "whyMatters": "Creates accountability and donor-ready evidence"
+        }
+      },
+      "useCases": {
+        "eyebrow": "Pilot Focus",
+        "title": "What the Pilot Will Address",
+        "subtitle": "Starting with two high-impact categories that are visible, verifiable, and have clear before/after states.",
+        "examplesLabel": "Examples",
+        "workflowLabel": "Expected Flow",
+        "workflow": {
+          "report": "Community reports",
+          "verify": "Verification",
+          "respond": "Coordinated response"
+        },
+        "waste": {
+          "title": "Waste & Litter",
+          "description": "Illegal dumping, refuse accumulation, and market waste affecting community health.",
+          "examples": {
+            "1": "Illegal dumping",
+            "2": "Market waste",
+            "3": "Refuse accumulation"
+          }
+        },
+        "drainage": {
+          "title": "Drainage & Flood Risk",
+          "description": "Blocked drains, flood-prone areas, and water pooling that create safety hazards.",
+          "examples": {
+            "1": "Blocked drains",
+            "2": "Flood-prone areas",
+            "3": "Water pooling"
+          }
+        },
+        "phase2Label": "Phase 2 categories:",
+        "phase2Categories": "Urban Heat, Water Quality, Air/Smoke"
+      },
+      "pilotFramework": {
+        "badge": "Pilot Targets — Not Achievements",
+        "title": "90-Day Pilot Framework",
+        "subtitle": "Our pilot is designed to test, learn, and improve—not to prove perfection. We measure what matters.",
+        "timelineLabel": "Timeline",
+        "metricsLabel": "Success Metrics (Targets)",
+        "targetLabel": "Target",
+        "timeline": {
+          "phase1": {
+            "title": "Onboard",
+            "item1": "Partner setup & training",
+            "item2": "Community onboarding",
+            "item3": "First reports & verifications"
+          },
+          "phase2": {
+            "title": "Optimize",
+            "item1": "Workflow refinement",
+            "item2": "Verification quality review",
+            "item3": "Response coordination playbooks"
+          },
+          "phase3": {
+            "title": "Measure",
+            "item1": "Outcome analysis",
+            "item2": "Document learnings",
+            "item3": "Publish pilot summary"
+          }
+        },
+        "metrics": {
+          "verifiedReports": "Verified reports/week",
+          "timeToVerified": "Time to verified",
+          "timeToResponse": "Response initiation",
+          "resolutionRate": "Resolution rate"
+        }
+      },
+      "whoItsFor": {
+        "eyebrow": "Built for Your Workflow",
+        "title": "Tailored for the Ecosystem",
+        "subtitle": "Different stakeholders, different needs—one platform that serves them all.",
+        "benefitsLabel": "What You Get",
+        "outcomeLabel": "The Outcome",
+        "communities": {
+          "title": "For Communities",
+          "description": "Transform local concerns into verifiable data. Document hazards, validate them collectively, and present undeniable evidence that demands resolution.",
+          "features": {
+            "1": "Evidence-based reporting tools",
+            "2": "Community verification protocols",
+            "3": "Transparent issue tracking"
+          },
+          "outcome": "Turn scattered complaints into cases that demand attention.",
+          "cta": "See how it works →"
+        },
+        "ngos": {
+          "title": "For NGOs & Donors",
+          "description": "Eliminate guesswork in resource allocation. Access community-verified ground truth to target interventions precisely and report on measurable outcomes.",
+          "features": {
+            "1": "Real-time needs assessment",
+            "2": "Remote impact monitoring",
+            "3": "Donor-ready CSV exports"
+          },
+          "outcome": "Target interventions with verified ground truth.",
+          "cta": "Explore partnership →"
+        },
+        "civic": {
+          "title": "For Civic Authorities",
+          "description": "Modernize urban management with citizen intelligence. Receive structured, deduplicated data on infrastructure issues for efficient prioritization.",
+          "features": {
+            "1": "Structured infrastructure data",
+            "2": "Deduplicated issue reports",
+            "3": "Public trust & engagement"
+          },
+          "outcome": "Prioritize repairs with citizen intelligence.",
+          "cta": "Start a pilot →"
+        }
+      },
+      "faq": {
+        "eyebrow": "Questions Answered",
+        "title": "Frequently Asked Questions",
+        "subtitle": "Common questions from partners, funders, and community members.",
+        "viewAll": "View all FAQs →",
+        "q1": {
+          "question": "How do you prevent false or spam reports?",
+          "answer": "EcoPulse uses community verification with a 2-person threshold, anti-self-verification rules, and duplicate detection. Reports must be verified by independent community members before being prioritized."
+        },
+        "q2": {
+          "question": "How does verification work?",
+          "answer": "Nearby community members confirm what they see by visiting the location. A report is promoted to 'verified' status when it reaches the verification threshold (2 independent verifications). Verifiers cannot verify their own reports."
+        },
+        "q3": {
+          "question": "What about privacy?",
+          "answer": "Privacy-first: we strip EXIF metadata from photos, minimize personal data collection, and avoid device fingerprinting. We encourage users not to include sensitive personal information in reports."
+        },
+        "q4": {
+          "question": "How is data exported for donor reporting?",
+          "answer": "NGO dashboards include CSV export with photo evidence, timestamps, verification status, and location data. This enables donor-ready impact reporting with verifiable evidence."
+        },
+        "q5": {
+          "question": "What's your governance structure?",
+          "answer": "EcoPulse is built by a small core team with experience in product, community operations, and engineering. Fiscal sponsorship is in progress. We are setting up responsible governance and operational partnerships for the pilot."
+        },
+        "q6": {
+          "question": "How can an NGO or civic partner help?",
+          "answer": "Partners can support community onboarding, participate in verification training, and help coordinate response workflows during the pilot. We're actively seeking pilot partners in Nigeria."
+        }
+      },
+      "cta": {
+        "urgencyBadge": "Pilot Cohort Forming • Q1 2026 • Limited Partner Slots",
+        "title": "Ready to Partner?",
+        "description": "Join a network of forward-thinking organizations using verified data to solve Africa's environmental challenges.",
+        "paths": {
+          "ngos": {
+            "audience": "For NGOs",
+            "action": "Join the Pilot",
+            "cta": "Get in touch"
+          },
+          "funders": {
+            "audience": "For Funders",
+            "action": "Review Pilot Plan",
+            "cta": "View details"
+          },
+          "communities": {
+            "audience": "For Communities",
+            "action": "See the Platform",
+            "cta": "View map"
+          }
+        },
+        "preferContact": "Prefer to reach out directly?",
+        "mainCta": "Contact Us"
+      },
+      "governance": {
+        "title": "Built Responsibly",
+        "description": "EcoPulse is built by a focused team with experience in product development, community operations, and engineering. We are setting up responsible governance for the pilot.",
+        "signals": {
+          "fiscal": "Fiscal sponsorship: In progress",
+          "dataSovereignty": "Data sovereignty: Self-hosting capable",
+          "transparency": "Open approach: Transparency by default"
+        }
+      }
+    },
+    "about": {
+      "meta": {
+        "title": "EcoPulse — About Us",
+        "description": "Learn why EcoPulse was created and meet the team behind community-verified environmental reporting for African communities."
+      },
+      "hero": {
+        "badge": "Our Story",
+        "title": "Built From Community Need",
+        "originStory": "We saw communities frustrated by environmental issues that went unreported—not because people didn't care, but because there was no trusted system to make their voices count. EcoPulse was born from that gap.",
+        "intro": "EcoPulse is a community-powered platform for reporting and verifying waste and drainage issues with photo evidence. We add community verification to improve trust, reduce noise, and enable coordinated action—starting with a measurable pilot in African communities."
+      },
+      "values": {
+        "eyebrow": "What Guides Us",
+        "title": "Our Core Values",
+        "communityFirst": {
+          "title": "Community First",
+          "description": "We build with communities, not for them. Local knowledge is the foundation of everything we do."
+        },
+        "privacyByDesign": {
+          "title": "Privacy by Design",
+          "description": "Minimal data collection, EXIF stripping, no device fingerprinting. Protection is built into every feature."
+        },
+        "verifiedTrust": {
+          "title": "Verified Trust",
+          "description": "2-person verification threshold, anti-self-verification rules, and duplicate detection ensure data quality."
+        },
+        "accessibleDesign": {
+          "title": "Radically Accessible",
+          "description": "Mobile-first, 3G-optimized, icon-driven for all literacy levels. No app download required."
+        }
+      },
+      "different": {
+        "eyebrow": "Why We're Different",
+        "title": "Built for African Realities",
+        "intro": "Western civic tech assumes constant internet, government trust, and institutional response. EcoPulse is built differently—designed for the infrastructure and social dynamics of African communities.",
+        "localContext": {
+          "title": "Local Context",
+          "description": "Designed for African infrastructure realities: 3G networks, mobile-first users, varying literacy levels."
+        },
+        "communityOwned": {
+          "title": "Community-Owned Data",
+          "description": "Communities maintain ownership of their reports. We provide the tools; they own the evidence."
+        },
+        "privacyFirst": {
+          "title": "Privacy-First",
+          "description": "No surveillance, no data monetization. We strip EXIF, minimize collection, and protect contributors."
+        },
+        "comparisonLabel": "How We Compare",
+        "comparison": {
+          "western": "Western Civic Tech",
+          "ecopulse": "EcoPulse",
+          "topDown": "Top-down government focus",
+          "communityDriven": "Community-driven action",
+          "dataExtract": "Data extraction model",
+          "dataEmpower": "Data empowerment model"
+        }
+      },
+      "team": {
+        "eyebrow": "The Team",
+        "title": "Meet the People Behind EcoPulse",
+        "description": "A small, mission-driven team with experience in product, community operations, and engineering—building tools for communities that need them most.",
+        "members": {
+          "founder": {
+            "initials": "AA",
+            "name": "Ali Ahmad",
+            "bio": "Product strategist with a passion for civic tech and community empowerment. Leading vision and product development."
+          },
+          "community": {
+            "initials": "CM",
+            "name": "Community Team",
+            "bio": "Building partnerships and supporting community onboarding during the pilot phase."
+          },
+          "engineering": {
+            "initials": "ET",
+            "name": "Engineering Team",
+            "bio": "Designing and building the mobile-first, privacy-respecting infrastructure."
+          }
+        },
+        "fiscalStatus": "Fiscal sponsorship: In active discussion with sponsors"
+      },
+      "cta": {
+        "title": "Ready to Partner?",
+        "description": "We're seeking NGO partners, civic responders, and funders who share our vision for community-driven environmental action.",
+        "pilotButton": "Explore Pilot Plan",
+        "contactButton": "Get in Touch"
+      }
+    },
+    "mission": {
+      "meta": {
+        "title": "EcoPulse — Mission & Vision",
+        "description": "Our mission is to build trusted environmental data infrastructure that enables African communities to document, verify, and address environmental challenges through collective action."
+      },
+      "hero": {
+        "badge": "Our Mission",
+        "vision": "Environmental justice starts with trusted data.",
+        "mission": "We believe every community deserves the tools to document environmental issues with dignity, verify them through collective trust, and transform evidence into coordinated action. EcoPulse is building the infrastructure to make this possible—one verified report at a time."
+      },
+      "beliefs": {
+        "eyebrow": "What We Believe",
+        "title": "Our Manifesto",
+        "belief1": "Communities are experts in their own neighborhoods. Local knowledge is the foundation of trusted data.",
+        "belief2": "Privacy is a right, not a privilege. We protect contributors because trust enables action.",
+        "belief3": "Technology should adapt to communities, not the other way around. Mobile-first, low-bandwidth, accessible.",
+        "belief4": "Verification without bureaucracy. Neighbors validating neighbors creates distributed trust at scale."
+      },
+      "principles": {
+        "eyebrow": "How We Work",
+        "title": "Guiding Principles",
+        "subtitle": "These principles shape every decision we make—from product design to partner relationships.",
+        "communityLed": {
+          "title": "Community-Led",
+          "description": "Trust comes from local knowledge. We build with communities, not for them."
+        },
+        "privacy": {
+          "title": "Privacy by Design",
+          "description": "Minimal data collection, EXIF stripping, no device fingerprinting. Protection is built-in."
+        },
+        "accessibility": {
+          "title": "Radical Accessibility",
+          "description": "Mobile-first, 3G-optimized, icon-driven for all literacy levels. No app download required."
+        },
+        "transparency": {
+          "title": "Transparent Process",
+          "description": "Clear status updates, open learning during pilot, honest about what we know and don't know."
+        },
+        "safety": {
+          "title": "Safety & Dignity",
+          "description": "Respectful design that honors the communities we serve. Safety is non-negotiable."
+        }
+      },
+      "impact": {
+        "eyebrow": "Measuring What Matters",
+        "title": "How We Define Success",
+        "description": "We measure impact by community outcomes, not platform vanity metrics. Our success is defined by the change we enable, not the data we collect.",
+        "notLabel": "What We Don't Optimize For",
+        "not": {
+          "vanity": "User counts or engagement metrics",
+          "extraction": "Data monetization or surveillance",
+          "dependency": "Creating platform dependency"
+        },
+        "metrics": {
+          "reports": {
+            "title": "Verification Quality",
+            "description": "The percentage of reports that achieve community verification, indicating data trustworthiness."
+          },
+          "verification": {
+            "title": "Time to Verified",
+            "description": "How quickly reports achieve verification, measuring community engagement and process efficiency."
+          },
+          "response": {
+            "title": "Response Outcomes",
+            "description": "What happens after verification—documented response attempts and resolution rates, defined with partners."
+          }
+        },
+        "philosophy": "We succeed when communities can trust their own data and partners can act on it."
+      },
+      "cta": {
+        "title": "Join Our Mission",
+        "description": "We're seeking NGO partners, civic responders, and funders who share our vision for community-driven environmental action.",
+        "pilotButton": "Explore Pilot Plan",
+        "aboutButton": "Meet the Team"
+      }
+    },
+    "pilot": {
+      "meta": {
+        "title": "EcoPulse — 90-Day Pilot Plan",
+        "description": "A structured 90-day pilot to evaluate community reporting, verification quality, and response coordination for waste and drainage issues in African communities."
+      },
+      "hero": {
+        "badge": "Seeking Partners",
+        "title": "90-Day Pilot Framework",
+        "intro": "A structured pilot designed to test adoption, verification quality, and response coordination for waste and drainage issues. We measure what matters and share learnings openly.",
+        "stats": {
+          "duration": "90",
+          "durationLabel": "Days",
+          "locations": "2-3",
+          "locationsLabel": "Communities",
+          "categories": "2",
+          "categoriesLabel": "Issue Types"
+        }
+      },
+      "scope": {
+        "eyebrow": "What We're Testing",
+        "title": "Pilot Scope",
+        "description": "This pilot focuses on proving the core hypothesis: community verification can create trusted environmental data that enables coordinated response.",
+        "geography": {
+          "title": "Target Communities",
+          "description": "Selected communities in Nigeria (finalizing with NGO partners). Urban and peri-urban focus."
+        },
+        "verification": {
+          "title": "Verification Model",
+          "description": "2-person verification threshold with anti-self-verification rules and duplicate detection."
+        },
+        "success": {
+          "title": "Success Definition",
+          "description": "Verified issues receive documented response attempts. Resolution outcomes measured with partners."
+        },
+        "focus": {
+          "title": "Issue Categories",
+          "waste": {
+            "title": "Waste & Litter",
+            "description": "Illegal dumping, refuse accumulation, market waste affecting community health."
+          },
+          "drainage": {
+            "title": "Drainage & Flood Risk",
+            "description": "Blocked drains, flood-prone areas, water pooling creating safety hazards."
+          },
+          "note": "Phase 2 will expand to urban heat, water quality, and air/smoke issues."
+        }
+      },
+      "timeline": {
+        "eyebrow": "Implementation Phases",
+        "title": "90-Day Timeline",
+        "phase1": {
+          "days": "Days 0–30",
+          "title": "Onboard & Launch",
+          "description": "Partner integration, community onboarding, and first reports/verifications.",
+          "activity1": "Partner setup and training",
+          "activity2": "Community champion recruitment",
+          "activity3": "First reports and verifications"
+        },
+        "phase2": {
+          "days": "Days 31–60",
+          "title": "Optimize & Learn",
+          "description": "Workflow refinement based on early data, verification quality monitoring.",
+          "activity1": "Workflow refinement based on data",
+          "activity2": "Verification quality review",
+          "activity3": "Response coordination playbooks"
+        },
+        "phase3": {
+          "days": "Days 61–90",
+          "title": "Measure & Report",
+          "description": "Outcome analysis, documentation, and public pilot summary.",
+          "activity1": "Comprehensive outcome analysis",
+          "activity2": "Document learnings and insights",
+          "activity3": "Publish pilot summary report"
+        }
+      },
+      "metrics": {
+        "eyebrow": "What We Measure",
+        "title": "Success Metrics",
+        "subtitle": "Targets, not achievements. We're transparent about what we're testing and what we're learning.",
+        "reports": {
+          "title": "Verified Reports",
+          "target": "50+/week",
+          "description": "Reports achieving community verification"
+        },
+        "verification": {
+          "title": "Time to Verified",
+          "target": "<24h",
+          "description": "Median time from report to verification"
+        },
+        "response": {
+          "title": "Response Initiation",
+          "target": "<72h",
+          "description": "Verified issues receiving response attempt"
+        },
+        "resolution": {
+          "title": "Resolution Rate",
+          "target": "TBD",
+          "description": "Defined with partners during pilot"
+        },
+        "disclaimer": "These are targets for the pilot, not claims of current performance. We'll share actual results transparently."
+      },
+      "risks": {
+        "eyebrow": "Transparency",
+        "title": "Risks & Mitigations",
+        "subtitle": "We're honest about challenges. Here's how we're addressing known risks.",
+        "riskLabel": "Risk",
+        "mitigationLabel": "Mitigation",
+        "falseReports": {
+          "risk": "False or misleading reports could undermine trust in the data.",
+          "mitigation": "2-person verification threshold, deduplication, anti-self-verification rules, and photo evidence requirements."
+        },
+        "privacy": {
+          "risk": "Privacy concerns could limit community participation.",
+          "mitigation": "EXIF stripping, minimal data collection, no device fingerprinting, and anonymous reporting option."
+        },
+        "adoption": {
+          "risk": "Low adoption could limit data volume and verification quality.",
+          "mitigation": "Partner-led community onboarding, local champions, mobile-first UX, and no app download required."
+        }
+      },
+      "partners": {
+        "eyebrow": "Who We're Looking For",
+        "title": "Partner With Us",
+        "whatYouGetLabel": "What you get",
+        "ngos": {
+          "title": "NGO Partners",
+          "description": "Organizations working on environmental issues in African communities who can help with community access and onboarding.",
+          "benefit1": "Access to verified community data",
+          "benefit2": "CSV exports for donor reporting",
+          "benefit3": "Co-authorship on pilot findings"
+        },
+        "responders": {
+          "title": "Civic Responders",
+          "description": "Local government, waste management, or community organizations who can coordinate response to verified issues.",
+          "benefit1": "Prioritized, verified issue alerts",
+          "benefit2": "Response coordination tools",
+          "benefit3": "Documented outcome tracking"
+        },
+        "funders": {
+          "title": "Funders & Sponsors",
+          "description": "Organizations supporting civic tech, environmental justice, or African innovation who want to support a measurable pilot.",
+          "benefit1": "Transparent pilot metrics",
+          "benefit2": "Regular progress reporting",
+          "benefit3": "Impact documentation"
+        }
+      },
+      "cta": {
+        "title": "Ready to Partner?",
+        "description": "We're actively seeking NGO partners, civic responders, and funders for the pilot. Let's discuss how we can work together.",
+        "contactButton": "Get in Touch",
+        "faqButton": "Read FAQ"
+      }
+    },
+    "faq": {
+      "meta": {
+        "title": "EcoPulse — FAQ",
+        "description": "Answers to common questions about reporting, verification, privacy, partnerships, and impact with EcoPulse."
+      },
+      "hero": {
+        "badge": "Got Questions?",
+        "title": "Frequently Asked Questions",
+        "subtitle": "Everything you need to know about EcoPulse—from how reporting works to partnership opportunities."
+      },
+      "categories": {
+        "howItWorks": {
+          "title": "How It Works",
+          "description": "Understanding the reporting and verification process",
+          "questions": {
+            "reporting": {
+              "q": "How do I report an environmental issue?",
+              "a": "Take a photo of the issue, share your location, select a category (waste or drainage), and add a brief description of at least 60 characters. You can report anonymously or create an account to track your contributions."
+            },
+            "verification": {
+              "q": "How does community verification work?",
+              "a": "Once a report is submitted, nearby community members can confirm what they see. When a report reaches 2 verifications from different people, it's promoted to 'verified' status. This creates distributed trust without bureaucracy."
+            },
+            "anonymous": {
+              "q": "Can I report anonymously?",
+              "a": "Yes. Anonymous reporting is fully supported. We use a temporary session ID (stored locally) to track your reports—not device fingerprinting. If you create an account later, you can claim your anonymous reports."
+            }
+          }
+        },
+        "privacy": {
+          "title": "Privacy & Data",
+          "description": "How we protect contributors and handle data",
+          "questions": {
+            "dataCollection": {
+              "q": "What data do you collect?",
+              "a": "We collect only what's necessary: photo, location, category, and description. We strip EXIF data from photos, don't use device fingerprinting, and don't sell or monetize your data. See our Privacy Policy for full details."
+            },
+            "photoPrivacy": {
+              "q": "What happens to my photos?",
+              "a": "Photos are processed to remove EXIF metadata (which can contain GPS, device info, and timestamps), resized for efficiency, and compressed. We never share raw, unprocessed photos."
+            },
+            "deletion": {
+              "q": "Can I delete my reports?",
+              "a": "Authenticated users can delete their own reports. For anonymous reports, contact us with your session ID (found in your browser's local storage). We're working on a self-service deletion feature."
+            }
+          }
+        },
+        "pilot": {
+          "title": "Pilot Program",
+          "description": "About our 90-day pilot and partnership opportunities",
+          "questions": {
+            "pilotScope": {
+              "q": "What is the 90-day pilot?",
+              "a": "The pilot is a structured test of EcoPulse in 2-3 Nigerian communities. We're measuring verification quality, time-to-response, and resolution outcomes. We share learnings openly, including what doesn't work."
+            },
+            "partnership": {
+              "q": "How can my organization partner with EcoPulse?",
+              "a": "We're seeking NGO partners (for community access), civic responders (for issue response), and funders (for pilot support). Contact us to discuss how we can work together."
+            },
+            "metrics": {
+              "q": "What metrics are you tracking?",
+              "a": "We track verification rate, time-to-verified, response initiation rate, and resolution outcomes. These are targets, not achievements—we share actuals transparently throughout the pilot."
+            }
+          }
+        },
+        "impact": {
+          "title": "Impact & Sustainability",
+          "description": "Our approach to creating lasting change",
+          "questions": {
+            "resolution": {
+              "q": "Does EcoPulse guarantee issue resolution?",
+              "a": "No. EcoPulse provides verified evidence and coordination tools—but resolution depends on partners and community action. Our role is to strengthen the data and reduce friction, not replace response systems."
+            },
+            "sustainability": {
+              "q": "How will EcoPulse sustain itself?",
+              "a": "We're exploring fiscally-sponsored nonprofit status with grant funding for the pilot. Long-term, we're considering partner subscriptions for advanced features and API access—never data monetization."
+            },
+            "expansion": {
+              "q": "Will EcoPulse expand beyond Nigeria?",
+              "a": "If the pilot validates our approach, we plan to expand to other African communities. Our mobile-first, low-bandwidth design is built to work across diverse infrastructure contexts."
+            }
+          }
+        }
+      },
+      "cta": {
+        "title": "Still Have Questions?",
+        "description": "We're happy to answer questions from potential partners, funders, or community members.",
+        "contactButton": "Get in Touch",
+        "pilotButton": "Explore Pilot Plan"
+      }
+    },
+    "contact": {
+      "meta": {
+        "title": "EcoPulse — Contact Us",
+        "description": "Get in touch with EcoPulse to discuss partnerships, pilot participation, or funding opportunities. We respond to serious inquiries within 48 hours."
+      },
+      "hero": {
+        "badge": "Let's Connect",
+        "title": "Partner With Us",
+        "subtitle": "We're actively seeking NGO partners, civic responders, and funders for our 90-day pilot. Whether you have questions or want to collaborate, we'd love to hear from you."
+      },
+      "partnerTypes": {
+        "eyebrow": "Who We're Looking For",
+        "title": "How You Can Help",
+        "ngo": {
+          "title": "NGO Partners",
+          "description": "Community access, onboarding support, and local expertise"
+        },
+        "responder": {
+          "title": "Civic Responders",
+          "description": "Issue response coordination and outcome tracking"
+        },
+        "funder": {
+          "title": "Funders & Sponsors",
+          "description": "Pilot funding and sustainability support"
+        }
+      },
+      "form": {
+        "title": "Send Us a Message",
+        "description": "Tell us about your organization and how you'd like to work together.",
+        "name": "Name",
+        "namePlaceholder": "Your name",
+        "email": "Email",
+        "emailPlaceholder": "you@example.com",
+        "organization": "Organization (optional)",
+        "organizationPlaceholder": "Your organization",
+        "message": "Message",
+        "messagePlaceholder": "Tell us about your interest in EcoPulse and how you'd like to partner...",
+        "submit": "Send Message",
+        "submitting": "Sending..."
+      },
+      "emails": {
+        "title": "Contact Directory",
+        "description": "Reach the right team directly",
+        "general": {
+          "label": "General Inquiries",
+          "description": "Questions, feedback & information"
+        },
+        "community": {
+          "label": "NGO & Community Partners",
+          "description": "Partnership & collaboration"
+        },
+        "sponsor": {
+          "label": "Sponsors & Funders",
+          "description": "Sponsorship & grant opportunities"
+        },
+        "finance": {
+          "label": "Finance & Grants",
+          "description": "Financial & grant administration"
+        }
+      },
+      "responseTime": {
+        "title": "Response Time",
+        "description": "We respond to partnership inquiries within 48 hours. For general questions, check our FAQ first—many common questions are answered there."
+      },
+      "quickLinks": {
+        "title": "Before You Reach Out",
+        "pilot": "Explore Pilot Plan",
+        "faq": "Read FAQ",
+        "about": "Learn About Us"
+      },
+      "success": "Thank you! Your message has been sent. We'll respond within 48 hours.",
+      "error": "We couldn't send your message. Please try again or email us directly."
+    },
+    "privacy": {
+      "meta": {
+        "title": "EcoPulse — Privacy Policy",
+        "description": "Learn how EcoPulse protects your data with privacy-first design, minimal collection, and transparent practices. GDPR-aligned and built for trust."
+      },
+      "badge": "Privacy Policy",
+      "title": "Privacy Policy",
+      "subtitle": "Your privacy is fundamental to our mission. We collect only what's necessary, protect it rigorously, and give you control over your data.",
+      "effectiveDate": "Effective Date: December 25, 2024 | Last Updated: December 25, 2024",
+      "principles": {
+        "title": "Our Privacy Principles",
+        "minimal": {
+          "title": "Minimal Collection",
+          "description": "We collect only the data essential for platform functionality—nothing more."
+        },
+        "transparent": {
+          "title": "Full Transparency",
+          "description": "Clear explanations of what we collect, why, and how long we keep it."
+        },
+        "secure": {
+          "title": "Security First",
+          "description": "Industry-standard encryption and access controls protect your information."
+        },
+        "respectful": {
+          "title": "User Control",
+          "description": "You have rights over your data—access, correct, delete, or export anytime."
+        }
+      },
+      "dataCollection": {
+        "title": "Data We Collect",
+        "intro": "We collect different types of data depending on how you use EcoPulse. Here's a clear breakdown:",
+        "reports": {
+          "title": "Environmental Reports",
+          "content": "Photos, GPS coordinates, category selection, and written descriptions of environmental issues. Location data is essential for mapping and verification purposes."
+        },
+        "verification": {
+          "title": "Verification Data",
+          "content": "Your verification status (confirm, dispute, or can't verify), optional notes, and timestamp. This builds community trust and validates reports."
+        },
+        "account": {
+          "title": "Account Information",
+          "content": "Email address and authentication data for registered users. Anonymous users may submit reports without an account using session-based tracking."
+        },
+        "technical": {
+          "title": "Technical Data",
+          "content": "Device type, browser version, and general location (country/region) for platform optimization. We do NOT use device fingerprinting or invasive tracking."
+        }
+      },
+      "photoHandling": {
+        "title": "Photo Privacy & Handling",
+        "intro": "Photos are critical evidence, but we handle them with privacy in mind:",
+        "exif": "EXIF metadata is automatically stripped from all photos, removing camera info, timestamps, and embedded GPS data",
+        "resize": "Images are resized and compressed for efficient storage while maintaining quality for verification",
+        "storage": "Photos are stored securely on encrypted infrastructure with access controls",
+        "access": "Only verified reports are publicly visible; pending reports have restricted access"
+      },
+      "dataUsage": {
+        "title": "How We Use Your Data",
+        "intro": "Your data serves specific, legitimate purposes:",
+        "platform": {
+          "title": "Platform Operation",
+          "description": "Display reports on maps, enable verification, and coordinate responses"
+        },
+        "partners": {
+          "title": "Partner Coordination",
+          "description": "Share verified data with NGO partners for issue resolution"
+        },
+        "analytics": {
+          "title": "Aggregate Analytics",
+          "description": "Understand usage patterns to improve the platform (anonymized)"
+        },
+        "improvement": {
+          "title": "Service Improvement",
+          "description": "Identify bugs, optimize performance, and develop new features"
+        }
+      },
+      "dataSharing": {
+        "title": "Data Sharing & Third Parties",
+        "commitment": "We never sell your data. Period.",
+        "never": "Your personal information is not sold, rented, or traded to advertisers, data brokers, or any third parties for commercial purposes.",
+        "exceptions": "We may share data with: (1) NGO and government partners for issue resolution (verified reports only), (2) Infrastructure providers essential for platform operation (Supabase, Vercel) under strict data processing agreements, (3) Legal authorities when required by law or to protect safety."
+      },
+      "retention": {
+        "title": "Data Retention",
+        "intro": "We keep data only as long as necessary for the stated purposes:",
+        "table": {
+          "dataType": "Data Type",
+          "period": "Retention Period"
+        },
+        "reports": {
+          "type": "Environmental Reports",
+          "period": "Retained while issue is active; archived after resolution"
+        },
+        "account": {
+          "type": "Account Data",
+          "period": "Until account deletion or 2 years of inactivity"
+        },
+        "session": {
+          "type": "Anonymous Sessions",
+          "period": "7 days after last activity"
+        },
+        "analytics": {
+          "type": "Analytics Data",
+          "period": "12 months (anonymized and aggregated)"
+        }
+      },
+      "rights": {
+        "title": "Your Data Rights",
+        "intro": "You have the following rights regarding your personal data, aligned with GDPR and NDPR principles:",
+        "access": {
+          "title": "Right to Access",
+          "description": "Request a copy of all data we hold about you"
+        },
+        "correction": {
+          "title": "Right to Correction",
+          "description": "Update or correct inaccurate personal information"
+        },
+        "deletion": {
+          "title": "Right to Deletion",
+          "description": "Request erasure of your data (subject to legal requirements)"
+        },
+        "portability": {
+          "title": "Data Portability",
+          "description": "Export your data in a machine-readable format"
+        },
+        "objection": {
+          "title": "Right to Object",
+          "description": "Object to certain types of data processing"
+        },
+        "withdraw": {
+          "title": "Withdraw Consent",
+          "description": "Revoke previously given consent at any time"
+        }
+      },
+      "security": {
+        "title": "Security Measures",
+        "intro": "We implement comprehensive security measures to protect your data:",
+        "encryption": "TLS encryption for all data in transit; AES-256 encryption for data at rest",
+        "access": "Role-based access controls limiting who can view personal data",
+        "audit": "Regular security audits and vulnerability assessments",
+        "rls": "Row-Level Security (RLS) ensuring users can only access their own data"
+      },
+      "international": {
+        "title": "International Data Transfers",
+        "content": "Your data may be processed in countries outside your residence for platform operation. We ensure appropriate safeguards through data processing agreements and compliance with applicable data protection laws, including GDPR and Nigeria's NDPR."
+      },
+      "children": {
+        "title": "Children's Privacy",
+        "content": "EcoPulse is not intended for children under 13 years of age. We do not knowingly collect personal information from children. If you believe a child has provided us with personal data, please contact us immediately for deletion."
+      },
+      "updates": {
+        "title": "Policy Updates",
+        "content": "We may update this Privacy Policy to reflect changes in our practices or legal requirements. Material changes will be notified via email (for registered users) or prominent notice on the platform. Continued use after updates constitutes acceptance of the revised policy."
+      },
+      "contact": {
+        "title": "Privacy Questions?",
+        "intro": "For any privacy-related questions, data access requests, or concerns, please contact our privacy team:",
+        "form": "Use Contact Form"
+      }
+    },
+    "terms": {
+      "meta": {
+        "title": "EcoPulse — Terms of Service",
+        "description": "Terms of Service governing use of the EcoPulse platform for community-driven environmental reporting and verification."
+      },
+      "badge": "Legal Agreement",
+      "title": "Terms of Service",
+      "subtitle": "These terms govern your use of EcoPulse. Please read them carefully before using our platform.",
+      "effectiveDate": "Effective Date: December 25, 2024 | Last Updated: December 25, 2024",
+      "summary": {
+        "title": "Quick Summary",
+        "access": "Free access to report and verify environmental issues in your community",
+        "content": "You retain ownership of your content but grant us license to display it",
+        "conduct": "Be truthful, respectful, and don't misuse the platform",
+        "liability": "We facilitate coordination but don't guarantee issue resolution"
+      },
+      "acceptance": {
+        "title": "Acceptance of Terms",
+        "intro": "By accessing or using EcoPulse ('the Platform'), you agree to be bound by these Terms of Service ('Terms'). These Terms constitute a legally binding agreement between you and EcoPulse.",
+        "warning": "If you do not agree to these Terms, do not use the Platform. Your continued use constitutes acceptance of any updates to these Terms."
+      },
+      "service": {
+        "title": "Description of Service",
+        "intro": "EcoPulse is a community-driven platform for environmental issue reporting, verification, and coordination. Our services include:",
+        "reporting": "Submitting reports of environmental issues with photos, location, and descriptions",
+        "verification": "Community verification of reported issues to build trusted data",
+        "coordination": "Connecting verified reports with NGO partners and civic responders",
+        "exports": "Data exports for partners to enable resource allocation and response"
+      },
+      "accounts": {
+        "title": "User Accounts",
+        "intro": "You may use EcoPulse with or without a registered account:",
+        "registration": {
+          "title": "Account Registration",
+          "content": "You must provide accurate information and keep your account credentials secure. You are responsible for all activity under your account."
+        },
+        "security": {
+          "title": "Account Security",
+          "content": "Choose a strong password and notify us immediately if you suspect unauthorized access. We are not liable for losses from unauthorized account use."
+        },
+        "anonymous": {
+          "title": "Anonymous Access",
+          "content": "You may submit reports anonymously. Anonymous reports use session-based tracking and can be claimed by registering an account within 7 days."
+        },
+        "termination": {
+          "title": "Account Termination",
+          "content": "We may suspend or terminate accounts that violate these Terms. You may delete your account at any time through account settings."
+        }
+      },
+      "userContent": {
+        "title": "User Content",
+        "intro": "You are responsible for all content you submit to EcoPulse, including reports, photos, and verifications.",
+        "license": {
+          "title": "License Grant",
+          "content": "By submitting content, you grant EcoPulse a worldwide, non-exclusive, royalty-free license to use, display, reproduce, and distribute your content for the purpose of operating the Platform and coordinating environmental responses. This license continues even if you delete your account, for content already shared with partners."
+        },
+        "responsibility": {
+          "title": "Content Responsibility",
+          "content": "You represent that you own or have the right to submit all content, and that it does not violate any third-party rights, including privacy, intellectual property, or other legal rights."
+        },
+        "moderation": {
+          "title": "Content Moderation",
+          "content": "We reserve the right to remove, modify, or restrict access to any content that violates these Terms or is deemed harmful, at our sole discretion and without prior notice."
+        }
+      },
+      "acceptable": {
+        "title": "Acceptable Use Policy",
+        "intro": "You agree to use EcoPulse in a lawful, ethical, and respectful manner.",
+        "prohibited": {
+          "title": "Prohibited Activities",
+          "illegal": "Uploading illegal content or using the Platform for unlawful purposes",
+          "harassment": "Harassing, threatening, or intimidating other users or community members",
+          "falseReports": "Submitting intentionally false, misleading, or fraudulent reports",
+          "personalData": "Including sensitive personal information about others (faces, addresses, IDs) in reports",
+          "spam": "Spamming, automated submissions, or manipulation of the verification system",
+          "interference": "Attempting to interfere with Platform operation, security, or other users' access"
+        }
+      },
+      "verification": {
+        "title": "Verification Guidelines",
+        "intro": "Verification is central to EcoPulse's trust model. When verifying reports, you agree to:",
+        "honesty": "Verify honestly based on your direct observation or knowledge",
+        "noSelf": "Not verify your own reports (the system prevents self-verification)",
+        "proximity": "Only verify reports in areas you can reasonably assess",
+        "objectivity": "Remain objective and not let personal relationships affect your verification"
+      },
+      "ip": {
+        "title": "Intellectual Property",
+        "platform": "The EcoPulse platform, including its design, code, logos, and branding, is owned by EcoPulse and protected by intellectual property laws. You may not copy, modify, or distribute any part of the Platform without written permission.",
+        "data": "Aggregated, anonymized data from the Platform may be used for research, reporting, and advocacy purposes. Individual user data is protected under our Privacy Policy."
+      },
+      "disclaimers": {
+        "title": "Disclaimers",
+        "noGuarantee": {
+          "title": "No Guarantee of Resolution",
+          "content": "EcoPulse facilitates reporting and coordination but does not guarantee that any reported issue will be resolved. Response depends on partner availability, resources, and priorities."
+        },
+        "asIs": {
+          "title": "Service 'As Is'",
+          "content": "The Platform is provided 'as is' without warranties of any kind, express or implied, including merchantability, fitness for a particular purpose, or non-infringement."
+        },
+        "availability": {
+          "title": "Service Availability",
+          "content": "We strive for continuous availability but do not guarantee uninterrupted access. The Platform may be unavailable due to maintenance, updates, or circumstances beyond our control."
+        }
+      },
+      "liability": {
+        "title": "Limitation of Liability",
+        "intro": "To the maximum extent permitted by law:",
+        "content": "EcoPulse and its officers, directors, employees, and partners shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or goodwill, arising from your use of the Platform. Our total liability for any claim shall not exceed the amount you paid us (if any) in the 12 months preceding the claim."
+      },
+      "indemnification": {
+        "title": "Indemnification",
+        "content": "You agree to indemnify, defend, and hold harmless EcoPulse and its affiliates, officers, directors, employees, and partners from any claims, damages, losses, or expenses (including legal fees) arising from your use of the Platform, violation of these Terms, or infringement of any third-party rights."
+      },
+      "governing": {
+        "title": "Governing Law",
+        "content": "These Terms are governed by and construed in accordance with the laws of the Federal Republic of Nigeria, without regard to conflict of law principles. Any disputes shall be resolved in the courts of Lagos, Nigeria, and you consent to personal jurisdiction in such courts."
+      },
+      "changes": {
+        "title": "Changes to Terms",
+        "content": "We may modify these Terms at any time. Material changes will be notified via email (for registered users) or prominent notice on the Platform at least 14 days before taking effect. Continued use after changes constitutes acceptance of the updated Terms."
+      },
+      "contact": {
+        "title": "Legal Questions?",
+        "intro": "For legal inquiries, Terms clarification, or formal notices, please contact our legal team:",
+        "privacy": "View Privacy Policy"
+      }
+    },
+    "footer": {
+      "tagline": "EcoPulse helps communities report, verify, and coordinate action on waste and drainage issues—transforming scattered concerns into actionable evidence.",
+      "mission": "Building trusted environmental data infrastructure for African communities, one verified report at a time.",
+      "navTitle": "Navigation",
+      "resourcesTitle": "Resources",
+      "contactTitle": "Contact",
+      "legalTitle": "Legal",
+      "email": "info@ecopulse.app",
+      "location": "Lagos, Nigeria",
+      "newsletterTitle": "Stay Updated",
+      "newsletterDescription": "Get pilot updates and impact reports delivered to your inbox.",
+      "subscribeButton": "Get Updates",
+      "copyright": "All rights reserved.",
+      "madeWith": "Built for African communities"
+    }
+  },
   "common": {
     "submit": "Submit",
     "cancel": "Cancel",

@@ -2,12 +2,8 @@
 
 import Link from 'next/link';
 import { HugeiconsIcon } from '@hugeicons/react';
-import {
-  AlertCircleIcon,
-  Home01Icon,
-  Location01Icon,
-  Leaf01Icon,
-} from '@hugeicons/core-free-icons';
+import { AlertCircleIcon, Home01Icon, Location01Icon } from '@hugeicons/core-free-icons';
+import { EcoPulseLogo } from '@/components/brand';
 
 /**
  * Global Not Found Page
@@ -53,10 +49,10 @@ export default function NotFound() {
       </div>
 
       {/* Footer */}
-      <p className="mt-12 text-sm text-gray-400 flex items-center gap-2">
-        <HugeiconsIcon icon={Leaf01Icon} size={16} className="text-green-500" />
-        EcoPulse - Community Environmental Action
-      </p>
+      <div className="mt-12 flex items-center gap-2 text-sm text-gray-400">
+        <EcoPulseLogo size="xs" />
+        <span>- Community Environmental Action</span>
+      </div>
     </div>
   );
 }

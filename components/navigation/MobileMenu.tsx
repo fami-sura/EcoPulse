@@ -49,7 +49,13 @@ interface NavItem {
 }
 
 const allNavItems: NavItem[] = [
-  { href: '/', icon: Home03Icon, ariaLabel: 'Navigate to Map', labelKey: 'map', visibility: 'all' },
+  {
+    href: '/map',
+    icon: Home03Icon,
+    ariaLabel: 'Navigate to Map',
+    labelKey: 'map',
+    visibility: 'all',
+  },
   {
     href: '/profile/reports',
     icon: File02Icon,
@@ -92,8 +98,8 @@ export function MobileMenu() {
 
   const isActive = useCallback(
     (href: string) => {
-      if (href === '/') {
-        return pathnameWithoutLocale === '/' || pathnameWithoutLocale === '';
+      if (href === '/map') {
+        return pathnameWithoutLocale === '/map' || pathnameWithoutLocale.startsWith('/map/');
       }
       return pathnameWithoutLocale.startsWith(href);
     },

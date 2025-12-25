@@ -1,8 +1,7 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { LoginForm } from '@/components/auth';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { HugeiconsIcon } from '@hugeicons/react';
-import { Leaf01Icon } from '@hugeicons/core-free-icons';
+import { EcoPulseIcon } from '@/components/brand';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -32,8 +31,8 @@ export default async function LoginPage({ params, searchParams }: Props) {
     <div className="min-h-[calc(100vh-4rem)] flex items-center justify-center px-4 py-8">
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
-          <div className="mx-auto w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-4">
-            <HugeiconsIcon icon={Leaf01Icon} size={28} className="text-green-600" />
+          <div className="mx-auto w-16 h-16 flex items-center justify-center mb-4">
+            <EcoPulseIcon size="lg" />
           </div>
           <CardTitle className="text-2xl">{t('title')}</CardTitle>
           <CardDescription>Welcome back! Sign in to continue.</CardDescription>

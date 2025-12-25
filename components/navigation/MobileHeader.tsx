@@ -22,7 +22,8 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { UserIcon, Logout01Icon, Settings02Icon, Leaf01Icon } from '@hugeicons/core-free-icons';
+import { UserIcon, Logout01Icon, Settings02Icon } from '@hugeicons/core-free-icons';
+import { EcoPulseLogo } from '@/components/brand';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { cn } from '@/lib/utils';
 import { useAuthStore } from '@/stores/authStore';
@@ -138,14 +139,9 @@ export function MobileHeader() {
       {/* Left: Hamburger Menu */}
       <MobileMenu />
 
-      {/* Center: Logo with Professional Icon */}
-      <Link
-        href="/"
-        className="flex items-center gap-1 text-xl font-semibold text-green-600"
-        aria-label="EcoPulse - Go to homepage"
-      >
-        <HugeiconsIcon icon={Leaf01Icon} size={28} aria-hidden="true" className="text-green-600" />
-        <span>EcoPulse</span>
+      {/* Center: Logo with Official Brand Mark */}
+      <Link href="/" className="flex items-center" aria-label="EcoPulse - Go to homepage">
+        <EcoPulseLogo size="sm" />
       </Link>
 
       {/* Right: User Avatar (only when authenticated) or spacer */}
