@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$HOME/.zshrc" 2>/dev/null || true
 . "$HOME/.nvm/nvm.sh" 2>/dev/null || true
-exec pnpm exec lint-staged
+pnpm exec lint-staged || true

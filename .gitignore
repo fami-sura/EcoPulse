@@ -78,6 +78,3 @@ _bmad-output/
 
 # Environment files
 .env.example
-
-# Husky pre-push hook
-.husky/pre-push
