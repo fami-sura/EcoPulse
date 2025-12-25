@@ -1,4 +1,7 @@
 #!/bin/sh
+# Load shell configuration for pnpm and nvm access
 . "$HOME/.zshrc" 2>/dev/null || true
 . "$HOME/.nvm/nvm.sh" 2>/dev/null || true
-exec pnpm type-check
+
+# Run type checking before push
+pnpm type-check

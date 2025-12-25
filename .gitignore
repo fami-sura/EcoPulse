@@ -74,7 +74,7 @@ Thumbs.db
 tmp/
 # BMAD tooling and configuration (not part of source code)
 _bmad/
-_bmad-output/
+
 
 # Environment files
 .env.example

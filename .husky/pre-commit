@@ -1,6 +1,13 @@
 #!/bin/sh
-set -e
-. "$HOME/.zshrc" 2>/dev/null || true
-. "$HOME/.nvm/nvm.sh" 2>/dev/null || true
-pnpm exec lint-staged || true
-exit 0
+# Load user environment to find pnpm and node
+if [ -s "$HOME/.bashrc" ]; then
+  . "$HOME/.bashrc" 2>/dev/null
+fi
+
+# NVM must come after bashrc, as bashrc might initialize it
+if [ -s "$HOME/.nvm/nvm.sh" ]; then
+  . "$HOME/.nvm/nvm.sh"
+fi
+
+# Run lint-staged
+pnpm exec lint-staged

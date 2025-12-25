@@ -1,0 +1,278 @@
+# BMM Workflow Status - EcoPulse Project
+# Generated: 2025-12-16
+# Last Updated: 2025-12-19
+# This tracks progress through BMM methodology phases: Discovery, Planning, Solutioning, Implementation
+
+# STATUS DEFINITIONS:
+# ==================
+# Initial Status (before completion):
+#   - required: Must be completed to progress
+#   - optional: Can be completed but not required
+#   - recommended: Strongly suggested but not required
+#   - conditional: Required only if certain conditions met (e.g., if_has_ui)
+#
+# Completion Status:
+#   - {file-path}: File created/found (e.g., "docs/prd.md")
+#   - skipped: Optional/conditional workflow that was skipped
+
+generated: '2025-12-16'
+last_updated: '2025-12-19'
+project: 'ecoPulse'
+project_type: 'product-platform'
+selected_track: 'bmad-method'
+field_type: 'greenfield'
+workflow_path: 'method-greenfield'
+
+workflow_status:
+  # Phase 0: Discovery (Optional)
+  brainstorm-project: 'skipped' # Party Mode covered this
+  research: 'optional'
+  product-brief: 'README.md' # Comprehensive spec already exists
+
+  # Phase 1: Planning (✅ COMPLETED)
+  prd: '_bmad-output/project-planning-artifacts/prd.md' # ✅ COMPLETED 2025-12-18 (9 updates: community motivation, next-intl, Resend, session-based verification)
+  prd_progress_summary: '_bmad-output/project-planning-artifacts/prd-progress-summary.md' # ✅ COMPLETED 2025-12-17
+  strategic-decisions: '_bmad-output/project-planning-artifacts/strategic-decisions.md' # ✅ Innovation Strategist competitive analysis
+
+  # Phase 2: Solutioning (✅ SPRINT 0 + SPRINT 1 COMPLETE, SPRINT 2-4 PENDING)
+  create-architecture: '_bmad-output/architecture.md' # ✅ COMPLETED + VALIDATED 2025-12-18 (9 updates aligned with PRD)
+  validate-architecture: 'completed' # ✅ Winston comprehensive review (2,859 lines, PRD consistency matrix)
+  create-ux-design: '_bmad-output/ux-design-specification.md' # ✅ COMPLETED + VALIDATED 2025-12-18 (2,615 lines, 8 additions + Hugeicons migration)
+  validate-ux-design: 'completed' # ✅ Sally full validation (7 updates aligned with PRD/Architecture)
+  create-epics-and-stories: '_bmad-output/implementation-artifacts/sprint-backlog.md' # ✅ ALL SPRINTS COMPLETE 2025-12-19 (62 stories, 199 points total)
+  validate-epics-sprint-1: '_bmad-output/implementation-artifacts/sprint-1-team-review.md' # ✅ COMPLETED 2025-12-19 (Team validation + stakeholder clarification)
+  test-design: 'recommended' # ⏳ PENDING: Murat (TEA) after Sprint 2-4 epics created
+  implementation-readiness: 'required' # ⏳ PENDING: Final gate after all epics + test strategy
+
+  # Phase 3: Implementation (Pending)
+  sprint-planning: 'required' # ⏳ PENDING: Bob (SM) finalizes sprint plan after all epics complete
+
+
+# Notes:
+# - Product Brief completed via README.md (comprehensive MVP spec)
+# - Party Mode brainstorming session completed with team alignment
+# - Tech stack decisions locked: Next.js 16 + Shadcn UI + Supabase + Drizzle ORM
+# - Architecture completed with Party Mode review (80 FRs, 72 NFRs analyzed)
+# - 9 core architectural decisions documented with team collaboration
+# - Implementation patterns defined to prevent AI agent conflicts
+# - Scope refined:+ VALIDATED (2025-12-18):
+# - 11 steps completed: Executive Summary, Classification, Success Criteria, User Journeys (8 personas),
+#   Domain Requirements (Govtech), Innovation Patterns, Web Requirements, Scoping, Functional Requirements (80),
+#   Non-Functional Requirements (84 - updated from 72)
+# - Document size: 3,169 lines (updated from 3,200+)
+# - Africa-First Design: Nigerian personas, community motivation (NOT gamification)
+# - 9 Critical Updates (2025-12-18):
+#   1. Removed points/badges/leaderboards → Community motivation ("You saved 15 kg of waste!")
+#   2. Specified next-intl v3.x framework (NFR75-77, official Next.js recommendation)
+#   3. Updated email provider to Resend with React Email templates (NFR43)
+#   4. Added session-based anonymous verification (FR28: localStorage session_id + fingerprinting fallback)
+#   5. Added CSV export automated testing (NFR42: CI/CD validation with seed data)
+#   6. Clarified Action Card templates (FR43: per-org customizable with platform defaults)
+#   7. Clarified data sovereignty exports (FR77: org-scoped only, not full database)
+#   8. Updated resolution verification (FR26: verify fixes, not problems)
+#   9. Preserved 2-verification threshold (FR27: educational function for low-literacy communities)
+# - Government-ready compliance: Section 508/WCAG 2.1 AA, SOC 2 Type II, CCPA
+# - User Journeys: Maria (Reporter), Sara (Verifier), Linda (NGO), James (Volunteer), Alex (Anonymous),
+#   Kevin (API Consumer), Michelle (Moderator), David (Government)
+# - MVP: Sprint 1-4 (12 weeks), Phase 2: Months 4-12, Phase 3: 12-24 months
+# - Trojan Horse GTM: NGO-first, government follows after proof
+# - MVP: Sprint 1-4 (12 weeks), Phase 2: Months 4-12, Phase 3: 12-24 months
+# - Trojan Horse GTM: Month 9 pivot decision (≥3 gov pilots or switch to hybrid sales)
+#
+# STRATEGIC DECISIONS (from Innovation Strategist competitive analysis):
+# - Positioning: Blue Ocean - "Distributed Environmental Action Platform" (not generic 311)
+# - Go-To-Market: NGOs first (Trojan Horse strategy), government follows
+# - Differentiators: Action Cards + Community Verification + Multi-Org Native + Environmental Domain Expertise
+# - Business Model: Freemium SaaS ($49-99 NGO tier, $499+ gov tier, target $300k ARR Year 1)
+# - Architecture: Data sovereignty + API-first + self-hosting capability (Supabase)
+# - Competitive gaps identified in 13+ platforms (SeeClickFix, FixMyStreet, PublicStuff, Accela, etc.)
+#
+# SPRINT PRIORITIZATION REFINEMENTS:
+# - Sprint 1: Core reporting + Map (2 categories only: Waste/Litter + Drainage)
+# - Sprint 2: Verification flow + User Profiles (points, contributions, personal impact stats)
+# - Sprint 3: NGO Dashboard (/org/dashboard route with CSV exports, verified outcomes, team performance)
+# - Sprint 4: Polish + Contact Directory + Public API + anti-spam
+# - Phase 2: Government admin panel (full RBAC), 311 integration API, self-hosting option
+#
+# ARCHITECTURE REQUIREMENTS (Winston):
+# - Multi-org data isolation via Supabase Row-Level Security (RLS)
+# ✅ ARCHITECTURE COMPLETED + VALIDATED (2025-12-18):
+# - Document size: 2,859 lines (comprehensive technical specification)
+# - 9 Critical Updates aligned with PRD:
+#   1. Community motivation architecture (NOT gamification/points system)
+#   2. next-intl v3.x implementation patterns (replaced next-i18next)
+#   3. Resend email provider integration
+#   4. Session-based anonymous verification architecture
+#   5. CSV export automated testing strategy
+#   6. Real-time cost justification ($50/mo Supabase Realtime Phase 2)
+#   7. Multi-org data isolation via RLS policies
+#   8. API-first design (Server Actions MVP, tRPC Phase 2)
+#   9. Performance targets: Map <1s, Dashboard <2s, Report <60s
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# ✅ PHASE 2 SOLUTIONING STATUS (2025-12-19):
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# ✅ PRD: 3,169 lines, 9 critical updates completed (community motivation, next-intl, Resend)
+# ✅ Architecture: 2,859 lines, 9 updates aligned with PRD, consistency matrix validated
+# ✅ UX Design: 2,615 lines, 7 updates + 8 additions + Hugeicons migration, 100% implementation-ready
+# ✅ Sprint 0: 4 stories, 19 points (Database, Supabase, Leaflet, Photo pipeline)
+# ✅ Sprint 1: 15 stories, 46 points (Report flow, Map, Auth, 2 categories)
+#
+# VALIDATION SUMMARY:
+# ✅ PRD ↔ Architecture: 100% aligned (12 requirements consistency matrix)
+# ✅ PRD ↔ UX Design: 100% aligned (all 8 personas, Africa-first preserved)
+# ✅ Architecture ↔ UX Design: 100% aligned (technical patterns match wireframes)
+# ✅ Sprint 1 Team Validation: 6 critical blockers identified and resolved
+#
+# TEAM CONSENSUS (Sprint 1 Review 2025-12-19):
+# ✅ Winston (Architect): "Sprint 0 foundational stories solve all implementation blockers"
+# ✅ Sally (UX Designer): "Icon-driven UI enforced, voice notes scope clarified (Phase 2 defer)"
+# ✅ Mary (BA): "Map filters added (FR1-5 compliance), clustering simplified"
+# ✅ Murat (TEA): "Comprehensive error handling patterns defined for all Server Actions"
+# ✅ Amelia (Dev): "Story 1.3.3 split resolved underestimation, ready to implement"
+# ✅ Stakeholder (Aliahmad): "Voice notes advanced features deferred to Phase 2 per PRD"
+#
+# SPRINT 1 CRITICAL FIXES APPLIED:
+# 1. ✅ Sprint 0 added (4 stories, 19 points) - Database, Supabase, Leaflet, Photo pipeline
+# 2. ✅ Epic 1.1 updated - Icon-driven UI enforced (NO text labels), 44x44px touch targets
+# 3. ✅ Epic 1.2 updated - Map filters added (3 pts), clustering simplified (server→client)
+# 4. ✅ Epic 1.3 updated - Error handling (8 scenarios), Story 1.3.3 split (3+5 pts), icon-only categories/severity
+# 5. ✅ Epic 1.4 updated - Auth error handling (7 scenarios), localStorage session ID (no fingerprinting)
+# 6. ✅ Deferrals - Story 1.4.4 (Profile, 2 pts) + Story 1.5.1 (Points, 2 pts) moved to Sprint 2
+# 7. ✅ Phase 2 scope - Web Audio API, offline recording, format fallback deferred
+#
+# TOTAL MVP SCOPE (Sprint 0-4):
+# - 62 stories total across 13 weeks
+# - 199 story points (Sprint 0: 19, Sprint 1: 46, Sprint 2: 54, Sprint 3: 42, Sprint 4: 38)
+# - Sprint 2-4: 47 stories remaining (Verification, Profiles, NGO Dashboard, API, Polish)
+#
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# NEXT STEPS (Immediate Actions for New Session):
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#
+# 🎯 PRIORITY 1: SPRINT 2-4 EPIC & STORY CREATION (Bob - Scrum Master)
+#    Status: 🟢 READY TO START (Sprint 0 + Sprint 1 complete, all dependencies met)
+#    Command: [Bob] Create Sprint 2-4 epics and stories from validated documents
+#    Scope:
+#      - Sprint 2 (Weeks 4-6): Verification + User Profiles
+#        • Epic 2.1: Verification System (second-person verification, before/after photos)
+#        • Epic 2.2: User Profiles Enhancement (points from 1.5.1, impact stats, contributions timeline, profile display from 1.4.4)
+#        • Epic 2.3: Community Flagging (flag issues/photos, moderator-lite flow)
+#        • Estimated: 18 stories, 54 points (includes 2 deferred stories from Sprint 1)
+#      - Sprint 3 (Weeks 7-9): NGO Dashboard + Action Cards
+#        • Epic 3.1: NGO Dashboard (org-scoped queries, auto-prioritization, KPIs, verified outcomes)
+#        • Epic 3.2: Action Cards (create campaigns, volunteer sign-up, proof upload, bulk resolution)
+#        • Epic 3.3: CSV Export System (funder reports with metrics, photo URLs, automated testing)
+#        • Estimated: 13 stories, 42 points
+#      - Sprint 4 (Weeks 10-12): Polish + API + Contact Directory
+#        • Epic 4.1: Public Read-Only API (REST endpoints, token auth, rate limiting, API docs)
+#        • Epic 4.2: Contact Directory (organization discovery, search/filter, SEO-indexed profiles)
+#        • Epic 4.3: Resolution Proof Workflow (community members upload proof, earn points)
+#        • Epic 4.4: Email Notifications (Resend integration, status change notifications, React Email templates)
+#        • Epic 4.5: Performance & Polish (Lighthouse CI, Core Web Vitals, accessibility final validation)
+#        • Estimated: 12 stories, 38 points
+#    Deliverables:
+#      - 47 stories with acceptance criteria across Sprint 2-4
+#      - Story point estimation (Fibonacci scale)
+#      - Dependencies mapped (especially Sprint 2.1 points → Sprint 2.2 profiles)
+#      - Definition of Done maintained (same gates as Sprint 0/1)
+#    Input Documents:
+#      ✅ PRD: _bmad-output/project-planning-artifacts/prd.md (3,169 lines)
+#      ✅ Architecture: _bmad-output/architecture.md (2,859 lines)
+#      ✅ UX Design: _bmad-output/ux-design-specification.md (2,615 lines)
+#      ✅ Sprint 0 + Sprint 1: _bmad-output/implementation-artifacts/sprint-backlog.md (1,749 lines)
+#    Estimated Time: 6-8 hours (similar to Sprint 0/1 effort)
+#    Output File: Continue editing _bmad-output/implementation-artifacts/sprint-backlog.md
+#
+# 🎯 PRIORITY 2: TEST STRATEGY (Murat - TEA)
+#    Status: 🟡 WAITING FOR ALL EPICS (can start partial strategy now, finalize after Sprint 2-4)
+#    Command: [Murat] Create comprehensive test design from all epics
+#    Deliverables:
+#      - Test strategy document (unit, integration, E2E, accessibility, performance)
+#      - Critical test scenarios prioritized by sprint:
+#        • Sprint 1: Photo EXIF stripping, anonymous session tracking, map clustering
+#        • Sprint 2: Multi-verifier logic, retroactive point calculation, duplicate flagging
+#        • Sprint 3: CSV export accuracy, org-scoped queries, Action Card rendering
+#        • Sprint 4: API rate limiting, email delivery, Lighthouse CI gates
+#      - Accessibility test plan (WCAG 2.1 AA + Hugeicons screen reader testing)
+#      - Performance test plan (Core Web Vitals, LCP <3.5s mobile, map <1s load)
+#      - Test automation framework (Vitest + Playwright + axe-core)
+#    Input Documents:
+#      ✅ PRD + Architecture + UX Design
+#      ✅ Sprint 0 + Sprint 1 epics
+#      ⏳ Sprint 2-4 epics (complete these first)
+#    Estimated Time: 6-8 hours (after all epics complete)
+#    Output File: _bmad-output/implementation-artifacts/test-strategy.md
+#
+# 🎯 PRIORITY 3: IMPLEMENTATION READINESS GATE CHECK
+#    Status: ⏳ PENDING (after Sprint 2-4 Epics + Test Strategy complete)
+#    Purpose: Final GO/NO-GO decision before Sprint 0 kickoff
+#    Checklist:
+#      - ✅ PRD complete and validated (3,169 lines, team approved)
+#      - ✅ Architecture complete and validated (2,859 lines, consistency matrix)
+#      - ✅ UX design complete and validated (2,615 lines, 100% implementation-ready)
+#      - ✅ Sprint 0 + Sprint 1 epics complete (19 stories, 65 points, all blockers resolved)
+#      - ⏳ Sprint 2-4 epics complete (Bob - 6-8 hours)
+#      - ⏳ Test strategy defined (Murat - 6-8 hours)
+#      - ⏳ Development environment setup plan (Sprint 0 scope)
+#      - ⏳ CI/CD pipeline design (Sprint 0 scope)
+#    Output: GO/NO-GO decision document with sign-off from PM (John) and stakeholder (Aliahmad)
+#
+# 🎯 PRIORITY 4: SPRINT 0 (Environment Setup) - 1 week
+#    Status: ⏳ PENDING (after Implementation Readiness Gate)
+#    Stories: 4 stories, 19 points (fully defined in sprint-backlog.md)
+#      - Story 0.1: Database Schema Setup (8 pts) - All tables, RLS policies, indexes, migrations
+#      - Story 0.2: Supabase Client Configuration (3 pts) - Server/Client setup, middleware, env vars
+#      - Story 0.3: Map Component Foundation (5 pts) - Leaflet + react-leaflet-cluster integration
+#      - Story 0.4: Photo Upload Pipeline (3 pts) - EXIF stripping with sharp, Storage buckets, Server Action
+#    Output: Development environment ready for Sprint 1 Day 1
+#
+# 🎯 PRIORITY 5: SPRINT 1-4 (MVP Development) - 12 weeks
+#    Sprint 1 (Weeks 1-3): ✅ Fully defined (15 stories, 46 points)
+#    Sprint 2 (Weeks 4-6): ⏳ Pending (18 stories, 54 points)
+#    Sprint 3 (Weeks 7-9): ⏳ Pending (13 stories, 42 points)
+#    Sprint 4 (Weeks 10-12): ⏳ Pending (12 stories, 38 points)
+#    Estimated Time: 1 week
+#    Output File: _bmad-output/epics-stories/sprint-backlog.md
+#
+# 4. TEST DESIGN (Murat - Test Engineer Architect) - PRIORITY 4
+#    Command: [Murat] Create test design from PRD and architecture
+#    Why Fourth: Test strategy depends on architecture and epic breakdown
+#    Deliverables:
+#      - Test strategy (unit, integration, E2E, accessibility, performance)
+#      - Critical test scenarios (verification flow, data exports, API endpoints)
+#      - Accessibility test plan (WCAG 2.1 AA validation)
+#      - Performance test plan (Core Web Vitals, load testing)
+#      - Test automation framework recommendations
+#    Dependencies: ✅ PRD complete, ⏳ Architecture required, ⏳ Epics recommended
+#    Estimated Time: 3-5 days
+#    Output File: _bmad-output/testing/test-design.md
+#
+# 5. IMPLEMENTATION READINESS GATE CHECK
+#    Purpose: Validate all planning/solutioning complete before Sprint 0
+#    Checklist:
+#      - ✅ PRD complete and approved
+#      - ⏳ Architecture complete and approved
+#      - ⏳ UX design complete (at least Sprint 1-2 flows)
+#      - ⏳ Sprint 1-4 epics and stories defined
+#      - ⏳ Test strategy defined
+#      - ⏳ Development environment setup plan
+#      - ⏳ CI/CD pipeline design
+#    Output: GO/NO-GO decision for Sprint 0 kickoff
+#
+# 6. SPRINT 0 (Environment Setup) - 1 week
+#    Tasks:
+#      - Next.js 15 project scaffolding
+#      - Supabase project setup (database, auth, storage, RLS policies)
+#      - Vercel deployment configuration
+#      - GitHub Actions CI/CD (Lighthouse CI, automated testing)
+#      - Radix UI + Tailwind design system setup
+#      - Leaflet map integration boilerplate
+#    Output: Development environment ready for Sprint 1
+#
+# 7. SPRINT 1-4 (MVP Development) - 12 weeks
+#    Sprint 1: Core reporting + Map
+#    Sprint 2: Verification + User Profiles
+#    Sprint 3: NGO Dashboard + Action Cards
+#    Sprint 4: Polish + Public API + Contact Directory
+#
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
