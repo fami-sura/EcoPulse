@@ -1,7 +1,7 @@
 /**
- * Next.js Middleware for Supabase Auth + i18n
+ * Next.js Proxy for Supabase Auth + i18n
  *
- * This middleware:
+ * This proxy:
  * 1. Handles i18n routing with next-intl
  * 2. Refreshes the user's session on every request (prevents stale sessions)
  * 3. Handles auth state synchronization between server and client
@@ -17,7 +17,7 @@ import { routing } from '@/i18n/routing';
 // Create the next-intl middleware
 const intlMiddleware = createMiddleware(routing);
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   // First, handle i18n routing
   const intlResponse = intlMiddleware(request);
 

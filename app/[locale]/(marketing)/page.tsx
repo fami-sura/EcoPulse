@@ -12,6 +12,7 @@ import {
   FAQPreview,
   CTABand,
   TeamGovernance,
+  PartnershipsInProgress,
 } from '@/components/marketing';
 
 type Props = {
@@ -69,6 +70,9 @@ export default async function LandingPage({ params }: Props) {
 
       {/* Team & Governance - Built responsibly */}
       <TeamGovernance />
+
+      {/* Partnerships in Progress - Social proof placeholder */}
+      <PartnershipsInProgress />
 
       {/* Final CTA Band - Multi-path conversion */}
       <CTABand />

@@ -45,7 +45,7 @@ export function MarketingFooter() {
     <footer className="border-t border-border bg-muted/30">
       {/* Main Footer Content */}
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-        <div className="grid gap-12 lg:grid-cols-12">
+        <div className="grid gap-8 grid-cols-1 lg:grid-cols-12 lg:gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-5">
             <Link
@@ -83,18 +83,18 @@ export function MarketingFooter() {
           </div>
 
           {/* Links Grid */}
-          <div className="lg:col-span-7 grid gap-8 sm:grid-cols-3">
+          <div className="lg:col-span-7 grid gap-4 grid-cols-3 lg:gap-8">
             {/* Navigation Links */}
             <div>
-              <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">
+              <h3 className="text-xs lg:text-sm font-semibold text-foreground uppercase tracking-wider">
                 {tFooter('navTitle')}
               </h3>
-              <ul className="mt-4 space-y-3">
+              <ul className="mt-2 lg:mt-4 space-y-2 lg:space-y-3">
                 {navLinks.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded inline-flex items-center gap-1 group"
+                      className="text-xs lg:text-sm text-muted-foreground hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded inline-flex items-center gap-1 group"
                     >
                       {t(link.labelKey)}
                       <HugeiconsIcon
@@ -111,15 +111,15 @@ export function MarketingFooter() {
 
             {/* Resources */}
             <div>
-              <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">
+              <h3 className="text-xs lg:text-sm font-semibold text-foreground uppercase tracking-wider">
                 {tFooter('resourcesTitle')}
               </h3>
-              <ul className="mt-4 space-y-3">
+              <ul className="mt-2 lg:mt-4 space-y-2 lg:space-y-3">
                 {resourceLinks.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded inline-flex items-center gap-1 group"
+                      className="text-xs lg:text-sm text-muted-foreground hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded inline-flex items-center gap-1 group"
                     >
                       {t(link.labelKey)}
                       <HugeiconsIcon
@@ -136,14 +136,14 @@ export function MarketingFooter() {
 
             {/* Contact & Legal */}
             <div>
-              <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">
+              <h3 className="text-xs lg:text-sm font-semibold text-foreground uppercase tracking-wider">
                 {tFooter('contactTitle')}
               </h3>
-              <ul className="mt-4 space-y-3">
+              <ul className="mt-2 lg:mt-4 space-y-2 lg:space-y-3">
                 <li>
                   <a
                     href={`mailto:${tFooter('email')}`}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded inline-flex items-center gap-2"
+                    className="text-xs lg:text-sm text-muted-foreground hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded inline-flex items-center gap-2"
                   >
                     <HugeiconsIcon
                       icon={Mail01Icon}
@@ -155,7 +155,7 @@ export function MarketingFooter() {
                   </a>
                 </li>
                 <li>
-                  <span className="text-sm text-muted-foreground inline-flex items-center gap-2">
+                  <span className="text-xs lg:text-sm text-muted-foreground inline-flex items-center gap-2">
                     <HugeiconsIcon
                       icon={Location01Icon}
                       size={14}
@@ -165,16 +165,16 @@ export function MarketingFooter() {
                     {tFooter('location')}
                   </span>
                 </li>
-                <li className="pt-4 border-t border-border mt-4">
-                  <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">
+                <li className="pt-2 lg:pt-4 border-t border-border mt-2 lg:mt-4">
+                  <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2 lg:mb-3">
                     {tFooter('legalTitle')}
                   </h4>
-                  <ul className="space-y-2">
+                  <ul className="space-y-1 lg:space-y-2">
                     {legalLinks.map((link) => (
                       <li key={link.href}>
                         <Link
                           href={link.href}
-                          className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                          className="text-xs lg:text-sm text-muted-foreground hover:text-primary transition-colors"
                         >
                           {t(link.labelKey)}
                         </Link>

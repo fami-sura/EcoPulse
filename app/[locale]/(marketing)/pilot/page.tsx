@@ -14,6 +14,7 @@ import {
   Leaf01Icon,
   Clock02Icon,
   Location01Icon,
+  Download01Icon,
 } from '@hugeicons/core-free-icons';
 import { HugeiconsIcon } from '@hugeicons/react';
 
@@ -75,7 +76,7 @@ function PilotContent() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-background py-20 sm:py-32">
+      <section className="relative overflow-hidden bg-background py-12 sm:py-20">
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
         <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
 
@@ -118,6 +119,22 @@ function PilotContent() {
                 </div>
                 <p className="text-sm text-muted-foreground">{t('hero.stats.categoriesLabel')}</p>
               </div>
+            </div>
+
+            {/* PDF Download CTA */}
+            <div className="mt-10">
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="min-h-12 px-6 border-primary/30 hover:border-primary hover:bg-primary/5"
+              >
+                <a href="/Pilot-program.pdf" download>
+                  <HugeiconsIcon icon={Download01Icon} size={18} className="mr-2" />
+                  {t('hero.downloadPdf')}
+                </a>
+              </Button>
+              <p className="mt-2 text-xs text-muted-foreground">{t('hero.downloadNote')}</p>
             </div>
           </div>
         </div>

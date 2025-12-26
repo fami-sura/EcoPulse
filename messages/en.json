@@ -302,7 +302,46 @@
           "dataSovereignty": "Data sovereignty: Self-hosting capable",
           "transparency": "Open approach: Transparency by default"
         }
+      },
+      "partnerships": {
+        "eyebrow": "Growing Together",
+        "title": "Partnerships in Progress",
+        "description": "We're building relationships with organizations who share our vision for community-driven environmental action.",
+        "ngos": {
+          "title": "Local NGOs",
+          "status": "In active discussion with community organizations in Nigeria for pilot partnership."
+        },
+        "sponsors": {
+          "title": "Fiscal Sponsors",
+          "status": "Exploring fiscal sponsorship options to ensure responsible governance and funding."
+        },
+        "researchers": {
+          "title": "University Partners",
+          "status": "Discussing research collaboration for pilot evaluation and impact measurement."
+        },
+        "note": "Partner logos will appear here once partnerships are formalized. We don't claim endorsements we don't have."
+      },
+      "countdown": {
+        "title": "Pilot Begins In",
+        "days": "Days",
+        "hours": "Hours",
+        "minutes": "Minutes",
+        "seconds": "Seconds",
+        "joinPilot": "Join the Pilot",
+        "liveNow": "Pilot is Live",
+        "liveTitle": "The EcoPulse pilot is now active!",
+        "viewMap": "View Live Map"
       }
+    },
+    "newsletter": {
+      "title": "Stay Updated",
+      "description": "Get pilot updates and learnings delivered to your inbox.",
+      "placeholder": "Enter your email",
+      "subscribe": "Subscribe",
+      "submitting": "Subscribing...",
+      "success": "Thanks! You'll receive pilot updates soon.",
+      "error": "Please enter a valid email address.",
+      "privacy": "We respect your privacy. Unsubscribe anytime."
     },
     "about": {
       "meta": {
@@ -472,6 +511,7 @@
         "title": "EcoPulse — 90-Day Pilot Plan",
         "description": "A structured 90-day pilot to evaluate community reporting, verification quality, and response coordination for waste and drainage issues in African communities."
       },
+      "breadcrumb": "Pilot Plan",
       "hero": {
         "badge": "Seeking Partners",
         "title": "90-Day Pilot Framework",
@@ -483,7 +523,9 @@
           "locationsLabel": "Communities",
           "categories": "2",
           "categoriesLabel": "Issue Types"
-        }
+        },
+        "downloadPdf": "Download Pilot Plan (PDF)",
+        "downloadNote": "Comprehensive pilot framework for offline review and sharing"
       },
       "scope": {
         "eyebrow": "What We're Testing",

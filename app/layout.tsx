@@ -16,6 +16,7 @@ const merriweather = Merriweather({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'),
   title: 'EcoPulse - Community Environmental Action',
   description: 'Report, verify, and track environmental issues in your community',
   icons: {
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     siteName: 'EcoPulse',
     images: [
       {
-        url: '/ecoPulse.png',
+        url: 'ecoPulse.png',
         width: 1200,
         height: 630,
         alt: 'EcoPulse - Community Verified Environmental Action',
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'EcoPulse - Community Environmental Action',
     description: 'Report, verify, and track environmental issues in your community',
-    images: ['/ecoPulse.png'],
+    images: ['ecoPulse.png'],
   },
 };
 

@@ -1,0 +1,26 @@
+# EcoPulse Robots.txt
+# https://www.robotstxt.org/
+
+User-agent: *
+Allow: /
+
+# Block internal app routes from indexing
+Disallow: /api/
+Disallow: /auth/
+Disallow: /issues/
+Disallow: /reports/
+Disallow: /profile/
+
+# Allow marketing and main product pages
+Allow: /
+Allow: /about
+Allow: /mission
+Allow: /pilot
+Allow: /faq
+Allow: /contact
+Allow: /privacy
+Allow: /terms
+Allow: /map
+
+# Sitemap location
+Sitemap: https://ecopulse.app/sitemap.xml
