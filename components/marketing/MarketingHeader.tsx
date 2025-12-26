@@ -74,13 +74,13 @@ export function MarketingHeader() {
         <Link
           href="/"
           className="flex min-h-11 min-w-11 items-center group"
-          aria-label="EcoPulse - Go to homepage"
+          aria-label={t('a11y.homeLink')}
         >
           <EcoPulseLogo size="md" showTagline />
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="Main navigation">
+        <nav className="hidden items-center gap-1 lg:flex" aria-label={t('a11y.mainNav')}>
           {navItems.map((item) => {
             const active = isActive(item.href);
             return (
@@ -139,7 +139,7 @@ export function MarketingHeader() {
           )}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-expanded={mobileMenuOpen}
-          aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+          aria-label={mobileMenuOpen ? t('a11y.closeMenu') : t('a11y.openMenu')}
         >
           <HugeiconsIcon
             icon={mobileMenuOpen ? Cancel01Icon : Menu01Icon}
@@ -152,7 +152,7 @@ export function MarketingHeader() {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="border-t border-border bg-background lg:hidden animate-in slide-in-from-top-2 duration-200">
-          <nav className="mx-auto max-w-7xl px-4 py-6 sm:px-6" aria-label="Mobile navigation">
+          <nav className="mx-auto max-w-7xl px-4 py-6 sm:px-6" aria-label={t('a11y.mobileNav')}>
             <div className="flex flex-col gap-1">
               {navItems.map((item) => {
                 const active = isActive(item.href);

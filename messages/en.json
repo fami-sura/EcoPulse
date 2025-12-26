@@ -7,10 +7,25 @@
       "pilot": "Pilot Plan",
       "faq": "FAQ",
       "contact": "Contact",
+      "contactUs": "Contact Us",
       "viewMap": "View Map",
       "reports": "Reports",
       "privacy": "Privacy",
-      "terms": "Terms"
+      "terms": "Terms",
+      "a11y": {
+        "homeLink": "Go to homepage",
+        "openMenu": "Open menu",
+        "closeMenu": "Close menu",
+        "mainNav": "Main navigation",
+        "mobileNav": "Mobile navigation",
+        "breadcrumb": "Breadcrumb",
+        "scrollProgress": "Page scroll progress",
+        "social": {
+          "twitter": "EcoPulse on X (Twitter)",
+          "linkedin": "EcoPulse on LinkedIn",
+          "github": "EcoPulse on GitHub"
+        }
+      }
     },
     "landing": {
       "meta": {
@@ -18,7 +33,7 @@
         "description": "EcoPulse enables communities to report and verify waste and drainage issues with photo evidence—supporting a measurable pilot and coordinated response."
       },
       "hero": {
-        "badge": "Pilot Program • Seeking Partners",
+        "badge": "12-Month Program • 90-Day Pilot Phase • Seeking Partners",
         "emotionalHook": "Because communities shouldn't have to wait for someone else to notice.",
         "title": "Verified Environmental Data for Communities That Need Action",
         "subtitle": "EcoPulse transforms scattered community reports into structured, verified evidence that NGOs, funders, and civic responders can trust and act upon.",
@@ -74,9 +89,9 @@
       "different": {
         "eyebrow": "Our Approach",
         "title": "Not Another 311 Platform",
-        "subtitle": "Western civic tech assumes constant internet, government trust, and institutional response. EcoPulse is built differently.",
+        "subtitle": "Civic tech assumes constant internet, government trust, and institutional response. EcoPulse is built differently.",
         "columns": {
-          "western": "Western Civic Tech",
+          "western": "Civic Tech",
           "ecopulse": "EcoPulse"
         },
         "rows": {
@@ -168,8 +183,8 @@
       },
       "pilotFramework": {
         "badge": "Pilot Targets — Not Achievements",
-        "title": "90-Day Pilot Framework",
-        "subtitle": "Our pilot is designed to test, learn, and improve—not to prove perfection. We measure what matters.",
+        "title": "90-Day Pilot Phase Framework",
+        "subtitle": "A 90-day pilot phase within our 12-month program—designed to test, learn, and improve. We measure what matters.",
         "timelineLabel": "Timeline",
         "metricsLabel": "Success Metrics (Targets)",
         "targetLabel": "Target",
@@ -377,7 +392,7 @@
       "different": {
         "eyebrow": "Why We're Different",
         "title": "Built for African Realities",
-        "intro": "Western civic tech assumes constant internet, government trust, and institutional response. EcoPulse is built differently—designed for the infrastructure and social dynamics of African communities.",
+        "intro": "Civic tech assumes constant internet, government trust, and institutional response. EcoPulse is built differently—designed for the infrastructure and social dynamics of African communities.",
         "localContext": {
           "title": "Local Context",
           "description": "Designed for African infrastructure realities: 3G networks, mobile-first users, varying literacy levels."
@@ -392,7 +407,7 @@
         },
         "comparisonLabel": "How We Compare",
         "comparison": {
-          "western": "Western Civic Tech",
+          "western": "Civic Tech",
           "ecopulse": "EcoPulse",
           "topDown": "Top-down government focus",
           "communityDriven": "Community-driven action",
@@ -508,14 +523,14 @@
     },
     "pilot": {
       "meta": {
-        "title": "EcoPulse — 90-Day Pilot Plan",
-        "description": "A structured 90-day pilot to evaluate community reporting, verification quality, and response coordination for waste and drainage issues in African communities."
+        "title": "EcoPulse — 12-Month Program (90-Day Pilot Phase)",
+        "description": "A 12-month program with an initial 90-day pilot phase to evaluate community reporting, verification quality, and response coordination for waste and drainage issues in African communities."
       },
       "breadcrumb": "Pilot Plan",
       "hero": {
         "badge": "Seeking Partners",
-        "title": "90-Day Pilot Framework",
-        "intro": "A structured pilot designed to test adoption, verification quality, and response coordination for waste and drainage issues. We measure what matters and share learnings openly.",
+        "title": "12-Month Program, 90-Day Pilot Phase",
+        "intro": "A 12-month program with an initial 90-day pilot phase designed to test adoption, verification quality, and response coordination for waste and drainage issues. We measure what matters and share learnings openly.",
         "stats": {
           "duration": "90",
           "durationLabel": "Days",
@@ -558,7 +573,7 @@
       },
       "timeline": {
         "eyebrow": "Implementation Phases",
-        "title": "90-Day Timeline",
+        "title": "90-Day Pilot Phase Timeline",
         "phase1": {
           "days": "Days 0–30",
           "title": "Onboard & Launch",
@@ -711,11 +726,11 @@
         },
         "pilot": {
           "title": "Pilot Program",
-          "description": "About our 90-day pilot and partnership opportunities",
+          "description": "About our 12-month program and 90-day pilot phase, plus partnership opportunities",
           "questions": {
             "pilotScope": {
-              "q": "What is the 90-day pilot?",
-              "a": "The pilot is a structured test of EcoPulse in 2-3 Nigerian communities. We're measuring verification quality, time-to-response, and resolution outcomes. We share learnings openly, including what doesn't work."
+              "q": "What is the 12-month program (90-day pilot phase)?",
+              "a": "EcoPulse is structured as a 12-month program, starting with a focused 90-day pilot phase in 2-3 Nigerian communities. We're measuring verification quality, time-to-response, and resolution outcomes. We share learnings openly, including what doesn't work."
             },
             "partnership": {
               "q": "How can my organization partner with EcoPulse?",
@@ -761,7 +776,7 @@
       "hero": {
         "badge": "Let's Connect",
         "title": "Partner With Us",
-        "subtitle": "We're actively seeking NGO partners, civic responders, and funders for our 90-day pilot. Whether you have questions or want to collaborate, we'd love to hear from you."
+        "subtitle": "We're actively seeking NGO partners, civic responders, and funders for our 12-month program (starting with a 90-day pilot phase). Whether you have questions or want to collaborate, we'd love to hear from you."
       },
       "partnerTypes": {
         "eyebrow": "Who We're Looking For",
@@ -798,19 +813,23 @@
         "description": "Reach the right team directly",
         "general": {
           "label": "General Inquiries",
-          "description": "Questions, feedback & information"
+          "description": "Questions, feedback & information",
+          "address": "hello@ecopulse.app"
         },
         "community": {
           "label": "NGO & Community Partners",
-          "description": "Partnership & collaboration"
+          "description": "Partnership & collaboration",
+          "address": "partners@ecopulse.app"
         },
         "sponsor": {
           "label": "Sponsors & Funders",
-          "description": "Sponsorship & grant opportunities"
+          "description": "Sponsorship & grant opportunities",
+          "address": "sponsors@ecopulse.app"
         },
         "finance": {
           "label": "Finance & Grants",
-          "description": "Financial & grant administration"
+          "description": "Financial & grant administration",
+          "address": "finance@ecopulse.app"
         }
       },
       "responseTime": {
@@ -1113,6 +1132,21 @@
         "title": "Legal Questions?",
         "intro": "For legal inquiries, Terms clarification, or formal notices, please contact our legal team:",
         "privacy": "View Privacy Policy"
+      }
+    },
+    "mapPreview": {
+      "loadingTitle": "Loading map...",
+      "locationLabel": "Lagos, Nigeria",
+      "fallbackTitle": "Interactive Map",
+      "fallbackSubtitle": "Click to explore verified reports",
+      "ctaTitle": "Explore Live Map",
+      "ctaSubtitle": "See verified reports in real-time",
+      "status": {
+        "verified": "{count} Verified",
+        "pending": "{count} Pending"
+      },
+      "a11y": {
+        "viewFullMap": "View the full interactive map"
       }
     },
     "footer": {

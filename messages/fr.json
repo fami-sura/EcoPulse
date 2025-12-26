@@ -7,10 +7,25 @@
       "pilot": "Programme Pilote",
       "faq": "FAQ",
       "contact": "Contact",
+      "contactUs": "Contactez-nous",
       "viewMap": "Voir la Carte",
       "reports": "Signalements",
       "privacy": "Confidentialité",
-      "terms": "Conditions"
+      "terms": "Conditions",
+      "a11y": {
+        "homeLink": "Aller à l’accueil",
+        "openMenu": "Ouvrir le menu",
+        "closeMenu": "Fermer le menu",
+        "mainNav": "Navigation principale",
+        "mobileNav": "Navigation mobile",
+        "breadcrumb": "Fil d’Ariane",
+        "scrollProgress": "Progression de défilement de la page",
+        "social": {
+          "twitter": "EcoPulse sur X (Twitter)",
+          "linkedin": "EcoPulse sur LinkedIn",
+          "github": "EcoPulse sur GitHub"
+        }
+      }
     },
     "landing": {
       "meta": {
@@ -18,7 +33,7 @@
         "description": "EcoPulse permet aux communautés de signaler et vérifier les problèmes de déchets et de drainage avec des preuves photo—soutenant un pilote mesurable et une réponse coordonnée."
       },
       "hero": {
-        "badge": "Programme Pilote • Recherche de Partenaires",
+        "badge": "Programme de 12 mois • Phase pilote de 90 jours • Recherche de partenaires",
         "emotionalHook": "Parce que les communautés ne devraient pas attendre que quelqu'un d'autre remarque.",
         "title": "Données Environnementales Vérifiées pour les Communautés Qui Ont Besoin d'Action",
         "subtitle": "EcoPulse transforme les signalements communautaires dispersés en preuves structurées et vérifiées auxquelles les ONG, les bailleurs de fonds et les intervenants civiques peuvent faire confiance et agir.",
@@ -74,9 +89,9 @@
       "different": {
         "eyebrow": "Notre Approche",
         "title": "Pas Une Autre Plateforme 311",
-        "subtitle": "La technologie civique occidentale suppose un internet constant, la confiance du gouvernement et une réponse institutionnelle. EcoPulse est construit différemment.",
+        "subtitle": "La technologie civique suppose un internet constant, la confiance du gouvernement et une réponse institutionnelle. EcoPulse est construit différemment.",
         "columns": {
-          "western": "Tech Civique Occidentale",
+          "western": "Tech Civique",
           "ecopulse": "EcoPulse"
         },
         "rows": {
@@ -168,8 +183,8 @@
       },
       "pilotFramework": {
         "badge": "Objectifs Pilotes — Pas des Réalisations",
-        "title": "Cadre Pilote de 90 Jours",
-        "subtitle": "Notre pilote est conçu pour tester, apprendre et améliorer—pas pour prouver la perfection. Nous mesurons ce qui compte.",
+        "title": "Cadre de Phase Pilote de 90 Jours",
+        "subtitle": "Une phase pilote de 90 jours au sein de notre programme de 12 mois—conçue pour tester, apprendre et améliorer. Nous mesurons ce qui compte.",
         "timelineLabel": "Chronologie",
         "metricsLabel": "Métriques de Succès (Objectifs)",
         "targetLabel": "Objectif",
@@ -338,7 +353,7 @@
       "different": {
         "eyebrow": "Pourquoi Nous Sommes Différents",
         "title": "Construit pour les Réalités Africaines",
-        "intro": "La technologie civique occidentale suppose un internet constant, la confiance du gouvernement et une réponse institutionnelle. EcoPulse est construit différemment—conçu pour l'infrastructure et les dynamiques sociales des communautés africaines.",
+        "intro": "La technologie civique suppose un internet constant, la confiance du gouvernement et une réponse institutionnelle. EcoPulse est construit différemment—conçu pour l'infrastructure et les dynamiques sociales des communautés africaines.",
         "localContext": {
           "title": "Contexte Local",
           "description": "Conçu pour les réalités d'infrastructure africaines : réseaux 3G, utilisateurs mobile-first, niveaux d'alphabétisation variés."
@@ -353,7 +368,7 @@
         },
         "comparisonLabel": "Comment Nous Comparons",
         "comparison": {
-          "western": "Tech Civique Occidentale",
+          "western": "Tech Civique",
           "ecopulse": "EcoPulse",
           "topDown": "Focus gouvernemental descendant",
           "communityDriven": "Action pilotée par la communauté",
@@ -469,13 +484,13 @@
     },
     "pilot": {
       "meta": {
-        "title": "EcoPulse — Plan Pilote de 90 Jours",
-        "description": "Un pilote structuré de 90 jours pour évaluer le signalement communautaire, la qualité de vérification et la coordination des réponses pour les problèmes de déchets et de drainage dans les communautés africaines."
+        "title": "EcoPulse — Programme de 12 mois (phase pilote de 90 jours)",
+        "description": "Un programme de 12 mois avec une phase pilote initiale de 90 jours pour évaluer le signalement communautaire, la qualité de vérification et la coordination des réponses pour les problèmes de déchets et de drainage dans les communautés africaines."
       },
       "hero": {
         "badge": "Recherche de Partenaires",
-        "title": "Cadre Pilote de 90 Jours",
-        "intro": "Un pilote structuré conçu pour tester l'adoption, la qualité de vérification et la coordination des réponses pour les problèmes de déchets et de drainage. Nous mesurons ce qui compte et partageons les apprentissages ouvertement.",
+        "title": "Programme de 12 mois, phase pilote de 90 jours",
+        "intro": "Un programme de 12 mois avec une phase pilote initiale de 90 jours conçu pour tester l'adoption, la qualité de vérification et la coordination des réponses pour les problèmes de déchets et de drainage. Nous mesurons ce qui compte et partageons les apprentissages ouvertement.",
         "stats": {
           "duration": "90",
           "durationLabel": "Jours",
@@ -483,7 +498,9 @@
           "locationsLabel": "Communautés",
           "categories": "2",
           "categoriesLabel": "Types de Problèmes"
-        }
+        },
+        "downloadPdf": "Télécharger le plan pilote (PDF)",
+        "downloadNote": "Cadre pilote complet pour consultation et partage hors ligne"
       },
       "scope": {
         "eyebrow": "Ce Que Nous Testons",
@@ -516,7 +533,7 @@
       },
       "timeline": {
         "eyebrow": "Phases de Mise en Œuvre",
-        "title": "Chronologie de 90 Jours",
+        "title": "Chronologie de la phase pilote de 90 jours",
         "phase1": {
           "days": "Jours 0–30",
           "title": "Intégration et Lancement",
@@ -669,11 +686,11 @@
         },
         "pilot": {
           "title": "Programme Pilote",
-          "description": "À propos de notre pilote de 90 jours et des opportunités de partenariat",
+          "description": "À propos de notre programme de 12 mois et de la phase pilote de 90 jours, ainsi que des opportunités de partenariat",
           "questions": {
             "pilotScope": {
-              "q": "Qu'est-ce que le pilote de 90 jours ?",
-              "a": "Le pilote est un test structuré d'EcoPulse dans 2-3 communautés nigérianes. Nous mesurons la qualité de vérification, le temps de réponse et les résultats de résolution. Nous partageons les apprentissages ouvertement, y compris ce qui ne fonctionne pas."
+              "q": "Qu'est-ce que le programme de 12 mois (phase pilote de 90 jours) ?",
+              "a": "EcoPulse est structuré comme un programme de 12 mois, commençant par une phase pilote ciblée de 90 jours dans 2-3 communautés nigérianes. Nous mesurons la qualité de vérification, le temps de réponse et les résultats de résolution. Nous partageons les apprentissages ouvertement, y compris ce qui ne fonctionne pas."
             },
             "partnership": {
               "q": "Comment mon organisation peut-elle s'associer à EcoPulse ?",
@@ -719,7 +736,7 @@
       "hero": {
         "badge": "Connectons-Nous",
         "title": "Devenez Partenaire",
-        "subtitle": "Nous recherchons activement des partenaires ONG, des intervenants civiques et des bailleurs de fonds pour notre pilote de 90 jours. Que vous ayez des questions ou souhaitiez collaborer, nous aimerions avoir de vos nouvelles."
+        "subtitle": "Nous recherchons activement des partenaires ONG, des intervenants civiques et des bailleurs de fonds pour notre programme de 12 mois (commençant par une phase pilote de 90 jours). Que vous ayez des questions ou souhaitiez collaborer, nous aimerions avoir de vos nouvelles."
       },
       "partnerTypes": {
         "eyebrow": "Qui Nous Recherchons",
@@ -756,19 +773,23 @@
         "description": "Contactez directement la bonne équipe",
         "general": {
           "label": "Demandes Générales",
-          "description": "Questions, commentaires & informations"
+          "description": "Questions, commentaires & informations",
+          "address": "hello@ecopulse.app"
         },
         "community": {
           "label": "ONG & Partenaires Communautaires",
-          "description": "Partenariat & collaboration"
+          "description": "Partenariat & collaboration",
+          "address": "partners@ecopulse.app"
         },
         "sponsor": {
           "label": "Sponsors & Bailleurs",
-          "description": "Opportunités de sponsoring & subventions"
+          "description": "Opportunités de sponsoring & subventions",
+          "address": "sponsors@ecopulse.app"
         },
         "finance": {
           "label": "Finance & Subventions",
-          "description": "Administration financière & subventions"
+          "description": "Administration financière & subventions",
+          "address": "finance@ecopulse.app"
         }
       },
       "responseTime": {
@@ -1071,6 +1092,21 @@
         "title": "Questions Juridiques ?",
         "intro": "Pour les demandes juridiques, clarifications des Conditions ou avis formels, veuillez contacter notre équipe juridique :",
         "privacy": "Voir la Politique de Confidentialité"
+      }
+    },
+    "mapPreview": {
+      "loadingTitle": "Chargement de la carte...",
+      "locationLabel": "Lagos, Nigeria",
+      "fallbackTitle": "Carte interactive",
+      "fallbackSubtitle": "Cliquez pour explorer les signalements vérifiés",
+      "ctaTitle": "Explorer la carte en direct",
+      "ctaSubtitle": "Voir les signalements vérifiés en temps réel",
+      "status": {
+        "verified": "{count} vérifiés",
+        "pending": "{count} en attente"
+      },
+      "a11y": {
+        "viewFullMap": "Voir la carte interactive complète"
       }
     },
     "footer": {

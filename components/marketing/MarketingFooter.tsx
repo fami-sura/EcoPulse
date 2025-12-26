@@ -32,9 +32,9 @@ const legalLinks = [
 ] as const;
 
 const socialLinks = [
-  { href: 'https://twitter.com/ecopulse', icon: NewTwitterIcon, label: 'Twitter' },
-  { href: 'https://linkedin.com/company/ecopulse', icon: Linkedin01Icon, label: 'LinkedIn' },
-  { href: 'https://github.com/ecopulse', icon: Github01Icon, label: 'GitHub' },
+  { href: 'https://twitter.com/ecopulse', icon: NewTwitterIcon, labelKey: 'twitter' },
+  { href: 'https://linkedin.com/company/ecopulse', icon: Linkedin01Icon, labelKey: 'linkedin' },
+  { href: 'https://github.com/ecopulse', icon: Github01Icon, labelKey: 'github' },
 ] as const;
 
 export function MarketingFooter() {
@@ -51,7 +51,7 @@ export function MarketingFooter() {
             <Link
               href="/"
               className="inline-flex items-center group"
-              aria-label="EcoPulse - Go to homepage"
+              aria-label={t('a11y.homeLink')}
             >
               <EcoPulseLogo size="md" showTagline />
             </Link>
@@ -69,12 +69,12 @@ export function MarketingFooter() {
             <div className="mt-6 flex items-center gap-3">
               {socialLinks.map((social) => (
                 <a
-                  key={social.label}
+                  key={social.href}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex h-10 w-10 items-center justify-center rounded-lg bg-background border border-border text-muted-foreground hover:text-primary hover:border-primary/50 transition-colors"
-                  aria-label={social.label}
+                  aria-label={t(`a11y.social.${social.labelKey}`)}
                 >
                   <HugeiconsIcon icon={social.icon} size={18} aria-hidden="true" />
                 </a>

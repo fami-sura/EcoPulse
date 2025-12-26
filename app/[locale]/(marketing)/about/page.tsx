@@ -23,13 +23,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'marketing.about' });
 
+  const canonical = process.env.NEXT_PUBLIC_APP_URL
+    ? new URL(`/${locale}/about`, process.env.NEXT_PUBLIC_APP_URL).toString()
+    : undefined;
+
   return {
     title: t('meta.title'),
     description: t('meta.description'),
+    alternates: canonical ? { canonical } : undefined,
     openGraph: {
       title: t('meta.title'),
       description: t('meta.description'),
       type: 'website',
+      url: canonical,
     },
   };
 }

@@ -32,7 +32,7 @@ export function Breadcrumb({ items, className }: BreadcrumbProps) {
   const t = useTranslations('marketing.nav');
 
   return (
-    <nav aria-label="Breadcrumb" className={cn('py-4', className)}>
+    <nav aria-label={t('a11y.breadcrumb')} className={cn('py-4', className)}>
       <ol className="flex flex-wrap items-center gap-1.5 text-sm text-muted-foreground">
         {/* Home link */}
         <li>

@@ -21,25 +21,31 @@ export async function proxy(request: NextRequest) {
   // First, handle i18n routing
   const intlResponse = intlMiddleware(request);
 
+  // Skip Supabase client initialization if environment variables are not set
+  // This is needed for e2e tests and CI environments where these might not be available
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+  if (!supabaseUrl || !supabaseAnonKey) {
+    // In development or testing without Supabase configured, just return the intl response
+    return intlResponse;
+  }
+
   // Create Supabase client with the response from intl middleware
-  const supabase = createServerClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-    {
-      cookies: {
-        getAll() {
-          return request.cookies.getAll();
-        },
-        setAll(cookiesToSet) {
-          cookiesToSet.forEach(({ name, value }) => request.cookies.set(name, value));
-          // Copy cookies to the intl response
-          cookiesToSet.forEach(({ name, value, options }) =>
-            intlResponse.cookies.set(name, value, options)
-          );
-        },
+  const supabase = createServerClient(supabaseUrl, supabaseAnonKey, {
+    cookies: {
+      getAll() {
+        return request.cookies.getAll();
       },
-    }
-  );
+      setAll(cookiesToSet) {
+        cookiesToSet.forEach(({ name, value }) => request.cookies.set(name, value));
+        // Copy cookies to the intl response
+        cookiesToSet.forEach(({ name, value, options }) =>
+          intlResponse.cookies.set(name, value, options)
+        );
+      },
+    },
+  });
 
   // IMPORTANT: Do not write any logic between createServerClient and
   // supabase.auth.getUser(). This is required to refresh the session.

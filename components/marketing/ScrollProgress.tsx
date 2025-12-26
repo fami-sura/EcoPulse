@@ -12,8 +12,10 @@
  */
 
 import { useState, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 
 export function ScrollProgress() {
+  const t = useTranslations('marketing.nav');
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -37,12 +39,12 @@ export function ScrollProgress() {
 
   return (
     <div
-      className="fixed top-0 left-0 right-0 h-1 bg-muted z-[60]"
+      className="fixed top-0 left-0 right-0 h-1 bg-muted z-60"
       role="progressbar"
       aria-valuenow={Math.round(progress)}
       aria-valuemin={0}
       aria-valuemax={100}
-      aria-label="Page scroll progress"
+      aria-label={t('a11y.scrollProgress')}
     >
       <div
         className="h-full bg-primary transition-[width] duration-150 ease-out"

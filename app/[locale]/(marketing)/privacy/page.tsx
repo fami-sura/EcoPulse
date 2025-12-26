@@ -24,13 +24,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'marketing.privacy' });
 
+  const canonical = process.env.NEXT_PUBLIC_APP_URL
+    ? new URL(`/${locale}/privacy`, process.env.NEXT_PUBLIC_APP_URL).toString()
+    : undefined;
+
   return {
     title: t('meta.title'),
     description: t('meta.description'),
+    alternates: canonical ? { canonical } : undefined,
     openGraph: {
       title: t('meta.title'),
       description: t('meta.description'),
       type: 'website',
+      url: canonical,
     },
   };
 }
@@ -318,11 +324,11 @@ function PrivacyContent() {
               <p className="text-muted-foreground leading-relaxed mb-4">{t('contact.intro')}</p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="mailto:privacy@ecopulse.app"
+                  href={`mailto:${t('contact.email')}`}
                   className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
                 >
                   <HugeiconsIcon icon={Mail01Icon} size={18} />
-                  privacy@ecopulse.app
+                  {t('contact.email')}
                 </a>
                 <Link
                   href="/contact"

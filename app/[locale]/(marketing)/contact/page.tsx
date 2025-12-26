@@ -22,13 +22,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'marketing.contact' });
 
+  const canonical = process.env.NEXT_PUBLIC_APP_URL
+    ? new URL(`/${locale}/contact`, process.env.NEXT_PUBLIC_APP_URL).toString()
+    : undefined;
+
   return {
     title: t('meta.title'),
     description: t('meta.description'),
+    alternates: canonical ? { canonical } : undefined,
     openGraph: {
       title: t('meta.title'),
       description: t('meta.description'),
       type: 'website',
+      url: canonical,
     },
   };
 }
@@ -153,10 +159,10 @@ function ContactContent() {
                       </p>
                     </div>
                     <a
-                      href="mailto:info@ecopulse.app"
+                      href={`mailto:${t('emails.general.address')}`}
                       className="text-sm font-medium text-primary hover:underline"
                     >
-                      info@ecopulse.app
+                      {t('emails.general.address')}
                     </a>
                   </div>
 
@@ -171,10 +177,10 @@ function ContactContent() {
                       </p>
                     </div>
                     <a
-                      href="mailto:community@ecopulse.app"
+                      href={`mailto:${t('emails.community.address')}`}
                       className="text-sm font-medium text-primary hover:underline"
                     >
-                      community@ecopulse.app
+                      {t('emails.community.address')}
                     </a>
                   </div>
 
@@ -189,10 +195,10 @@ function ContactContent() {
                       </p>
                     </div>
                     <a
-                      href="mailto:sponsor@ecopulse.app"
+                      href={`mailto:${t('emails.sponsor.address')}`}
                       className="text-sm font-medium text-primary hover:underline"
                     >
-                      sponsor@ecopulse.app
+                      {t('emails.sponsor.address')}
                     </a>
                   </div>
 
@@ -207,10 +213,10 @@ function ContactContent() {
                       </p>
                     </div>
                     <a
-                      href="mailto:finance@ecopulse.app"
+                      href={`mailto:${t('emails.finance.address')}`}
                       className="text-sm font-medium text-primary hover:underline"
                     >
-                      finance@ecopulse.app
+                      {t('emails.finance.address')}
                     </a>
                   </div>
                 </div>

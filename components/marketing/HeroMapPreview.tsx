@@ -10,6 +10,7 @@
 
 import { useState, useSyncExternalStore } from 'react';
 import dynamic from 'next/dynamic';
+import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { LAGOS_CENTER, MAP_ZOOM } from '@/lib/map/constants';
 import { cn } from '@/lib/utils';
@@ -45,28 +46,30 @@ const sampleMarkers: SampleMarker[] = [
 ];
 
 function MapPreviewSkeleton() {
+  const t = useTranslations('marketing.mapPreview');
   return (
     <div className="absolute inset-0 bg-muted flex items-center justify-center">
       <div className="text-center">
         <div className="w-16 h-16 rounded-full bg-primary/10 mx-auto mb-4 flex items-center justify-center">
           <HugeiconsIcon icon={MapsLocation01Icon} size={32} className="text-primary" />
         </div>
-        <p className="text-sm font-medium text-foreground">Loading Map...</p>
-        <p className="text-xs text-muted-foreground mt-1">Lagos, Nigeria</p>
+        <p className="text-sm font-medium text-foreground">{t('loadingTitle')}</p>
+        <p className="text-xs text-muted-foreground mt-1">{t('locationLabel')}</p>
       </div>
     </div>
   );
 }
 
 function MapFallback() {
+  const t = useTranslations('marketing.mapPreview');
   return (
-    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-muted to-accent/5 flex items-center justify-center">
+    <div className="absolute inset-0 bg-linear-to-br from-primary/5 via-muted to-accent/5 flex items-center justify-center">
       <div className="text-center">
         <div className="w-20 h-20 rounded-full bg-primary/10 mx-auto mb-4 flex items-center justify-center ring-4 ring-primary/20">
           <HugeiconsIcon icon={MapsLocation01Icon} size={40} className="text-primary" />
         </div>
-        <p className="text-lg font-semibold text-foreground">Interactive Map</p>
-        <p className="text-sm text-muted-foreground mt-1">Click to explore verified reports</p>
+        <p className="text-lg font-semibold text-foreground">{t('fallbackTitle')}</p>
+        <p className="text-sm text-muted-foreground mt-1">{t('fallbackSubtitle')}</p>
       </div>
     </div>
   );
@@ -87,6 +90,7 @@ interface HeroMapPreviewProps {
 }
 
 export function HeroMapPreview({ className }: HeroMapPreviewProps) {
+  const t = useTranslations('marketing.mapPreview');
   const [isHovered, setIsHovered] = useState(false);
   // Use useSyncExternalStore pattern for SSR-safe mounting detection
   const mounted = useMounted();
@@ -121,7 +125,7 @@ export function HeroMapPreview({ className }: HeroMapPreviewProps) {
           'absolute inset-0 bg-foreground/60 backdrop-blur-sm flex flex-col items-center justify-center transition-opacity duration-300 z-20',
           isHovered ? 'opacity-100' : 'opacity-0'
         )}
-        aria-label="View the full interactive map"
+        aria-label={t('a11y.viewFullMap')}
       >
         <div className="text-center text-background">
           <div className="w-16 h-16 rounded-full bg-primary mx-auto mb-4 flex items-center justify-center shadow-lg">
@@ -131,8 +135,8 @@ export function HeroMapPreview({ className }: HeroMapPreviewProps) {
               className="text-primary-foreground"
             />
           </div>
-          <p className="text-lg font-semibold">Explore Live Map</p>
-          <p className="text-sm opacity-80 mt-1">See verified reports in real-time</p>
+          <p className="text-lg font-semibold">{t('ctaTitle')}</p>
+          <p className="text-sm opacity-80 mt-1">{t('ctaSubtitle')}</p>
         </div>
       </Link>
 
@@ -140,18 +144,18 @@ export function HeroMapPreview({ className }: HeroMapPreviewProps) {
       <div className="absolute top-4 left-4 flex gap-2 z-10 pointer-events-none">
         <div className="bg-background/95 backdrop-blur-sm rounded-full px-3 py-1.5 text-xs font-medium shadow-md border border-border flex items-center gap-1.5">
           <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-          <span className="text-foreground">3 Verified</span>
+          <span className="text-foreground">{t('status.verified', { count: 3 })}</span>
         </div>
         <div className="bg-background/95 backdrop-blur-sm rounded-full px-3 py-1.5 text-xs font-medium shadow-md border border-border flex items-center gap-1.5">
           <span className="w-2 h-2 rounded-full bg-amber-500"></span>
-          <span className="text-foreground">2 Pending</span>
+          <span className="text-foreground">{t('status.pending', { count: 2 })}</span>
         </div>
       </div>
 
       {/* Location Badge */}
       <div className="absolute top-4 right-4 z-10 pointer-events-none">
         <div className="bg-background/95 backdrop-blur-sm rounded-full px-3 py-1.5 text-xs font-medium shadow-md border border-border text-foreground">
-          Lagos, Nigeria
+          {t('locationLabel')}
         </div>
       </div>
     </div>
