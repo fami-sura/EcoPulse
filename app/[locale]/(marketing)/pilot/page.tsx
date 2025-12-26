@@ -135,7 +135,7 @@ function PilotContent() {
                 size="lg"
                 className="min-h-12 px-6 border-primary/30 hover:border-primary hover:bg-primary/5"
               >
-                <a href="/Pilot-program.pdf" download>
+                <a href="/EcoPulsePilotProgram.pdf" download="EcoPulsePilotProgram.pdf">
                   <HugeiconsIcon icon={Download01Icon} size={18} className="mr-2" />
                   {t('hero.downloadPdf')}
                 </a>
