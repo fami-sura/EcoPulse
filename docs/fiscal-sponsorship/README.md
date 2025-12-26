@@ -1,6 +1,6 @@
 # Fiscal Sponsorship Sprint (10 Days)
 
-Goal: secure a fiscal sponsor able to receive and administer a **$50–100k** grant for EcoPulse’s **Water**-aligned pilot (Nigeria / Niger / Chad), enabling an AJA Foundation LOI that can truthfully use a sponsor’s 501(c)(3) + EIN.
+Goal: secure a fiscal sponsor able to receive and administer a **$50–100k** grant for EcoPulse’s **Water**-aligned program (Nigeria / Niger / Chad) with an initial **90-day pilot phase**, enabling an AJA Foundation LOI that can truthfully use a sponsor’s 501(c)(3) + EIN.
 
 ## What’s in this folder
 

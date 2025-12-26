@@ -10,6 +10,8 @@ I’m building EcoPulse (E‑Community Pulse), a community reporting + verificat
 
 We’re preparing a $50–100k LOI to the AJA Foundation (Water pillar) and are seeking a fiscal sponsor that can receive philanthropic funds and support compliant disbursement to vendors/contractors for a 12‑month pilot across Nigeria, Niger, and Chad.
 
+We’re framing this as a 12‑month program with an initial 90‑day pilot phase focused on validating adoption, verification quality, and response coordination.
+
 Could we schedule a 20‑minute call to confirm fit, fee structure, onboarding timeline, and requirements? I can share a 1‑page overview and draft budget.
 
 Thanks,
@@ -27,7 +29,7 @@ Hello {Name/Team},
 
 EcoPulse (E‑Community Pulse) is building a mobile-first reporting + verification workflow so communities can flag waste/drainage issues with photos + location, verify quickly, and coordinate response. The goal is sustainable water-impact: fewer blocked drains, less contamination risk, and improved accountability in response.
 
-We’re seeking fiscal sponsorship for a 12‑month pilot (Nigeria, Niger, Chad) and a $50–100k philanthropic request (initially AJA Foundation / Water pillar). We need a sponsor able to receive funds under a 501(c)(3) umbrella and support compliant disbursement and basic reporting.
+We’re seeking fiscal sponsorship for a 12‑month program (Nigeria, Niger, Chad) with an initial 90‑day pilot phase, and a $50–100k philanthropic request (initially AJA Foundation / Water pillar). We need a sponsor able to receive funds under a 501(c)(3) umbrella and support compliant disbursement and basic reporting.
 
 If this could be a fit, can we schedule a short call? I’ll share our 1‑page sponsor pack + draft budget.
 

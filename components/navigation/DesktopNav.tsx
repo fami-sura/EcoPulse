@@ -86,13 +86,27 @@ export function DesktopNav() {
   const { isAuthenticated, user, profile } = useAuthStore();
 
   // Remove locale prefix from pathname for matching
-  const pathnameWithoutLocale = pathname.replace(/^\/[a-z]{2}(?:\/|$)/, '/');
+  // Handles both '/en/map' and direct '/map' paths
+  let pathnameWithoutLocale = pathname;
+  const localeMatch = pathname.match(/^\/([a-z]{2})(?:\/|$)/);
+  if (localeMatch) {
+    pathnameWithoutLocale = pathname.slice(localeMatch[0].length - 1) || '/';
+  }
 
   const isActive = (href: string) => {
-    if (href === '/map') {
-      return pathnameWithoutLocale === '/map' || pathnameWithoutLocale.startsWith('/map/');
+    // Normalize paths for comparison
+    const normalizedPathname =
+      pathnameWithoutLocale === '/' ? '/' : pathnameWithoutLocale.toLowerCase();
+    const normalizedHref = href.toLowerCase();
+
+    if (normalizedHref === '/map') {
+      return (
+        normalizedPathname === '/map' ||
+        normalizedPathname === '/' ||
+        normalizedPathname.startsWith('/map/')
+      );
     }
-    return pathnameWithoutLocale.startsWith(href);
+    return normalizedPathname.startsWith(normalizedHref);
   };
 
   // Filter nav items based on user role

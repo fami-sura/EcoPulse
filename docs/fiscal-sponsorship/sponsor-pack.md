@@ -17,15 +17,27 @@ EcoPulse enables:
 - **Coordinate:** responders/NGOs see validated issues and track resolution
 - **Learn:** lightweight community education prompts improve safe practices and long-term prevention
 
-## Proposed pilot (12 months)
+## Program structure
+
+We are planning a **12-month program** with an initial **90-day pilot phase** focused on validating adoption, verification quality, and partner response coordination.
+
+## Proposed program (12 months)
 
 - **Countries:** Nigeria, Niger, Chad
 - **Focus:** drainage/waste hotspots impacting water quality and flood risk
-- **Outputs (draft targets):**
-  - 1,500+ community reports submitted
-  - 700+ verified issues (threshold-based verification)
-  - 200+ issues resolved/closed with evidence
-  - monthly public transparency summaries (counts + categories + response time)
+- **Outputs (targets; to be refined with partners):**
+  - Reports submitted (photo + location)
+  - Verification rate and verification quality indicators
+  - Median time: report → verified; verified → first response attempt
+  - Resolution outcomes (definition agreed with partners)
+  - Monthly transparency summaries (counts, categories, and response timing)
+
+## Trust & safeguards (how we keep data credible)
+
+- **Evidence:** photo + geolocation reporting
+- **Trust:** community verification + duplicate safeguards
+- **Safety:** privacy-first photo handling (including EXIF removal) and minimal personal data collection
+- **Action:** partners can prioritize verified issues and track response status
 
 ## Funding need
 

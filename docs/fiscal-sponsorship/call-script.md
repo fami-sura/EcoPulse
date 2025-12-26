@@ -13,7 +13,7 @@ In one call, confirm: **fit**, **timeline**, **fees**, **requirements**, and whe
 
 - EcoPulse: community reporting + verification for waste/drainage/flooding issues.
 - Water-first outcomes in Nigeria/Niger/Chad.
-- Seeking $50–100k initial grant (AJA Water LOI).
+- Seeking $50–100k initial grant (AJA Water LOI) to support a 12-month program with an initial 90-day pilot phase.
 
 ## 2) What we need from a sponsor (2 min)
 

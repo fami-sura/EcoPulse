@@ -38,6 +38,8 @@ EcoPulse helps communities in Nigeria, Niger, and Chad protect water quality and
 
 We operate a mobile-first platform where residents submit waste/drainage/flooding issues with photos + geolocation. Community verification increases accuracy and accountability. Verified issues are routed to responders/partners, and resolution status is tracked with transparent reporting. We also deliver lightweight community education prompts to reduce recurrence and support sustainability.
 
+We are planning a 12-month program with an initial 90-day pilot phase focused on validating adoption, verification quality, and response coordination.
+
 ## 8) How did you hear about Global Impact Ventures?
 
 Internet search

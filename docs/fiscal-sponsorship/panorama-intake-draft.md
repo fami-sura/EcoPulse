@@ -20,6 +20,8 @@ Model A (launching a new idea/timebound initiative), with a planned transition t
 
 Planning an initial $50–100k philanthropic request (AJA Foundation Water pillar LOI). Seeking fiscal sponsorship so we can apply under a 501(c)(3) umbrella and administer funds compliantly.
 
+We are planning a 12-month program with an initial 90-day pilot phase focused on validating adoption, verification quality, and response coordination.
+
 ## Activities
 
 - Collect reports with photo + location

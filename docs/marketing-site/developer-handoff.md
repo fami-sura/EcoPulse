@@ -345,7 +345,8 @@ Required structure:
 1. Pilot overview
    - Problem statement
    - Target geography (placeholder ok)
-   - Duration (recommended: 90 days)
+   - Program duration (recommended): 12 months
+   - Pilot phase duration (recommended): 90 days
 2. Scope table
    - Where (city/wards)
    - Who verifies (community members)
@@ -698,7 +699,7 @@ Secondary CTA label:
 
 **Pilot snapshot (short paragraph)**
 
-- “We are preparing a 90‑day pilot to test adoption, verification quality, and response coordination in selected communities. Our goal is to learn what works, measure outcomes, and improve the model with partners.”
+- “We are preparing a 12‑month program with an initial 90‑day pilot phase to test adoption, verification quality, and response coordination in selected communities. Our goal is to learn what works, measure outcomes, and improve the model with partners.”
 
 **Who it’s for (3 cards)**
 
@@ -796,17 +797,17 @@ Secondary CTA label:
 **SEO**
 
 - Title: “EcoPulse — Pilot Plan”
-- Description: “A 90-day pilot plan to evaluate community reporting, verification quality, and response coordination for waste and drainage issues.”
+- Description: “A 90-day pilot phase within a 12-month program to evaluate community reporting, verification quality, and response coordination for waste and drainage issues.”
 
 **Pilot overview**
 
-- H1: “Pilot plan (90 days)”
-- Intro: “This pilot is designed to test adoption, verification quality, and response coordination for waste and drainage issues in selected communities.”
+- H1: “Pilot plan (90-day phase)”
+- Intro: “This pilot phase is designed to test adoption, verification quality, and response coordination for waste and drainage issues in selected communities, as the first phase of a 12-month program.”
 
 **Scope (table copy)**
 
 - Geography: “Selected communities in [City, Country] (finalizing with partners).”
-- Duration: “90 days”
+- Duration: “Pilot phase: 90 days (within a 12-month program)”
 - Issue focus: “Waste accumulation and blocked drainage”
 - Verification model: “Community verification with safeguards against duplicates and self-verification.”
 - Success definition: “Verified issues receive documented response attempts and resolution outcomes where feasible.”
