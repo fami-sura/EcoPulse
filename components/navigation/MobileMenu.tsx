@@ -16,7 +16,7 @@
 import { useCallback, useState, useMemo } from 'react';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import * as Dialog from '@radix-ui/react-dialog';
 import {
   Home03Icon,
@@ -89,8 +89,9 @@ const allNavItems: NavItem[] = [
 export function MobileMenu() {
   const pathname = usePathname();
   const t = useTranslations('navigation');
+  const locale = useLocale();
   const { isMenuOpen, openMenu, closeMenu } = useNavigationStore();
-  const { isAuthenticated, user, profile } = useAuthStore();
+  const { isAuthenticated, user, profile, logout: storeLogout } = useAuthStore();
   const [isLoggingOut, setIsLoggingOut] = useState(false);
 
   // Remove locale prefix from pathname for matching
@@ -128,7 +129,17 @@ export function MobileMenu() {
     setIsLoggingOut(true);
     closeMenu();
     try {
-      await logout();
+      const result = await logout();
+      if (result.success) {
+        // Clear client-side auth state
+        storeLogout();
+        // Redirect to home page with full page navigation
+        const homePath = locale === 'en' ? '/' : `/${locale}`;
+        window.location.href = homePath;
+      } else {
+        console.error('Logout failed:', result.error);
+        setIsLoggingOut(false);
+      }
     } catch (error) {
       console.error('Logout failed:', error);
       setIsLoggingOut(false);
@@ -167,8 +178,9 @@ export function MobileMenu() {
           aria-label={t('openMenu')}
           className={cn(
             'flex h-11 w-11 items-center justify-center rounded-lg lg:hidden',
-            'text-gray-600 hover:bg-gray-100',
-            'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2'
+            'text-muted-foreground hover:bg-muted hover:text-foreground',
+            'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2',
+            'transition-colors'
           )}
           suppressHydrationWarning
         >
@@ -190,7 +202,7 @@ export function MobileMenu() {
         {/* Slide-in Menu Panel */}
         <Dialog.Content
           className={cn(
-            'fixed inset-y-0 left-0 w-75 bg-white shadow-xl',
+            'fixed inset-y-0 left-0 w-75 bg-background shadow-xl',
             'flex flex-col',
             'data-[state=open]:animate-in data-[state=closed]:animate-out',
             'data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left',
@@ -201,8 +213,8 @@ export function MobileMenu() {
           aria-describedby={undefined}
         >
           {/* Menu Header with Close Button */}
-          <div className="flex h-15 shrink-0 items-center justify-between border-b border-gray-200 px-4">
-            <Dialog.Title className="text-lg font-semibold text-gray-900">
+          <div className="flex h-15 shrink-0 items-center justify-between border-b border-border px-4">
+            <Dialog.Title className="text-lg font-semibold text-foreground">
               {t('mainMenu')}
             </Dialog.Title>
             <Dialog.Close asChild>
@@ -210,8 +222,9 @@ export function MobileMenu() {
                 aria-label={t('closeMenu')}
                 className={cn(
                   'flex h-11 w-11 items-center justify-center rounded-lg',
-                  'text-gray-500 hover:bg-gray-100 hover:text-gray-700',
-                  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2'
+                  'text-muted-foreground hover:bg-muted hover:text-foreground',
+                  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2',
+                  'transition-colors'
                 )}
               >
                 <HugeiconsIcon icon={Cancel01Icon} size={24} aria-hidden="true" />
@@ -232,11 +245,11 @@ export function MobileMenu() {
                     aria-label={item.ariaLabel}
                     aria-current={active ? 'page' : undefined}
                     className={cn(
-                      'flex h-14 items-center gap-4 rounded-xl px-4 transition-all',
-                      'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2',
+                      'flex h-14 items-center gap-4 rounded-xl px-4 transition-all duration-200',
+                      'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2',
                       active
-                        ? 'bg-green-600/10 text-green-600'
-                        : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
+                        ? 'bg-primary/10 text-primary'
+                        : 'text-muted-foreground hover:bg-muted hover:text-foreground'
                     )}
                   >
                     <HugeiconsIcon
@@ -255,7 +268,7 @@ export function MobileMenu() {
           </nav>
 
           {/* Auth Section */}
-          <div className="shrink-0 border-t border-gray-200 p-4">
+          <div className="shrink-0 border-t border-border p-4">
             {isAuthenticated && user ? (
               <div className="flex flex-col gap-2">
                 {/* User Info */}
@@ -269,15 +282,15 @@ export function MobileMenu() {
                       className="h-10 w-10 rounded-full object-cover"
                     />
                   ) : (
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-100 text-green-600">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
                       <HugeiconsIcon icon={UserIcon} size={20} aria-hidden="true" />
                     </div>
                   )}
                   <div className="flex-1 min-w-0">
-                    <p className="text-sm font-medium text-gray-900 truncate">
+                    <p className="text-sm font-medium text-foreground truncate">
                       {profile?.username || user.email?.split('@')[0] || 'User'}
                     </p>
-                    <p className="text-xs text-gray-500 truncate">{user.email}</p>
+                    <p className="text-xs text-muted-foreground truncate">{user.email}</p>
                   </div>
                 </div>
                 {/* Logout Button */}
@@ -287,9 +300,10 @@ export function MobileMenu() {
                   aria-label={isLoggingOut ? t('loggingOut') : t('logout')}
                   className={cn(
                     'flex h-12 items-center justify-center gap-2 rounded-xl',
-                    'bg-red-50 text-red-600 font-medium',
-                    'hover:bg-red-100 active:bg-red-200 disabled:opacity-50',
-                    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2'
+                    'bg-destructive/10 text-destructive font-medium',
+                    'hover:bg-destructive/20 active:bg-destructive/30 disabled:opacity-50',
+                    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-destructive focus-visible:ring-offset-2',
+                    'transition-colors'
                   )}
                 >
                   <HugeiconsIcon icon={Logout01Icon} size={20} aria-hidden="true" />
@@ -303,9 +317,10 @@ export function MobileMenu() {
                 aria-label="Log in to your account"
                 className={cn(
                   'flex h-14 items-center justify-center gap-2 rounded-xl',
-                  'bg-green-600 text-white font-medium',
-                  'hover:bg-green-700 active:bg-green-800',
-                  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2'
+                  'bg-primary text-primary-foreground font-semibold shadow-sm',
+                  'hover:bg-primary/90 active:bg-primary/80',
+                  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2',
+                  'transition-colors'
                 )}
               >
                 <HugeiconsIcon icon={Login01Icon} size={22} aria-hidden="true" />

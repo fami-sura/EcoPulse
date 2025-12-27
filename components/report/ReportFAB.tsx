@@ -37,13 +37,13 @@ export function ReportFAB({ onClick, className }: ReportFABProps) {
       className={cn(
         // Base styles
         'fixed flex items-center justify-center',
-        'bg-green-600 text-white shadow-lg',
+        'bg-primary text-primary-foreground shadow-lg',
         'transition-all duration-200 ease-out',
         // Hover/active states
-        'hover:bg-green-700 hover:shadow-xl',
-        'active:scale-95 active:bg-green-800',
+        'hover:bg-primary/90 hover:shadow-xl',
+        'active:scale-95',
         // Focus states
-        'focus:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2',
+        'focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2',
         // Mobile: FAB style (bottom-left, circular)
         'bottom-6 left-4',
         'h-14 w-14 rounded-full',

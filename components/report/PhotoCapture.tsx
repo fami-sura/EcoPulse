@@ -279,7 +279,10 @@ export function PhotoCapture({
       <div className="grid grid-cols-3 gap-3 sm:grid-cols-4">
         {/* Uploaded Photos */}
         {photoUrls.map((url, index) => (
-          <div key={url} className="relative aspect-square overflow-hidden rounded-lg bg-gray-100">
+          <div
+            key={url}
+            className="relative aspect-square overflow-hidden rounded-xl bg-muted border border-border"
+          >
             <Image
               src={url}
               alt={`Uploaded photo ${index + 1}`}
@@ -290,13 +293,16 @@ export function PhotoCapture({
             <button
               type="button"
               onClick={() => handleRemovePhoto(index)}
-              className="absolute right-1 top-1 flex h-6 w-6 items-center justify-center rounded-full bg-red-500 text-white hover:bg-red-600"
+              className="absolute right-1 top-1 flex h-6 w-6 items-center justify-center rounded-full bg-destructive text-destructive-foreground hover:bg-destructive/90 transition-colors"
               aria-label={`Remove photo ${index + 1}`}
             >
               <HugeiconsIcon icon={Cancel01Icon} className="h-4 w-4" />
             </button>
-            <div className="absolute bottom-1 left-1 flex h-5 w-5 items-center justify-center rounded-full bg-green-500">
-              <HugeiconsIcon icon={CheckmarkCircle02Icon} className="h-3 w-3 text-white" />
+            <div className="absolute bottom-1 left-1 flex h-5 w-5 items-center justify-center rounded-full bg-primary">
+              <HugeiconsIcon
+                icon={CheckmarkCircle02Icon}
+                className="h-3 w-3 text-primary-foreground"
+              />
             </div>
           </div>
         ))}
@@ -305,25 +311,25 @@ export function PhotoCapture({
         {uploadingPhotos.map((photo) => (
           <div
             key={photo.id}
-            className="relative aspect-square overflow-hidden rounded-lg bg-gray-100"
+            className="relative aspect-square overflow-hidden rounded-xl bg-muted border border-border"
           >
             <div className="flex h-full w-full items-center justify-center">
               {photo.error ? (
                 <div className="flex flex-col items-center gap-1 p-2">
-                  <HugeiconsIcon icon={Cancel01Icon} className="h-6 w-6 text-red-500" />
-                  <span className="text-xs text-red-500">Failed</span>
+                  <HugeiconsIcon icon={Cancel01Icon} className="h-6 w-6 text-destructive" />
+                  <span className="text-xs text-destructive">Failed</span>
                   <button
                     type="button"
                     onClick={() => handleRetryUpload(photo)}
-                    className="text-xs text-green-600 hover:underline"
+                    className="text-xs text-primary hover:underline"
                   >
                     Retry
                   </button>
                 </div>
               ) : (
                 <div className="flex flex-col items-center gap-2">
-                  <div className="h-8 w-8 animate-spin rounded-full border-2 border-gray-300 border-t-green-600" />
-                  <span className="text-xs text-gray-500">Uploading...</span>
+                  <div className="h-8 w-8 animate-spin rounded-full border-2 border-muted-foreground/30 border-t-primary" />
+                  <span className="text-xs text-muted-foreground">Uploading...</span>
                 </div>
               )}
             </div>
@@ -331,7 +337,7 @@ export function PhotoCapture({
               <button
                 type="button"
                 onClick={() => handleRemoveFailedUpload(photo.id)}
-                className="absolute right-1 top-1 flex h-6 w-6 items-center justify-center rounded-full bg-red-500 text-white hover:bg-red-600"
+                className="absolute right-1 top-1 flex h-6 w-6 items-center justify-center rounded-full bg-destructive text-destructive-foreground hover:bg-destructive/90 transition-colors"
                 aria-label="Remove failed upload"
               >
                 <HugeiconsIcon icon={Cancel01Icon} className="h-4 w-4" />
@@ -347,12 +353,12 @@ export function PhotoCapture({
             onClick={handleAddClick}
             disabled={isUploading}
             className={cn(
-              'aspect-square rounded-lg border-2 border-dashed',
+              'aspect-square rounded-xl border-2 border-dashed',
               'flex flex-col items-center justify-center gap-2',
-              'transition-colors',
+              'transition-all',
               isUploading
-                ? 'cursor-not-allowed border-gray-200 bg-gray-50 text-gray-400'
-                : 'border-gray-300 bg-white text-gray-500 hover:border-green-500 hover:bg-green-50 hover:text-green-600'
+                ? 'cursor-not-allowed border-border bg-muted/50 text-muted-foreground'
+                : 'border-border bg-background text-muted-foreground hover:border-primary hover:bg-primary/5 hover:text-primary'
             )}
             aria-label={photoUrls.length === 0 ? 'Add photo' : 'Add another photo'}
           >
@@ -384,14 +390,22 @@ export function PhotoCapture({
       />
 
       {/* Photo Count */}
-      <p className="text-sm text-gray-500">
-        {photoUrls.length} of {MAX_PHOTOS} photos{' '}
-        {photoUrls.length === 0 && <span className="text-red-500">• At least 1 required</span>}
-      </p>
+      <div className="flex items-center justify-between rounded-lg bg-muted/50 px-3 py-2 border border-border">
+        <p className="text-sm text-foreground">
+          <span className="font-semibold text-primary">{photoUrls.length}</span> of {MAX_PHOTOS}{' '}
+          photos
+        </p>
+        {photoUrls.length === 0 && (
+          <span className="text-xs text-destructive font-medium">At least 1 required</span>
+        )}
+        {photoUrls.length >= MAX_PHOTOS && (
+          <span className="text-xs text-muted-foreground font-medium">Maximum reached</span>
+        )}
+      </div>
 
       {/* Error Messages */}
       {(validationError || error) && (
-        <p className="text-sm text-red-500" role="alert">
+        <p className="text-sm text-destructive" role="alert">
           {validationError || error}
         </p>
       )}

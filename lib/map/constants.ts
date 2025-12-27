@@ -76,6 +76,7 @@ export interface MapIssue {
   severity: IssueRow['severity'];
   note: string | null;
   address: string | null;
+  verification_count: number;
 }
 
 /**

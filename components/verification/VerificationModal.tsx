@@ -370,7 +370,7 @@ export function VerificationModal({ isOpen, onClose, issue, onSuccess }: Verific
         aria-modal="true"
         aria-labelledby="verification-modal-title"
         className={cn(
-          'fixed z-50 bg-white rounded-t-2xl md:rounded-xl shadow-xl',
+          'fixed z-50 bg-background rounded-t-2xl md:rounded-xl shadow-xl border border-border',
           'animate-in slide-in-from-bottom-4 duration-300',
           // Mobile: Bottom sheet
           'inset-x-0 bottom-0 max-h-[90vh]',
@@ -381,17 +381,17 @@ export function VerificationModal({ isOpen, onClose, issue, onSuccess }: Verific
       >
         {/* Drag handle (mobile) */}
         <div className="flex justify-center pt-3 md:hidden">
-          <div className="h-1.5 w-12 rounded-full bg-gray-300" />
+          <div className="h-1.5 w-12 rounded-full bg-muted-foreground/30" />
         </div>
 
         {/* Header */}
-        <div className="flex items-center justify-between border-b border-gray-200 px-4 py-3 md:px-6">
-          <h2 id="verification-modal-title" className="text-lg font-semibold text-gray-900">
+        <div className="flex items-center justify-between border-b border-border px-4 py-3 md:px-6">
+          <h2 id="verification-modal-title" className="text-lg font-semibold text-foreground">
             Verify This Issue
           </h2>
           <button
             onClick={onClose}
-            className="flex h-10 w-10 items-center justify-center rounded-full hover:bg-gray-100 transition-colors"
+            className="flex h-10 w-10 items-center justify-center rounded-full hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
             aria-label="Close"
           >
             <HugeiconsIcon icon={Cancel01Icon} size={24} />
@@ -402,7 +402,7 @@ export function VerificationModal({ isOpen, onClose, issue, onSuccess }: Verific
         <div className="overflow-y-auto p-4 md:p-6 space-y-6 max-h-[calc(90vh-180px)] md:max-h-[calc(85vh-180px)]">
           {/* Error message */}
           {error && (
-            <div className="flex items-start gap-3 rounded-lg bg-red-50 p-4 text-sm text-red-700 border border-red-200">
+            <div className="flex items-start gap-3 rounded-lg bg-destructive/10 p-4 text-sm text-destructive border border-destructive/20">
               <HugeiconsIcon icon={AlertCircleIcon} size={20} className="mt-0.5 shrink-0" />
               <p>{error}</p>
             </div>
@@ -410,15 +410,15 @@ export function VerificationModal({ isOpen, onClose, issue, onSuccess }: Verific
 
           {/* Photo Capture */}
           <section>
-            <label className="mb-2 block text-sm font-medium text-gray-700">
-              Verification Photo <span className="text-red-500">*</span>
+            <label className="mb-2 block text-sm font-medium text-foreground">
+              Verification Photo <span className="text-destructive">*</span>
             </label>
-            <p className="mb-3 text-sm text-gray-500">
+            <p className="mb-3 text-sm text-muted-foreground">
               Take a new photo from the location to verify this issue exists.
             </p>
 
             {photoUrl ? (
-              <div className="relative rounded-xl overflow-hidden border border-gray-200">
+              <div className="relative rounded-xl overflow-hidden border border-border">
                 <Image
                   src={photoUrl}
                   alt="Verification photo"
@@ -431,12 +431,12 @@ export function VerificationModal({ isOpen, onClose, issue, onSuccess }: Verific
                   onClick={() => {
                     setPhotoUrl(null);
                   }}
-                  className="absolute top-2 right-2 flex h-8 w-8 items-center justify-center rounded-full bg-black/60 text-white hover:bg-black/80 transition-colors"
+                  className="absolute top-2 right-2 flex h-8 w-8 items-center justify-center rounded-full bg-background/80 backdrop-blur-sm text-muted-foreground hover:bg-muted hover:text-foreground transition-colors border border-border"
                   aria-label="Remove photo"
                 >
                   <HugeiconsIcon icon={Cancel01Icon} size={18} />
                 </button>
-                <div className="absolute bottom-2 left-2 flex items-center gap-1.5 rounded-full bg-green-500 px-3 py-1 text-sm text-white">
+                <div className="absolute bottom-2 left-2 flex items-center gap-1.5 rounded-full bg-primary px-3 py-1 text-sm text-primary-foreground">
                   <HugeiconsIcon icon={CheckmarkCircle02Icon} size={16} />
                   Photo uploaded
                 </div>
@@ -446,25 +446,25 @@ export function VerificationModal({ isOpen, onClose, issue, onSuccess }: Verific
                 onClick={() => fileInputRef.current?.click()}
                 disabled={isUploading}
                 className={cn(
-                  'w-full h-48 rounded-xl border-2 border-dashed border-gray-300',
+                  'w-full h-48 rounded-xl border-2 border-dashed border-border',
                   'flex flex-col items-center justify-center gap-3',
-                  'text-gray-500 hover:border-green-500 hover:bg-green-50 hover:text-green-600',
-                  'transition-colors cursor-pointer',
+                  'text-muted-foreground hover:border-primary hover:bg-primary/5 hover:text-primary',
+                  'transition-all cursor-pointer',
                   isUploading && 'opacity-50 cursor-not-allowed'
                 )}
               >
                 {isUploading ? (
                   <>
-                    <div className="h-10 w-10 animate-spin rounded-full border-2 border-gray-300 border-t-green-600" />
+                    <div className="h-10 w-10 animate-spin rounded-full border-2 border-muted border-t-primary" />
                     <span>Uploading...</span>
                   </>
                 ) : (
                   <>
-                    <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gray-100">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-full bg-muted">
                       <HugeiconsIcon icon={Camera01Icon} size={28} />
                     </div>
                     <span className="font-medium">Take Photo</span>
-                    <span className="text-xs text-gray-400">Tap to open camera</span>
+                    <span className="text-xs text-muted-foreground">Tap to open camera</span>
                   </>
                 )}
               </button>
@@ -483,16 +483,18 @@ export function VerificationModal({ isOpen, onClose, issue, onSuccess }: Verific
 
           {/* Screenshot Warning */}
           {screenshotWarning && !warningOverridden && (
-            <div className="flex items-start gap-3 rounded-lg bg-amber-50 p-4 text-sm text-amber-800 border border-amber-200">
+            <div className="flex items-start gap-3 rounded-lg bg-amber-500/10 p-4 text-sm text-amber-800 dark:text-amber-300 border border-amber-500/20">
               <HugeiconsIcon icon={AlertCircleIcon} size={20} className="mt-0.5 shrink-0" />
               <div className="flex-1">
                 <p className="font-medium">Photo appears to be a screenshot</p>
-                <p className="mt-1 text-amber-700">Please take a new photo from the location.</p>
+                <p className="mt-1 text-amber-700 dark:text-amber-400">
+                  Please take a new photo from the location.
+                </p>
                 <Button
                   variant="ghost"
                   size="sm"
                   onClick={handleOverrideWarning}
-                  className="mt-2 text-amber-800 hover:text-amber-900"
+                  className="mt-2 text-amber-800 dark:text-amber-300 hover:text-amber-900 hover:bg-amber-500/20"
                 >
                   Submit Anyway
                 </Button>
@@ -502,18 +504,18 @@ export function VerificationModal({ isOpen, onClose, issue, onSuccess }: Verific
 
           {/* Distance Warning */}
           {distanceWarning && !warningOverridden && (
-            <div className="flex items-start gap-3 rounded-lg bg-amber-50 p-4 text-sm text-amber-800 border border-amber-200">
+            <div className="flex items-start gap-3 rounded-lg bg-amber-500/10 p-4 text-sm text-amber-800 dark:text-amber-300 border border-amber-500/20">
               <HugeiconsIcon icon={Location01Icon} size={20} className="mt-0.5 shrink-0" />
               <div className="flex-1">
                 <p className="font-medium">You&apos;re far from the issue location</p>
-                <p className="mt-1 text-amber-700">
+                <p className="mt-1 text-amber-700 dark:text-amber-400">
                   Please verify in person at the reported location.
                 </p>
                 <Button
                   variant="ghost"
                   size="sm"
                   onClick={handleOverrideWarning}
-                  className="mt-2 text-amber-800 hover:text-amber-900"
+                  className="mt-2 text-amber-800 dark:text-amber-300 hover:text-amber-900 hover:bg-amber-500/20"
                 >
                   Submit Anyway
                 </Button>
@@ -525,9 +527,9 @@ export function VerificationModal({ isOpen, onClose, issue, onSuccess }: Verific
           <section>
             <label
               htmlFor="verification-note"
-              className="mb-2 block text-sm font-medium text-gray-700"
+              className="mb-2 block text-sm font-medium text-foreground"
             >
-              Context Notes <span className="font-normal text-gray-400">(optional)</span>
+              Context Notes <span className="font-normal text-muted-foreground">(optional)</span>
             </label>
             <Textarea
               id="verification-note"
@@ -537,26 +539,28 @@ export function VerificationModal({ isOpen, onClose, issue, onSuccess }: Verific
               className="min-h-24"
               maxLength={MAX_NOTE_LENGTH}
             />
-            <div className="mt-1 text-right text-xs text-gray-400">
+            <div className="mt-1 text-right text-xs text-muted-foreground">
               {note.length}/{MAX_NOTE_LENGTH} characters
             </div>
           </section>
 
           {/* Location Info */}
-          <section className="rounded-lg bg-gray-50 p-4 border border-gray-200">
+          <section className="rounded-lg bg-muted/50 p-4 border border-border">
             <div className="flex items-center gap-2 text-sm">
               <HugeiconsIcon
                 icon={Location01Icon}
                 size={18}
-                className={geolocation.loading ? 'animate-pulse text-gray-400' : 'text-blue-500'}
+                className={
+                  geolocation.loading ? 'animate-pulse text-muted-foreground' : 'text-primary'
+                }
               />
-              <span className="font-medium text-gray-700">Your Location</span>
+              <span className="font-medium text-foreground">Your Location</span>
             </div>
-            <div className="mt-2 text-sm text-gray-600">
+            <div className="mt-2 text-sm text-muted-foreground">
               {geolocation.loading ? (
-                <span className="text-gray-400">Detecting location...</span>
+                <span className="text-muted-foreground">Detecting location...</span>
               ) : geolocation.error ? (
-                <span className="text-amber-600">{geolocation.error}</span>
+                <span className="text-amber-600 dark:text-amber-400">{geolocation.error}</span>
               ) : geolocation.accuracy ? (
                 <span>Accurate within {Math.round(geolocation.accuracy)} meters</span>
               ) : (
@@ -567,7 +571,7 @@ export function VerificationModal({ isOpen, onClose, issue, onSuccess }: Verific
         </div>
 
         {/* Footer */}
-        <div className="border-t border-gray-200 px-4 py-4 md:px-6">
+        <div className="border-t border-border px-4 py-4 md:px-6">
           <Button
             onClick={handleSubmit}
             disabled={!canSubmit}
@@ -576,7 +580,7 @@ export function VerificationModal({ isOpen, onClose, issue, onSuccess }: Verific
           >
             {isSubmitting ? (
               <>
-                <div className="h-5 w-5 animate-spin rounded-full border-2 border-white border-t-transparent" />
+                <div className="h-5 w-5 animate-spin rounded-full border-2 border-primary-foreground border-t-transparent" />
                 Submitting...
               </>
             ) : (

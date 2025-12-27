@@ -184,7 +184,7 @@ export function VerifyButton({ issue, onVerified, className }: VerifyButtonProps
         <HugeiconsIcon
           icon={CheckmarkCircle02Icon}
           size={20}
-          className={isVerified ? 'text-green-500' : ''}
+          className={isVerified ? 'text-primary' : ''}
         />
         <span>{buttonLabel}</span>
       </Button>

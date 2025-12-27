@@ -31,6 +31,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
 import { createClient } from '@/lib/supabase/client';
+import { useAuthStore } from '@/stores/authStore';
 import { cn } from '@/lib/utils';
 
 interface SettingsState {
@@ -44,39 +45,32 @@ export default function ProfileSettingsPage() {
   const router = useRouter();
   const t = useTranslations('profile.settings');
   const tCommon = useTranslations('common');
+  const { user, isLoading: authLoading, isAuthenticated } = useAuthStore();
   const [settings, setSettings] = useState<SettingsState>({
     email_verified_reports: true,
     email_action_cards: true,
     email_monthly_summary: false,
     profile_public: true,
   });
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoadingSettings, setIsLoadingSettings] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
   const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle');
   const [error, setError] = useState<string | null>(null);
-  const [hasCheckedAuth, setHasCheckedAuth] = useState(false);
 
-  // Check auth state from Supabase directly for SSR hydration
+  // Redirect if not authenticated (after auth check completes)
   useEffect(() => {
-    async function checkAuthAndFetchSettings() {
+    if (!authLoading && !isAuthenticated) {
+      router.push('/auth/login?redirect=/profile/settings');
+    }
+  }, [authLoading, isAuthenticated, router]);
+
+  // Fetch settings when user is available
+  useEffect(() => {
+    async function fetchSettings() {
+      if (!user?.id) return;
+
       const supabase = createClient();
 
-      // Use getUser() instead of getSession() - getUser() validates with the server
-      // and is more reliable after recent login. getSession() can return stale data.
-      const {
-        data: { user },
-        error: authError,
-      } = await supabase.auth.getUser();
-
-      if (authError || !user) {
-        // Not authenticated - redirect to login
-        router.push('/auth/login');
-        return;
-      }
-
-      setHasCheckedAuth(true);
-
-      // Fetch settings
       try {
         const { data, error } = await supabase
           .from('users')
@@ -100,33 +94,26 @@ export default function ProfileSettingsPage() {
         console.error('Error fetching settings:', err);
         setError(t('saveFailedDescription'));
       } finally {
-        setIsLoading(false);
+        setIsLoadingSettings(false);
       }
     }
 
-    checkAuthAndFetchSettings();
-  }, [router, t]);
+    fetchSettings();
+  }, [user, t]);
 
   /**
    * Save settings to database with debounce
    */
   const saveSettings = useCallback(
     async (newSettings: SettingsState) => {
+      if (!user?.id) return;
+
       setIsSaving(true);
       setSaveStatus('saving');
       setError(null);
 
       try {
         const supabase = createClient();
-
-        // Get current user to ensure we have the user ID
-        const {
-          data: { user },
-          error: authError,
-        } = await supabase.auth.getUser();
-        if (authError || !user?.id) {
-          throw new Error('No authenticated user');
-        }
 
         const { error } = await supabase
           .from('users')
@@ -154,7 +141,7 @@ export default function ProfileSettingsPage() {
         setIsSaving(false);
       }
     },
-    [settings, t]
+    [settings, t, user]
   );
 
   /**
@@ -173,13 +160,18 @@ export default function ProfileSettingsPage() {
   );
 
   // Show loading state while checking auth or loading settings
-  if (!hasCheckedAuth || isLoading) {
+  if (authLoading || isLoadingSettings) {
     return (
       <div className="flex min-h-screen items-center justify-center">
         <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />
         <span className="sr-only">{tCommon('loading')}</span>
       </div>
     );
+  }
+
+  // Don't render if not authenticated (will redirect)
+  if (!isAuthenticated) {
+    return null;
   }
 
   return (

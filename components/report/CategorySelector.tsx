@@ -20,7 +20,7 @@
 
 import { useCallback, useRef, KeyboardEvent } from 'react';
 import { HugeiconsIcon } from '@hugeicons/react';
-import { Delete02Icon, DropletIcon } from '@hugeicons/core-free-icons';
+import { Delete02Icon, DropletIcon, CheckmarkCircle02Icon } from '@hugeicons/core-free-icons';
 import { cn } from '@/lib/utils';
 
 export type Category = 'waste' | 'drainage';
@@ -40,12 +40,20 @@ const categories = [
   {
     id: 'waste' as Category,
     icon: Delete02Icon,
-    label: 'Report waste or litter issue',
+    label: 'Waste/Litter',
+    description: 'Report waste or litter issue',
+    color: 'text-amber-600',
+    bgColor: 'bg-amber-50',
+    borderColor: 'border-amber-200',
   },
   {
     id: 'drainage' as Category,
     icon: DropletIcon,
-    label: 'Report drainage or flood risk issue',
+    label: 'Drainage',
+    description: 'Report drainage or flood risk issue',
+    color: 'text-blue-600',
+    bgColor: 'bg-blue-50',
+    borderColor: 'border-blue-200',
   },
 ];
 
@@ -86,7 +94,7 @@ export function CategorySelector({ value, onChange, error, className }: Category
 
   return (
     <div
-      className={cn('flex flex-wrap justify-center gap-4', className)}
+      className={cn('grid grid-cols-1 sm:grid-cols-2 gap-3', className)}
       role="radiogroup"
       aria-label="Select issue category"
     >
@@ -103,23 +111,50 @@ export function CategorySelector({ value, onChange, error, className }: Category
             type="button"
             role="radio"
             aria-checked={isSelected}
-            aria-label={category.label}
+            aria-label={category.description}
             className={cn(
-              'flex h-25 w-25 items-center justify-center rounded-lg border transition-all duration-200',
-              'focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2',
+              'flex items-center gap-4 rounded-xl border-2 p-4 transition-all duration-200',
+              'focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2',
               isSelected
-                ? 'border-[3px] border-green-600 bg-green-50'
-                : 'border border-gray-200 hover:border-gray-300 hover:bg-gray-50',
-              showError && 'animate-shake border-red-500'
+                ? 'border-primary bg-primary/5 shadow-md scale-[1.02]'
+                : 'border-border bg-card hover:border-primary/30 hover:shadow-sm',
+              showError && 'animate-shake border-destructive'
             )}
             onClick={() => onChange(category.id)}
             onKeyDown={(e) => handleKeyDown(e, index)}
           >
-            <HugeiconsIcon
-              icon={category.icon}
-              size={32}
-              color={isSelected ? '#059669' : '#6B7280'}
-            />
+            <div
+              className={cn(
+                'flex h-14 w-14 items-center justify-center rounded-lg shrink-0',
+                isSelected ? category.bgColor : 'bg-muted'
+              )}
+            >
+              <HugeiconsIcon
+                icon={category.icon}
+                size={28}
+                className={cn(isSelected ? category.color : 'text-muted-foreground')}
+              />
+            </div>
+            <div className="flex-1 text-left">
+              <div
+                className={cn(
+                  'font-semibold text-base',
+                  isSelected ? 'text-foreground' : 'text-foreground'
+                )}
+              >
+                {category.label}
+              </div>
+              <div className="text-sm text-muted-foreground mt-0.5">
+                {isSelected ? 'Selected' : 'Tap to select'}
+              </div>
+            </div>
+            {isSelected && (
+              <HugeiconsIcon
+                icon={CheckmarkCircle02Icon}
+                size={24}
+                className="text-primary shrink-0"
+              />
+            )}
           </button>
         );
       })}

@@ -36,6 +36,7 @@ describe('ClusteredMarkers Component', () => {
       address: '123 Lagos Street, Nigeria',
       photos: ['photo1.jpg'],
       created_at: '2024-01-01T00:00:00Z',
+      verification_count: 0,
     },
     {
       id: '2',
@@ -48,6 +49,7 @@ describe('ClusteredMarkers Component', () => {
       address: '456 Abuja Road, Nigeria',
       photos: [],
       created_at: '2024-01-02T00:00:00Z',
+      verification_count: 2,
     },
     {
       id: '3',
@@ -60,6 +62,7 @@ describe('ClusteredMarkers Component', () => {
       address: '789 Port Harcourt Ave, Nigeria',
       photos: ['photo2.jpg', 'photo3.jpg'],
       created_at: '2024-01-03T00:00:00Z',
+      verification_count: 3,
     },
   ];
 

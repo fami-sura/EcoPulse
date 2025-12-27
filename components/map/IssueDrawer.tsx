@@ -33,9 +33,11 @@ import {
   Clock01Icon,
   Cancel01Icon,
   ArrowRight01Icon,
+  CheckmarkCircle02Icon,
 } from '@hugeicons/core-free-icons';
 import { Link } from '@/i18n/routing';
 import { Button } from '@/components/ui/button';
+import { VerifyButton } from '@/components/verification/VerifyButton';
 import { cn } from '@/lib/utils';
 import type { MapPin } from '@/stores/mapStore';
 
@@ -73,9 +75,9 @@ function getCategoryInfo(category: MapPin['category']) {
       return {
         icon: Delete02Icon,
         label: category,
-        bgColor: 'bg-gray-50',
-        textColor: 'text-gray-700',
-        borderColor: 'border-gray-200',
+        bgColor: 'bg-muted',
+        textColor: 'text-muted-foreground',
+        borderColor: 'border-border',
       };
   }
 }
@@ -86,18 +88,28 @@ function getCategoryInfo(category: MapPin['category']) {
 function getSeverityInfo(severity: MapPin['severity']) {
   switch (severity) {
     case 'low':
-      return { icon: SmileIcon, label: 'Low', color: 'text-green-600', bgColor: 'bg-green-50' };
+      return { icon: SmileIcon, label: 'Low', color: 'text-primary', bgColor: 'bg-primary/10' };
     case 'medium':
       return {
         icon: NeutralIcon,
         label: 'Medium',
-        color: 'text-amber-600',
-        bgColor: 'bg-amber-50',
+        color: 'text-warning',
+        bgColor: 'bg-warning/10',
       };
     case 'high':
-      return { icon: SadIcon, label: 'High', color: 'text-red-600', bgColor: 'bg-red-50' };
+      return {
+        icon: SadIcon,
+        label: 'High',
+        color: 'text-destructive',
+        bgColor: 'bg-destructive/10',
+      };
     default:
-      return { icon: NeutralIcon, label: severity, color: 'text-gray-600', bgColor: 'bg-gray-50' };
+      return {
+        icon: NeutralIcon,
+        label: severity,
+        color: 'text-muted-foreground',
+        bgColor: 'bg-muted',
+      };
   }
 }
 
@@ -109,16 +121,16 @@ function getStatusInfo(status: MapPin['status']) {
     case 'pending':
       return {
         label: 'Pending',
-        bgColor: 'bg-gray-100',
-        textColor: 'text-gray-700',
-        dotColor: 'bg-gray-400',
+        bgColor: 'bg-muted',
+        textColor: 'text-muted-foreground',
+        dotColor: 'bg-muted-foreground',
       };
     case 'verified':
       return {
         label: 'Verified',
-        bgColor: 'bg-green-100',
-        textColor: 'text-green-700',
-        dotColor: 'bg-green-500',
+        bgColor: 'bg-primary/10',
+        textColor: 'text-primary',
+        dotColor: 'bg-primary',
       };
     case 'in_progress':
       return {
@@ -130,16 +142,16 @@ function getStatusInfo(status: MapPin['status']) {
     case 'resolved':
       return {
         label: 'Resolved',
-        bgColor: 'bg-emerald-100',
-        textColor: 'text-emerald-700',
-        dotColor: 'bg-emerald-500',
+        bgColor: 'bg-violet-100',
+        textColor: 'text-violet-700',
+        dotColor: 'bg-violet-500',
       };
     default:
       return {
         label: status,
-        bgColor: 'bg-gray-100',
-        textColor: 'text-gray-700',
-        dotColor: 'bg-gray-400',
+        bgColor: 'bg-muted',
+        textColor: 'text-muted-foreground',
+        dotColor: 'bg-muted-foreground',
       };
   }
 }
@@ -213,20 +225,20 @@ export function IssueDrawer({ pin, isOpen, onClose }: IssueDrawerProps) {
         aria-modal="true"
         aria-labelledby="issue-drawer-title"
         className={cn(
-          'fixed bottom-0 left-0 right-0 z-1002 max-h-[85vh] overflow-hidden rounded-t-2xl bg-white shadow-2xl',
+          'fixed bottom-0 left-0 right-0 z-1002 max-h-[85vh] overflow-hidden rounded-t-2xl bg-background shadow-2xl border-t border-border',
           'transform transition-transform duration-300 ease-out',
-          'md:left-auto md:right-4 md:bottom-4 md:w-96 md:rounded-2xl'
+          'md:left-auto md:right-4 md:bottom-4 md:w-96 md:rounded-2xl md:border'
         )}
       >
         {/* Drag Handle (mobile) */}
         <div className="flex justify-center py-2 md:hidden">
-          <div className="h-1 w-10 rounded-full bg-gray-300" />
+          <div className="h-1 w-10 rounded-full bg-muted-foreground/30" />
         </div>
 
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-black/10 text-gray-600 hover:bg-black/20 transition-colors"
+          className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-background/80 backdrop-blur-sm text-muted-foreground hover:bg-muted hover:text-foreground transition-colors border border-border"
           aria-label="Close"
         >
           <HugeiconsIcon icon={Cancel01Icon} size={18} />
@@ -234,7 +246,7 @@ export function IssueDrawer({ pin, isOpen, onClose }: IssueDrawerProps) {
 
         {/* Photo Preview */}
         {pin.photos && pin.photos.length > 0 && (
-          <div className="relative h-48 w-full overflow-hidden bg-gray-100">
+          <div className="relative h-48 w-full overflow-hidden bg-muted">
             <Image
               src={pin.photos[0]}
               alt={`${categoryInfo.label} issue photo`}
@@ -294,29 +306,57 @@ export function IssueDrawer({ pin, isOpen, onClose }: IssueDrawerProps) {
 
           {/* Description */}
           {pin.note && (
-            <p className="line-clamp-3 text-sm text-gray-700 leading-relaxed">{pin.note}</p>
+            <p className="line-clamp-3 text-sm text-foreground/80 leading-relaxed">{pin.note}</p>
           )}
 
           {/* Location */}
           {pin.address && (
-            <div className="flex items-start gap-2 rounded-lg bg-gray-50 p-3">
+            <div className="flex items-start gap-2 rounded-lg bg-muted/50 p-3 border border-border">
               <HugeiconsIcon
                 icon={Location01Icon}
                 size={18}
-                className="mt-0.5 shrink-0 text-gray-400"
+                className="mt-0.5 shrink-0 text-muted-foreground"
               />
-              <span className="line-clamp-2 text-sm text-gray-600">{pin.address}</span>
+              <span className="line-clamp-2 text-sm text-muted-foreground">{pin.address}</span>
             </div>
           )}
 
           {/* Timestamp */}
-          <div className="flex items-center gap-2 text-xs text-gray-500">
+          <div className="flex items-center gap-2 text-xs text-muted-foreground">
             <HugeiconsIcon icon={Clock01Icon} size={14} />
             <span>Reported {formatRelativeTime(pin.created_at)}</span>
           </div>
 
+          {/* Verification Count */}
+          {pin.verification_count > 0 && (
+            <div className="flex items-center gap-2 text-sm text-primary">
+              <HugeiconsIcon icon={CheckmarkCircle02Icon} size={16} />
+              <span>
+                {pin.verification_count} verification{pin.verification_count > 1 ? 's' : ''}
+              </span>
+            </div>
+          )}
+
           {/* Actions */}
           <div className="flex gap-3 pt-2">
+            {/* Show verify button only for pending issues */}
+            {pin.status === 'pending' && (
+              <VerifyButton
+                issue={{
+                  id: pin.id,
+                  lat: pin.lat,
+                  lng: pin.lng,
+                  user_id: null, // Not available in drawer - server validates
+                  session_id: null, // Not available in drawer - server validates
+                  status: pin.status,
+                  verification_count: pin.verification_count,
+                  created_at: pin.created_at,
+                  category: pin.category,
+                  photos: pin.photos,
+                }}
+                className="flex-1"
+              />
+            )}
             <Link href={`/issues/${pin.id}`} className="flex-1" onClick={onClose}>
               <Button className="w-full gap-2">
                 View Details

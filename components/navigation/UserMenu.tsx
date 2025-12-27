@@ -13,9 +13,9 @@
  */
 
 import { useState, useRef, useEffect, useCallback } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
+import { Link } from '@/i18n/routing';
 import { UserIcon, Settings02Icon, Logout01Icon } from '@hugeicons/core-free-icons';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { cn } from '@/lib/utils';
@@ -24,7 +24,8 @@ import { logout } from '@/app/actions/logout';
 
 export function UserMenu() {
   const t = useTranslations('navigation');
-  const { user, profile } = useAuthStore();
+  const locale = useLocale();
+  const { user, profile, logout: storeLogout } = useAuthStore();
   const [isOpen, setIsOpen] = useState(false);
   const [isLoggingOut, setIsLoggingOut] = useState(false);
   const [focusedIndex, setFocusedIndex] = useState<number>(-1);
@@ -107,8 +108,19 @@ export function UserMenu() {
 
   const handleLogout = async () => {
     setIsLoggingOut(true);
+    setIsOpen(false);
     try {
-      await logout();
+      const result = await logout();
+      if (result.success) {
+        // Clear client-side auth state
+        storeLogout();
+        // Redirect to home page with full page navigation
+        const homePath = locale === 'en' ? '/' : `/${locale}`;
+        window.location.href = homePath;
+      } else {
+        console.error('Logout failed:', result.error);
+        setIsLoggingOut(false);
+      }
     } catch (error) {
       console.error('Logout failed:', error);
       setIsLoggingOut(false);
@@ -138,7 +150,8 @@ export function UserMenu() {
         aria-controls={isOpen ? 'user-menu-dropdown' : undefined}
         className={cn(
           'flex min-h-11 min-w-11 items-center justify-center rounded-full',
-          'hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2'
+          'hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2',
+          'transition-colors'
         )}
       >
         {profile?.avatar_url ? (
@@ -150,7 +163,7 @@ export function UserMenu() {
             className="h-8 w-8 rounded-full object-cover"
           />
         ) : (
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-green-100 text-green-600">
+          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary">
             <HugeiconsIcon icon={UserIcon} size={18} aria-hidden="true" />
           </div>
         )}
@@ -161,7 +174,7 @@ export function UserMenu() {
         <div
           id="user-menu-dropdown"
           className={cn(
-            'absolute right-0 top-full mt-2 w-48 rounded-lg bg-white shadow-lg border border-gray-200',
+            'absolute right-0 top-full mt-2 w-48 rounded-xl bg-background shadow-xl border border-border',
             'py-1 z-50'
           )}
           role="menu"
@@ -177,9 +190,10 @@ export function UserMenu() {
             href="/profile"
             onClick={closeMenu}
             className={cn(
-              'flex items-center gap-3 px-4 py-2 text-sm text-gray-700',
-              'hover:bg-gray-100 focus:outline-none focus:bg-gray-100',
-              focusedIndex === 0 && 'bg-gray-100'
+              'flex items-center gap-3 px-4 py-2.5 text-sm text-foreground',
+              'hover:bg-muted focus:outline-none focus:bg-muted',
+              'transition-colors',
+              focusedIndex === 0 && 'bg-muted'
             )}
             role="menuitem"
             tabIndex={focusedIndex === 0 ? 0 : -1}
@@ -196,9 +210,10 @@ export function UserMenu() {
             href="/profile/settings"
             onClick={closeMenu}
             className={cn(
-              'flex items-center gap-3 px-4 py-2 text-sm text-gray-700',
-              'hover:bg-gray-100 focus:outline-none focus:bg-gray-100',
-              focusedIndex === 1 && 'bg-gray-100'
+              'flex items-center gap-3 px-4 py-2.5 text-sm text-foreground',
+              'hover:bg-muted focus:outline-none focus:bg-muted',
+              'transition-colors',
+              focusedIndex === 1 && 'bg-muted'
             )}
             role="menuitem"
             tabIndex={focusedIndex === 1 ? 0 : -1}
@@ -208,7 +223,7 @@ export function UserMenu() {
           </Link>
 
           {/* Divider */}
-          <div className="my-1 h-px bg-gray-200" role="separator" />
+          <div className="my-1 h-px bg-border" role="separator" />
 
           {/* Logout Button */}
           <button
@@ -218,10 +233,11 @@ export function UserMenu() {
             onClick={handleLogout}
             disabled={isLoggingOut}
             className={cn(
-              'flex w-full items-center gap-3 px-4 py-2 text-sm text-red-600',
-              'hover:bg-red-50 focus:outline-none focus:bg-red-50',
+              'flex w-full items-center gap-3 px-4 py-2.5 text-sm text-destructive',
+              'hover:bg-destructive/10 focus:outline-none focus:bg-destructive/10',
               'disabled:opacity-50 disabled:cursor-not-allowed',
-              focusedIndex === 2 && 'bg-red-50'
+              'transition-colors',
+              focusedIndex === 2 && 'bg-destructive/10'
             )}
             role="menuitem"
             tabIndex={focusedIndex === 2 ? 0 : -1}

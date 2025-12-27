@@ -300,40 +300,40 @@ export function LocationPicker({
         <div className="relative">
           <HugeiconsIcon
             icon={Search01Icon}
-            className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400"
+            className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground"
           />
           <input
             type="text"
             value={searchQuery}
             onChange={handleSearchChange}
             placeholder="Search for address or place"
-            className="w-full rounded-lg border border-gray-300 bg-white py-3 pl-10 pr-10 text-sm focus:border-green-500 focus:outline-none focus:ring-1 focus:ring-green-500"
+            className="w-full rounded-xl border border-border bg-background py-3 pl-10 pr-10 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors"
           />
           {searchQuery && (
             <button
               type="button"
               onClick={handleClearSearch}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
             >
               <HugeiconsIcon icon={Cancel01Icon} className="h-5 w-5" />
             </button>
           )}
           {isSearching && (
             <div className="absolute right-10 top-1/2 -translate-y-1/2">
-              <div className="h-4 w-4 animate-spin rounded-full border-2 border-gray-300 border-t-green-600" />
+              <div className="h-4 w-4 animate-spin rounded-full border-2 border-muted-foreground/30 border-t-primary" />
             </div>
           )}
         </div>
 
         {/* Search Results Dropdown */}
         {showResults && searchResults.length > 0 && (
-          <div className="absolute left-0 right-0 z-1001 mt-1 max-h-60 overflow-y-auto rounded-lg border border-gray-200 bg-white shadow-lg">
+          <div className="absolute left-0 right-0 z-1001 mt-1 max-h-60 overflow-y-auto rounded-xl border border-border bg-card shadow-lg">
             {searchResults.map((result) => (
               <button
                 key={result.place_id}
                 type="button"
                 onClick={() => handleResultSelect(result)}
-                className="w-full px-4 py-3 text-left text-sm hover:bg-gray-50"
+                className="w-full px-4 py-3 text-left text-sm hover:bg-muted transition-colors"
               >
                 {result.display_name}
               </button>
@@ -342,14 +342,14 @@ export function LocationPicker({
         )}
 
         {showResults && searchResults.length === 0 && !isSearching && searchQuery.length >= 3 && (
-          <div className="absolute left-0 right-0 z-1001 mt-1 rounded-lg border border-gray-200 bg-white p-4 shadow-lg">
-            <p className="text-sm text-gray-500">No results found</p>
+          <div className="absolute left-0 right-0 z-1001 mt-1 rounded-xl border border-border bg-card p-4 shadow-lg">
+            <p className="text-sm text-muted-foreground">No results found</p>
           </div>
         )}
       </div>
 
       {/* Map Preview */}
-      <div className="h-50 w-full overflow-hidden rounded-lg border border-gray-300 md:h-75">
+      <div className="h-50 w-full overflow-hidden rounded-xl border border-border md:h-75">
         <MapContainer
           center={position}
           zoom={16}
@@ -368,13 +368,15 @@ export function LocationPicker({
 
       {/* Current Address */}
       {address && (
-        <p className="text-sm text-gray-600">
-          <span className="font-medium">Selected location:</span> {address}
+        <p className="text-sm text-muted-foreground">
+          <span className="font-medium text-foreground">Selected location:</span> {address}
         </p>
       )}
 
       {/* Instruction Text */}
-      <p className="text-xs text-gray-500">Tap on the map or drag the pin to adjust the location</p>
+      <p className="text-xs text-muted-foreground/70">
+        Tap on the map or drag the pin to adjust the location
+      </p>
 
       {/* Reset Button */}
       {onRequestCurrentLocation && (

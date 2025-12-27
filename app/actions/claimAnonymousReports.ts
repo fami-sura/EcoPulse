@@ -104,7 +104,14 @@ export async function claimAnonymousReports(sessionId: string): Promise<ClaimRes
     }));
 
     // Try to insert point history - don't fail if table doesn't exist yet
-    await supabase.from('points_history').insert(pointHistoryRecords).throwOnError();
+    const { error: historyError } = await supabase
+      .from('points_history')
+      .insert(pointHistoryRecords);
+
+    if (historyError) {
+      // Log but don't fail - points_history table may not exist yet
+      console.warn('Points history insert warning (non-fatal):', historyError.message);
+    }
 
     return {
       success: true,
@@ -113,9 +120,9 @@ export async function claimAnonymousReports(sessionId: string): Promise<ClaimRes
     };
   } catch (error) {
     console.error('Claim anonymous reports error:', error);
-    // Still return success if we claimed reports but points history failed
+    // Return failure with error details
     return {
-      success: true,
+      success: false,
       claimedCount: 0,
       error: error instanceof Error ? error.message : 'Unknown error',
     };

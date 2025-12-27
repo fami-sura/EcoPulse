@@ -38,7 +38,7 @@ import { type GeolocationResult } from '@/hooks/useGeolocation';
 import dynamic from 'next/dynamic';
 const LocationPicker = dynamic(() => import('./LocationPicker').then((mod) => mod.LocationPicker), {
   ssr: false,
-  loading: () => <div className="h-50 animate-pulse rounded-lg bg-gray-200" />,
+  loading: () => <div className="h-50 animate-pulse rounded-xl bg-muted" />,
 });
 
 /** Minimum description length */
@@ -255,13 +255,15 @@ export function ReportForm({ onSuccess, onCancel, className }: ReportFormProps) 
         aria-live="polite"
       >
         <div className="animate-scale-in">
-          <HugeiconsIcon icon={CheckmarkCircle02Icon} size={80} className="text-green-600" />
+          <HugeiconsIcon icon={CheckmarkCircle02Icon} size={80} className="text-primary" />
         </div>
         <div className="space-y-2 text-center">
-          <h2 className="text-2xl font-bold text-gray-900">Thank you!</h2>
-          <p className="text-gray-600">Your report has been submitted.</p>
+          <h2 className="text-2xl font-bold text-foreground">Thank you!</h2>
+          <p className="text-muted-foreground">Your report has been submitted.</p>
           {reportId && (
-            <p className="font-mono text-sm text-gray-500">Report #{reportId.slice(0, 8)}</p>
+            <p className="font-mono text-sm text-muted-foreground">
+              Report #{reportId.slice(0, 8)}
+            </p>
           )}
         </div>
         <div className="flex w-full flex-col gap-3 sm:flex-row sm:justify-center">
@@ -284,12 +286,12 @@ export function ReportForm({ onSuccess, onCancel, className }: ReportFormProps) 
         role="alert"
         aria-live="assertive"
       >
-        <div className="text-red-500">
+        <div className="text-destructive">
           <HugeiconsIcon icon={Cancel01Icon} size={64} />
         </div>
         <div className="space-y-2 text-center">
-          <h2 className="text-xl font-bold text-gray-900">Submission Failed</h2>
-          <p className="text-gray-600">{submitError}</p>
+          <h2 className="text-xl font-bold text-foreground">Submission Failed</h2>
+          <p className="text-muted-foreground">{submitError}</p>
         </div>
         <div className="flex w-full flex-col gap-3 sm:flex-row sm:justify-center">
           {retryCount < 3 && (
@@ -313,8 +315,8 @@ export function ReportForm({ onSuccess, onCancel, className }: ReportFormProps) 
         role="status"
         aria-live="polite"
       >
-        <div className="h-12 w-12 animate-spin rounded-full border-4 border-gray-200 border-t-green-600" />
-        <p className="text-lg text-gray-600">Submitting your report...</p>
+        <div className="h-12 w-12 animate-spin rounded-full border-4 border-muted border-t-primary" />
+        <p className="text-lg text-muted-foreground">Submitting your report...</p>
       </div>
     );
   }
@@ -322,32 +324,43 @@ export function ReportForm({ onSuccess, onCancel, className }: ReportFormProps) 
   // Form state
   return (
     <form
-      className={cn('space-y-6', className)}
+      className={cn('space-y-8 p-1', className)}
       onSubmit={(e) => {
         e.preventDefault();
         handleSubmit();
       }}
     >
       {/* Photos Section */}
-      <section className="space-y-2">
-        <Label className="text-base font-medium">
-          Photos <span className="text-red-500">*</span>
-        </Label>
+      <section className="space-y-3">
+        <div>
+          <Label className="text-base font-semibold text-foreground">
+            Photos <span className="text-destructive">*</span>
+          </Label>
+          <p className="text-sm text-muted-foreground mt-1">Upload 1-5 clear photos of the issue</p>
+        </div>
         <PhotoCapture
           photoUrls={photoUrls}
           onPhotosChange={setPhotoUrls}
           onUploadingChange={setIsUploading}
         />
         {showValidationErrors && validation.errors.photos && (
-          <p className="text-sm text-red-500">{validation.errors.photos}</p>
+          <p className="text-sm text-destructive flex items-center gap-1.5">
+            <HugeiconsIcon icon={Cancel01Icon} size={14} />
+            {validation.errors.photos}
+          </p>
         )}
       </section>
 
       {/* Location Section */}
       <section className="space-y-3">
-        <Label className="text-base font-medium">
-          Location <span className="text-red-500">*</span>
-        </Label>
+        <div>
+          <Label className="text-base font-semibold text-foreground">
+            Location <span className="text-destructive">*</span>
+          </Label>
+          <p className="text-sm text-muted-foreground mt-1">
+            Allow location access or pin the issue on the map
+          </p>
+        </div>
 
         {/* Auto-detection */}
         <LocationDetector onLocationDetected={handleLocationDetected} autoDetect={true} />
@@ -362,72 +375,120 @@ export function ReportForm({ onSuccess, onCancel, className }: ReportFormProps) 
         )}
 
         {showValidationErrors && validation.errors.location && (
-          <p className="text-sm text-red-500">{validation.errors.location}</p>
+          <p className="text-sm text-destructive flex items-center gap-1.5">
+            <HugeiconsIcon icon={Cancel01Icon} size={14} />
+            {validation.errors.location}
+          </p>
         )}
       </section>
 
       {/* Category Section */}
       <section className="space-y-3">
-        <Label className="text-base font-medium">
-          Issue Type <span className="text-red-500">*</span>
-        </Label>
+        <div>
+          <Label className="text-base font-semibold text-foreground">
+            Issue Type <span className="text-destructive">*</span>
+          </Label>
+          <p className="text-sm text-muted-foreground mt-1">
+            Select the category that best describes the issue
+          </p>
+        </div>
         <CategorySelector
           value={category}
           onChange={setCategory}
           error={showValidationErrors && !category}
         />
         {showValidationErrors && validation.errors.category && (
-          <p className="text-sm text-red-500">{validation.errors.category}</p>
+          <p className="text-sm text-destructive flex items-center gap-1.5">
+            <HugeiconsIcon icon={Cancel01Icon} size={14} />
+            {validation.errors.category}
+          </p>
         )}
       </section>
 
       {/* Severity Section */}
       <section className="space-y-3">
-        <Label className="text-base font-medium">Severity Level</Label>
+        <div>
+          <Label className="text-base font-semibold text-foreground">Severity Level</Label>
+          <p className="text-sm text-muted-foreground mt-1">How urgent is this issue?</p>
+        </div>
         <SeveritySelector value={severity} onChange={setSeverity} />
       </section>
 
       {/* Description Section */}
-      <section className="space-y-2">
-        <Label htmlFor="description" className="text-base font-medium">
-          Description <span className="text-red-500">*</span>
-        </Label>
+      <section className="space-y-3">
+        <div>
+          <Label htmlFor="description" className="text-base font-semibold text-foreground">
+            Description <span className="text-destructive">*</span>
+          </Label>
+          <p className="text-sm text-muted-foreground mt-1">
+            Provide detailed information about the issue (minimum 60 characters)
+          </p>
+        </div>
         <Textarea
           id="description"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-          placeholder="Describe the issue in detail (minimum 60 characters)..."
-          rows={4}
-          className={cn(showValidationErrors && validation.errors.description && 'border-red-500')}
+          placeholder="Describe what you observed, when it started, and how it affects the area..."
+          rows={5}
+          className={cn(
+            'resize-none',
+            showValidationErrors &&
+              validation.errors.description &&
+              'border-destructive focus:ring-destructive'
+          )}
         />
-        <div className="flex justify-between text-sm">
+        <div className="flex justify-between items-center text-sm">
           <span
             className={cn(
-              description.length >= MIN_DESCRIPTION_LENGTH ? 'text-green-600' : 'text-gray-500'
+              'flex items-center gap-1.5',
+              description.length >= MIN_DESCRIPTION_LENGTH
+                ? 'text-primary'
+                : 'text-muted-foreground'
             )}
           >
+            {description.length >= MIN_DESCRIPTION_LENGTH && (
+              <HugeiconsIcon icon={CheckmarkCircle02Icon} size={14} />
+            )}
             {description.length}/{MIN_DESCRIPTION_LENGTH} characters
           </span>
           {showValidationErrors && validation.errors.description && (
-            <span className="text-red-500">{validation.errors.description}</span>
+            <span className="text-destructive text-xs flex items-center gap-1.5">
+              <HugeiconsIcon icon={Cancel01Icon} size={14} />
+              Too short
+            </span>
           )}
         </div>
       </section>
 
       {/* Action Buttons */}
-      <div className="flex flex-col gap-3 pt-4 sm:flex-row">
-        <Button type="submit" disabled={!canSubmit} className="flex-1">
+      <div className="flex flex-col gap-3 pt-6 sm:flex-row border-t border-border">
+        <Button
+          type="submit"
+          disabled={!canSubmit}
+          className="flex-1 h-12 text-base font-semibold"
+          size="lg"
+        >
           {isUploading ? (
             <>
-              <span className="mr-2 h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
+              <span className="mr-2 h-5 w-5 animate-spin rounded-full border-2 border-white border-t-transparent" />
               Uploading photos...
             </>
           ) : (
-            'Submit Report'
+            <>
+              <HugeiconsIcon icon={CheckmarkCircle02Icon} size={20} className="mr-2" />
+              Submit Report
+            </>
           )}
         </Button>
         {onCancel && (
-          <Button type="button" variant="outline" onClick={onCancel}>
+          <Button
+            type="button"
+            variant="outline"
+            onClick={onCancel}
+            className="h-12 text-base"
+            size="lg"
+          >
+            <HugeiconsIcon icon={Cancel01Icon} size={20} className="mr-2" />
             Cancel
           </Button>
         )}

@@ -90,15 +90,15 @@ export function UpdatePasswordForm() {
   if (success) {
     return (
       <div className="text-center space-y-4" role="status" aria-live="polite">
-        <div className="mx-auto w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
+        <div className="mx-auto w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
           <HugeiconsIcon
             icon={CheckmarkCircle02Icon}
-            className="w-6 h-6 text-green-600"
+            className="w-6 h-6 text-primary"
             aria-hidden="true"
           />
         </div>
-        <h2 className="text-lg font-semibold text-foreground">{t('common.success')}</h2>
-        <p className="text-muted-foreground">{t('resetPassword.sent')}</p>
+        <h2 className="text-lg font-semibold text-foreground">{t('resetPassword.success')}</h2>
+        <p className="text-muted-foreground">{t('resetPassword.successMessage')}</p>
       </div>
     );
   }
@@ -115,7 +115,7 @@ export function UpdatePasswordForm() {
         <div
           id="server-error"
           role="alert"
-          className="p-3 text-sm text-red-600 bg-red-50 border border-red-200 rounded-md"
+          className="p-3 text-sm text-destructive bg-destructive/10 border border-destructive/20 rounded-xl"
         >
           {serverError}
         </div>
@@ -157,7 +157,7 @@ export function UpdatePasswordForm() {
           {t('signup.passwordHint')}
         </p>
         {errors.password && (
-          <p id="password-error" className="text-sm text-red-600" role="alert">
+          <p id="password-error" className="text-sm text-destructive" role="alert">
             {errors.password.message}
           </p>
         )}
@@ -196,7 +196,7 @@ export function UpdatePasswordForm() {
           </button>
         </div>
         {errors.confirmPassword && (
-          <p id="confirm-password-error" className="text-sm text-red-600" role="alert">
+          <p id="confirm-password-error" className="text-sm text-destructive" role="alert">
             {errors.confirmPassword.message}
           </p>
         )}

@@ -19,7 +19,11 @@
 
 import { useCallback, useRef, KeyboardEvent } from 'react';
 import { HugeiconsIcon } from '@hugeicons/react';
-import { SmileIcon, NeutralIcon, SadIcon } from '@hugeicons/core-free-icons';
+import {
+  CheckmarkBadge01Icon,
+  AlertDiamondIcon,
+  AlertCircleIcon,
+} from '@hugeicons/core-free-icons';
 import { cn } from '@/lib/utils';
 
 export type Severity = 'low' | 'medium' | 'high';
@@ -36,24 +40,36 @@ interface SeveritySelectorProps {
 const severities = [
   {
     id: 'low' as Severity,
-    icon: SmileIcon,
-    color: '#10B981',
-    bg: 'bg-green-500',
-    label: 'Low severity',
+    icon: CheckmarkBadge01Icon,
+    label: 'Low',
+    description: 'Minor issue',
+    color: 'text-primary',
+    bgColor: 'bg-primary/10',
+    borderColor: 'border-primary',
+    iconColor: 'text-primary',
+    ariaLabel: 'Low severity - minor issue',
   },
   {
     id: 'medium' as Severity,
-    icon: NeutralIcon,
-    color: '#F59E0B',
-    bg: 'bg-amber-500',
-    label: 'Medium severity',
+    icon: AlertDiamondIcon,
+    label: 'Medium',
+    description: 'Moderate concern',
+    color: 'text-amber-600',
+    bgColor: 'bg-amber-50',
+    borderColor: 'border-amber-500',
+    iconColor: 'text-amber-600',
+    ariaLabel: 'Medium severity - moderate concern',
   },
   {
     id: 'high' as Severity,
-    icon: SadIcon,
-    color: '#EF4444',
-    bg: 'bg-red-500',
-    label: 'High severity - urgent',
+    icon: AlertCircleIcon,
+    label: 'High',
+    description: 'Urgent action needed',
+    color: 'text-destructive',
+    bgColor: 'bg-destructive/10',
+    borderColor: 'border-destructive',
+    iconColor: 'text-destructive',
+    ariaLabel: 'High severity - urgent action needed',
   },
 ];
 
@@ -94,7 +110,7 @@ export function SeveritySelector({ value = 'medium', onChange, className }: Seve
 
   return (
     <div
-      className={cn('flex justify-center gap-3', className)}
+      className={cn('grid grid-cols-3 gap-3', className)}
       role="radiogroup"
       aria-label="Select issue severity"
     >
@@ -110,22 +126,40 @@ export function SeveritySelector({ value = 'medium', onChange, className }: Seve
             type="button"
             role="radio"
             aria-checked={isSelected}
-            aria-label={severity.label}
+            aria-label={severity.ariaLabel}
             className={cn(
-              'flex h-15 w-15 items-center justify-center rounded-lg border transition-all duration-200',
-              'focus:outline-none focus:ring-2 focus:ring-offset-2',
+              'flex flex-col items-center gap-2 rounded-xl border-2 p-4 transition-all duration-200',
+              'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary',
               isSelected
-                ? `${severity.bg} scale-110 border-transparent focus:ring-${severity.bg.replace('bg-', '')}`
-                : 'border-gray-200 bg-white hover:border-gray-300'
+                ? `${severity.bgColor} ${severity.borderColor} shadow-md scale-[1.02]`
+                : 'border-border bg-card hover:border-primary/30 hover:shadow-sm'
             )}
             onClick={() => onChange(severity.id)}
             onKeyDown={(e) => handleKeyDown(e, index)}
           >
-            <HugeiconsIcon
-              icon={severity.icon}
-              size={28}
-              color={isSelected ? '#FFFFFF' : severity.color}
-            />
+            <div
+              className={cn(
+                'flex h-12 w-12 items-center justify-center rounded-lg',
+                isSelected ? severity.bgColor : 'bg-muted'
+              )}
+            >
+              <HugeiconsIcon
+                icon={severity.icon}
+                size={24}
+                className={isSelected ? severity.iconColor : 'text-muted-foreground'}
+              />
+            </div>
+            <div className="text-center">
+              <div
+                className={cn(
+                  'font-semibold text-sm',
+                  isSelected ? severity.color : 'text-foreground'
+                )}
+              >
+                {severity.label}
+              </div>
+              <div className="text-xs text-muted-foreground mt-0.5">{severity.description}</div>
+            </div>
           </button>
         );
       })}

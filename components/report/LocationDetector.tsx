@@ -81,18 +81,18 @@ export function LocationDetector({
       {/* Success State */}
       {!loading && location && (
         <div className="space-y-2">
-          <div className="flex items-start gap-3 rounded-lg bg-green-50 p-4 dark:bg-green-900/20">
+          <div className="flex items-start gap-3 rounded-xl bg-primary/10 p-4 border border-primary/20">
             <HugeiconsIcon
               icon={CheckmarkCircle02Icon}
-              className="mt-0.5 h-5 w-5 shrink-0 text-green-600"
+              className="mt-0.5 h-5 w-5 shrink-0 text-primary"
             />
             <div className="flex-1">
-              <p className="text-sm font-medium text-green-700 dark:text-green-300">
-                Location detected
-              </p>
-              <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">{location.address}</p>
+              <p className="text-sm font-medium text-primary">Location detected</p>
+              <p className="mt-1 text-sm text-muted-foreground">{location.address}</p>
               {location.accuracy > 0 && (
-                <p className="mt-1 text-xs text-gray-500">{formatAccuracy(location.accuracy)}</p>
+                <p className="mt-1 text-xs text-muted-foreground/70">
+                  {formatAccuracy(location.accuracy)}
+                </p>
               )}
             </div>
           </div>
@@ -109,18 +109,18 @@ export function LocationDetector({
       {!loading && error && (
         <div className="space-y-2">
           <div
-            className="flex items-start gap-3 rounded-lg bg-amber-50 p-4 dark:bg-amber-900/20"
+            className="flex items-start gap-3 rounded-xl bg-amber-50 dark:bg-amber-950/20 p-4 border border-amber-200 dark:border-amber-800"
             role="alert"
           >
             <HugeiconsIcon
               icon={AlertCircleIcon}
-              className="mt-0.5 h-5 w-5 shrink-0 text-amber-600"
+              className="mt-0.5 h-5 w-5 shrink-0 text-amber-600 dark:text-amber-400"
             />
             <div className="flex-1">
-              <p className="text-sm font-medium text-amber-700 dark:text-amber-300">
+              <p className="text-sm font-semibold text-amber-800 dark:text-amber-300">
                 {isDenied ? 'Location access denied' : 'Unable to detect location'}
               </p>
-              <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">{error}</p>
+              <p className="mt-1 text-sm text-amber-700 dark:text-amber-400">{error}</p>
             </div>
           </div>
 

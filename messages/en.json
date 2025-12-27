@@ -1267,7 +1267,9 @@
       "sent": "Check your email for reset link",
       "newPassword": "New Password",
       "confirmPassword": "Confirm Password",
-      "submitNewPassword": "Reset Password"
+      "submitNewPassword": "Reset Password",
+      "success": "Password Updated",
+      "successMessage": "Your password has been successfully updated. Redirecting to login..."
     },
     "errors": {
       "invalidCredentials": "Email or password incorrect. Please try again.",

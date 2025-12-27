@@ -135,7 +135,7 @@ export function ProfileHeader({ profile, isOwnProfile }: ProfileHeaderProps) {
       <div className="relative">
         <Avatar className="w-28 h-28 md:w-32 md:h-32 cursor-pointer" onClick={handleAvatarClick}>
           <AvatarImage src={avatarUrl || undefined} alt={`${profile.username}'s avatar`} />
-          <AvatarFallback className="text-3xl bg-green-100 text-green-700">
+          <AvatarFallback className="text-3xl bg-primary/10 text-primary">
             {getInitials(profile.username)}
           </AvatarFallback>
         </Avatar>
@@ -146,17 +146,13 @@ export function ProfileHeader({ profile, isOwnProfile }: ProfileHeaderProps) {
             <button
               onClick={handleAvatarClick}
               disabled={isUploadingAvatar}
-              className="absolute bottom-0 right-0 bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-full p-2 shadow-sm hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors disabled:opacity-50"
+              className="absolute bottom-0 right-0 bg-background border-2 border-border rounded-full p-2 shadow-sm hover:bg-muted transition-colors disabled:opacity-50"
               aria-label={t('avatar.change')}
             >
               {isUploadingAvatar ? (
-                <div className="w-5 h-5 border-2 border-gray-400 border-t-transparent rounded-full animate-spin" />
+                <div className="w-5 h-5 border-2 border-muted-foreground border-t-transparent rounded-full animate-spin" />
               ) : (
-                <HugeiconsIcon
-                  icon={Camera01Icon}
-                  size={20}
-                  className="text-gray-600 dark:text-gray-400"
-                />
+                <HugeiconsIcon icon={Camera01Icon} size={20} className="text-muted-foreground" />
               )}
             </button>
 
@@ -179,16 +175,16 @@ export function ProfileHeader({ profile, isOwnProfile }: ProfileHeaderProps) {
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
           <div>
             {/* Username */}
-            <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
+            <h1 className="text-2xl font-bold text-foreground">
               @{profile.username || t('anonymous')}
             </h1>
 
             {/* Join date */}
-            <p className="text-gray-600 dark:text-gray-400 flex items-center gap-1.5 mt-1">
+            <p className="text-muted-foreground flex items-center gap-1.5 mt-1">
               <HugeiconsIcon
                 icon={Calendar03Icon}
                 size={16}
-                className="text-gray-500"
+                className="text-muted-foreground"
                 aria-hidden="true"
               />
               {t('memberSince', { date: joinDate })}
@@ -196,11 +192,11 @@ export function ProfileHeader({ profile, isOwnProfile }: ProfileHeaderProps) {
 
             {/* Location */}
             {profile.location && (
-              <p className="text-sm text-gray-500 dark:text-gray-400 flex items-center gap-1.5 mt-1">
+              <p className="text-sm text-muted-foreground flex items-center gap-1.5 mt-1">
                 <HugeiconsIcon
                   icon={Location01Icon}
                   size={16}
-                  className="text-gray-500"
+                  className="text-muted-foreground"
                   aria-hidden="true"
                 />
                 {profile.location}
@@ -226,12 +222,12 @@ export function ProfileHeader({ profile, isOwnProfile }: ProfileHeaderProps) {
 
         {/* Bio */}
         {profile.bio && (
-          <p className="mt-4 text-gray-700 dark:text-gray-300 whitespace-pre-wrap">{profile.bio}</p>
+          <p className="mt-4 text-foreground/80 whitespace-pre-wrap">{profile.bio}</p>
         )}
 
         {/* Empty bio message for own profile */}
         {isOwnProfile && !profile.bio && (
-          <p className="mt-4 text-gray-500 dark:text-gray-400 italic">{t('noBio')}</p>
+          <p className="mt-4 text-muted-foreground italic">{t('noBio')}</p>
         )}
       </div>
     </div>

@@ -75,19 +75,19 @@ interface StatCardProps {
 
 function StatCard({ icon, label, value, color }: StatCardProps) {
   const colorClasses = {
-    blue: 'bg-blue-50 text-blue-600 dark:bg-blue-950 dark:text-blue-400',
-    green: 'bg-green-50 text-green-600 dark:bg-green-950 dark:text-green-400',
-    purple: 'bg-purple-50 text-purple-600 dark:bg-purple-950 dark:text-purple-400',
-    orange: 'bg-orange-50 text-orange-600 dark:bg-orange-950 dark:text-orange-400',
+    blue: 'bg-blue-500/10 text-blue-600 dark:text-blue-400',
+    green: 'bg-primary/10 text-primary',
+    purple: 'bg-purple-500/10 text-purple-600 dark:text-purple-400',
+    orange: 'bg-orange-500/10 text-orange-600 dark:text-orange-400',
   };
 
   return (
-    <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-4">
+    <div className="bg-background border border-border rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow">
       <div className={`inline-flex p-2 rounded-lg ${colorClasses[color]} mb-2`}>
         <HugeiconsIcon icon={icon} size={24} aria-hidden="true" />
       </div>
-      <div className="text-2xl font-bold text-gray-900 dark:text-white">{value}</div>
-      <div className="text-sm text-gray-600 dark:text-gray-400">{label}</div>
+      <div className="text-2xl font-bold text-foreground">{value}</div>
+      <div className="text-sm text-muted-foreground">{label}</div>
     </div>
   );
 }

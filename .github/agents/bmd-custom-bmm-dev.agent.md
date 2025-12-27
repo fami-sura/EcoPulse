@@ -4,14 +4,14 @@ tools:
   [
     'execute',
     'read',
+    'agent',
     'edit',
     'search',
     'web',
     'firecrawl-mcp/*',
     'supabase/*',
-    'agent',
-    'memory',
     'todo',
+    'memory',
   ]
 ---
 

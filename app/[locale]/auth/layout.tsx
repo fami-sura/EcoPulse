@@ -2,10 +2,11 @@
  * Auth Pages Layout
  *
  * Shared layout for all auth pages (login, signup, magic-link, etc.)
- * Provides centered card layout.
+ * Includes marketing header for navigation and branding consistency.
  */
 
 import { setRequestLocale } from 'next-intl/server';
+import { MarketingHeader } from '@/components/marketing/MarketingHeader';
 
 type Props = {
   children: React.ReactNode;
@@ -16,5 +17,10 @@ export default async function AuthLayout({ children, params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <div className="min-h-screen bg-gray-50">{children}</div>;
+  return (
+    <>
+      <MarketingHeader />
+      <div className="min-h-screen bg-gray-50">{children}</div>
+    </>
+  );
 }

@@ -69,7 +69,9 @@ export async function getMapIssues(
     // Build query with filters
     let query = supabase
       .from('issues')
-      .select('id, lat, lng, status, category, photos, created_at, severity, note, address')
+      .select(
+        'id, lat, lng, status, category, photos, created_at, severity, note, address, verification_count'
+      )
       .eq('is_flagged', false)
       .gte('lat', bounds.sw_lat)
       .lte('lat', bounds.ne_lat)

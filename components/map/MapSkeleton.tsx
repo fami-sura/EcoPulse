@@ -23,7 +23,7 @@ export function MapSkeleton({ className }: MapSkeletonProps) {
     <div
       className={cn(
         'relative flex h-[calc(100vh-60px)] w-full items-center justify-center',
-        'bg-gray-100',
+        'bg-muted',
         className
       )}
       role="progressbar"
@@ -31,14 +31,14 @@ export function MapSkeleton({ className }: MapSkeletonProps) {
       aria-busy="true"
     >
       {/* Animated skeleton background */}
-      <div className="absolute inset-0 animate-pulse bg-linear-to-r from-gray-100 via-gray-200 to-gray-100" />
+      <div className="absolute inset-0 animate-pulse bg-linear-to-r from-muted via-muted-foreground/10 to-muted" />
 
       {/* Loading indicator */}
       <div className="relative z-10 flex flex-col items-center gap-4">
         {/* Map pin icon placeholder */}
-        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gray-200">
+        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-muted-foreground/20">
           <svg
-            className="h-8 w-8 text-gray-400"
+            className="h-8 w-8 text-muted-foreground"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -61,22 +61,22 @@ export function MapSkeleton({ className }: MapSkeletonProps) {
 
         {/* Loading text */}
         <div className="text-center">
-          <p className="text-sm font-medium text-gray-600">Loading map...</p>
-          <p className="mt-1 text-xs text-gray-500">Detecting your location</p>
+          <p className="text-sm font-medium text-foreground">Loading map...</p>
+          <p className="mt-1 text-xs text-muted-foreground">Detecting your location</p>
         </div>
 
         {/* Pulsing dots animation */}
         <div className="flex gap-1.5">
           <span
-            className="h-2 w-2 animate-pulse rounded-full bg-green-600"
+            className="h-2 w-2 animate-pulse rounded-full bg-primary"
             style={{ animationDelay: '0ms' }}
           />
           <span
-            className="h-2 w-2 animate-pulse rounded-full bg-green-600"
+            className="h-2 w-2 animate-pulse rounded-full bg-primary"
             style={{ animationDelay: '150ms' }}
           />
           <span
-            className="h-2 w-2 animate-pulse rounded-full bg-green-600"
+            className="h-2 w-2 animate-pulse rounded-full bg-primary"
             style={{ animationDelay: '300ms' }}
           />
         </div>

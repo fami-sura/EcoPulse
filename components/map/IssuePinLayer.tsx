@@ -131,6 +131,7 @@ export function IssuePinLayer() {
             created_at: issue.created_at,
             note: issue.note,
             address: issue.address,
+            verification_count: issue.verification_count,
           }));
           setPins(mapPins);
         } else {
@@ -199,9 +200,9 @@ export function IssuePinLayer() {
   if (isLoadingPins && pins.length === 0) {
     return (
       <div className="absolute left-1/2 top-1/2 z-1000 -translate-x-1/2 -translate-y-1/2">
-        <div className="flex flex-col items-center gap-2 rounded-lg bg-white p-4 shadow-lg">
-          <div className="h-6 w-6 animate-spin rounded-full border-2 border-gray-300 border-t-green-600" />
-          <span className="text-sm text-gray-600">Loading issues...</span>
+        <div className="flex flex-col items-center gap-2 rounded-xl bg-card p-4 shadow-lg border border-border">
+          <div className="h-6 w-6 animate-spin rounded-full border-2 border-muted-foreground/30 border-t-primary" />
+          <span className="text-sm text-muted-foreground">Loading issues...</span>
         </div>
       </div>
     );
@@ -211,11 +212,11 @@ export function IssuePinLayer() {
   if (error && pins.length === 0) {
     return (
       <div className="absolute left-1/2 top-1/2 z-1000 -translate-x-1/2 -translate-y-1/2">
-        <div className="flex flex-col items-center gap-2 rounded-lg bg-white p-4 shadow-lg">
-          <p className="text-sm text-red-600">{error}</p>
+        <div className="flex flex-col items-center gap-2 rounded-xl bg-card p-4 shadow-lg border border-border">
+          <p className="text-sm text-destructive">{error}</p>
           <button
             onClick={() => fetchIssues(true)}
-            className="rounded-md bg-green-600 px-3 py-1.5 text-sm text-white hover:bg-green-700"
+            className="rounded-lg bg-primary px-3 py-1.5 text-sm text-primary-foreground hover:bg-primary/90 transition-colors"
           >
             Retry
           </button>
@@ -232,9 +233,9 @@ export function IssuePinLayer() {
       {/* Loading indicator overlay when refetching */}
       {isLoadingPins && pins.length > 0 && (
         <div className="absolute right-4 top-4 z-1000">
-          <div className="flex items-center gap-2 rounded-lg bg-white px-3 py-2 shadow-lg">
-            <div className="h-4 w-4 animate-spin rounded-full border-2 border-gray-300 border-t-green-600" />
-            <span className="text-sm text-gray-600">Updating...</span>
+          <div className="flex items-center gap-2 rounded-xl bg-card px-3 py-2 shadow-lg border border-border">
+            <div className="h-4 w-4 animate-spin rounded-full border-2 border-muted-foreground/30 border-t-primary" />
+            <span className="text-sm text-muted-foreground">Updating...</span>
           </div>
         </div>
       )}

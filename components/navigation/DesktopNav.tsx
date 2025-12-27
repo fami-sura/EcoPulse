@@ -13,9 +13,9 @@
  */
 
 import { useMemo } from 'react';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
 import {
   Home03Icon,
   File02Icon,
@@ -132,15 +132,15 @@ export function DesktopNav() {
 
   return (
     <nav
-      className="sticky top-0 z-50 hidden h-15 w-full border-b border-gray-200 bg-white lg:block"
+      className="sticky top-0 z-50 hidden h-15 w-full border-b border-border bg-background/95 backdrop-blur-md lg:block"
       aria-label="Main navigation"
     >
-      <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-4">
+      <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo with Official Brand Mark */}
         <Link
-          href="/"
+          href="/map"
           className="flex min-h-11 min-w-11 items-center"
-          aria-label="EcoPulse - Go to homepage"
+          aria-label="EcoPulse - Go to Map"
         >
           <EcoPulseLogo size="sm" />
         </Link>
@@ -156,26 +156,28 @@ export function DesktopNav() {
                 aria-label={item.ariaLabel}
                 aria-current={active ? 'page' : undefined}
                 className={cn(
-                  'relative flex min-h-11 min-w-11 items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors',
-                  'hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2',
-                  active ? 'text-green-600' : 'text-gray-600 hover:text-gray-900'
+                  'relative flex min-h-11 min-w-11 items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200',
+                  'hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2',
+                  active
+                    ? 'text-primary font-semibold'
+                    : 'text-muted-foreground hover:text-foreground'
                 )}
               >
                 <HugeiconsIcon
                   icon={item.icon}
                   size={20}
                   aria-hidden="true"
-                  className={cn(active ? 'text-green-600' : 'text-gray-500')}
+                  className={cn(active ? 'text-primary' : 'text-muted-foreground')}
                 />
                 <span>
                   {item.labelKey === 'myReports' && !isAuthenticated
                     ? t('reports')
                     : t(item.labelKey)}
                 </span>
-                {/* Active indicator - green underline */}
+                {/* Active indicator - primary underline */}
                 {active && (
                   <span
-                    className="absolute bottom-0 left-4 right-4 h-0.5 rounded-full bg-green-600"
+                    className="absolute bottom-0 left-4 right-4 h-0.5 rounded-full bg-primary"
                     aria-hidden="true"
                   />
                 )}
@@ -193,8 +195,8 @@ export function DesktopNav() {
               href="/auth/login"
               aria-label="Log in to your account"
               className={cn(
-                'flex min-h-11 items-center gap-2 rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white transition-colors',
-                'hover:bg-green-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2'
+                'flex min-h-11 items-center gap-2 rounded-lg bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground shadow-sm transition-all duration-200',
+                'hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2'
               )}
             >
               <HugeiconsIcon icon={Login01Icon} size={18} aria-hidden="true" />

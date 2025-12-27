@@ -32,6 +32,7 @@ import {
 } from '@hugeicons/core-free-icons';
 import { useMapStore, type MapFilters as MapFiltersType } from '@/stores/mapStore';
 import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 import type { Database } from '@/lib/supabase/database.types';
 
 type IssueCategory = Database['public']['Enums']['issue_category'];
@@ -48,7 +49,7 @@ const STATUS_OPTIONS: { value: IssueStatus; label: string; color: string }[] = [
   { value: 'pending', label: 'Pending', color: '#6B7280' },
   { value: 'verified', label: 'Verified', color: '#10B981' },
   { value: 'in_progress', label: 'In Progress', color: '#3B82F6' },
-  { value: 'resolved', label: 'Resolved', color: '#22C55E' },
+  { value: 'resolved', label: 'Resolved', color: '#8B5CF6' },
 ];
 
 /** Filter configuration for date ranges */
@@ -143,15 +144,15 @@ function FilterContent({
     <div className="flex flex-col gap-6">
       {/* Pin Count */}
       {totalCount !== undefined && filteredCount !== undefined && (
-        <div className="rounded-md bg-gray-50 px-3 py-2 text-sm text-gray-600 dark:bg-gray-800 dark:text-gray-300">
-          Showing <span className="font-semibold">{filteredCount}</span> of{' '}
+        <div className="rounded-lg bg-muted/50 px-3 py-2.5 text-sm text-foreground border border-border">
+          Showing <span className="font-semibold text-primary">{filteredCount}</span> of{' '}
           <span className="font-semibold">{totalCount}</span> issues
         </div>
       )}
 
       {/* Category Filter */}
       <div>
-        <h3 className="mb-3 text-sm font-semibold text-gray-700 dark:text-gray-200">Category</h3>
+        <h3 className="mb-3 text-sm font-semibold text-foreground">Category</h3>
         <div className="flex flex-wrap gap-2">
           {CATEGORY_OPTIONS.map((option) => {
             const isSelected = filters.categories.includes(option.value);
@@ -159,10 +160,10 @@ function FilterContent({
               <button
                 key={option.value}
                 onClick={() => onCategoryToggle(option.value)}
-                className={`flex min-h-11 min-w-11 items-center gap-2 rounded-lg border px-3 py-2 transition-colors ${
+                className={`flex min-h-11 min-w-11 items-center gap-2 rounded-lg border px-3 py-2 transition-all duration-200 ${
                   isSelected
-                    ? 'border-green-600 bg-green-50 text-green-700 dark:bg-green-900/20 dark:text-green-400'
-                    : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+                    ? 'border-primary bg-primary/10 text-primary shadow-sm'
+                    : 'border-border bg-background text-foreground hover:border-primary/50 hover:bg-muted'
                 }`}
                 aria-pressed={isSelected}
                 aria-label={`${option.label} filter`}
@@ -180,7 +181,7 @@ function FilterContent({
 
       {/* Status Filter */}
       <div>
-        <h3 className="mb-3 text-sm font-semibold text-gray-700 dark:text-gray-200">Status</h3>
+        <h3 className="mb-3 text-sm font-semibold text-foreground">Status</h3>
         <div className="flex flex-wrap gap-2">
           {STATUS_OPTIONS.map((option) => {
             const isSelected = filters.statuses.includes(option.value);
@@ -188,10 +189,10 @@ function FilterContent({
               <button
                 key={option.value}
                 onClick={() => onStatusToggle(option.value)}
-                className={`flex min-h-11 min-w-11 items-center gap-2 rounded-lg border px-3 py-2 transition-colors ${
+                className={`flex min-h-11 min-w-11 items-center gap-2 rounded-lg border px-3 py-2 transition-all duration-200 ${
                   isSelected
-                    ? 'border-green-600 bg-green-50 text-green-700 dark:bg-green-900/20 dark:text-green-400'
-                    : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+                    ? 'border-primary bg-primary/10 text-primary shadow-sm'
+                    : 'border-border bg-background text-foreground hover:border-primary/50 hover:bg-muted'
                 }`}
                 aria-pressed={isSelected}
                 aria-label={`${option.label} status filter`}
@@ -213,7 +214,7 @@ function FilterContent({
 
       {/* Date Range Filter */}
       <div>
-        <h3 className="mb-3 text-sm font-semibold text-gray-700 dark:text-gray-200">Date Range</h3>
+        <h3 className="mb-3 text-sm font-semibold text-foreground">Date Range</h3>
         <div className="flex flex-wrap gap-2">
           {DATE_OPTIONS.map((option) => {
             const isSelected = filters.dateRange === option.value;
@@ -221,10 +222,10 @@ function FilterContent({
               <button
                 key={option.value}
                 onClick={() => onDateChange(option.value)}
-                className={`flex min-h-11 min-w-11 items-center gap-2 rounded-lg border px-3 py-2 transition-colors ${
+                className={`flex min-h-11 min-w-11 items-center gap-2 rounded-lg border px-3 py-2 transition-all duration-200 ${
                   isSelected
-                    ? 'border-green-600 bg-green-50 text-green-700 dark:bg-green-900/20 dark:text-green-400'
-                    : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+                    ? 'border-primary bg-primary/10 text-primary shadow-sm'
+                    : 'border-border bg-background text-foreground hover:border-primary/50 hover:bg-muted'
                 }`}
                 aria-pressed={isSelected}
                 aria-label={`${option.label} date filter`}
@@ -252,7 +253,7 @@ function FilterContent({
 
       {/* Apply Button (mobile only) */}
       {showApplyButton && (
-        <Button onClick={onApply} className="w-full bg-green-600 hover:bg-green-700">
+        <Button onClick={onApply} className="w-full">
           Apply Filters
         </Button>
       )}
@@ -267,6 +268,7 @@ export function MapFilters({ totalCount, filteredCount }: MapFiltersProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [localFilters, setLocalFilters] = useState<MapFiltersType>(filters);
   const [isMobile, setIsMobile] = useState(false);
+  const [isDesktopOpen, setIsDesktopOpen] = useState(false);
 
   // Detect mobile viewport
   useEffect(() => {
@@ -394,14 +396,14 @@ export function MapFilters({ totalCount, filteredCount }: MapFiltersProps) {
           <Button
             variant="outline"
             size="sm"
-            className="fixed bottom-6 right-4 flex items-center gap-2 rounded-full bg-white shadow-lg dark:bg-gray-800"
+            className="fixed bottom-6 right-4 flex items-center gap-2 rounded-full bg-background shadow-lg border-border"
             style={{ zIndex: 1000 }}
             aria-label="Open filters"
           >
             <HugeiconsIcon icon={FilterIcon} className="h-5 w-5" />
             <span>Filter</span>
             {hasActiveFilters && (
-              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-green-600 text-xs text-white">
+              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-primary text-xs text-primary-foreground">
                 {filters.categories.length +
                   filters.statuses.length +
                   (filters.dateRange !== 'all' ? 1 : 0)}
@@ -417,15 +419,17 @@ export function MapFilters({ totalCount, filteredCount }: MapFiltersProps) {
           />
 
           <Dialog.Content
-            className="fixed inset-x-0 bottom-0 max-h-[85vh] overflow-y-auto rounded-t-xl bg-white p-6 shadow-xl data-[state=closed]:animate-slide-out-to-bottom data-[state=open]:animate-slide-in-from-bottom dark:bg-gray-900"
+            className="fixed inset-x-0 bottom-0 max-h-[85vh] overflow-y-auto rounded-t-xl bg-background p-6 shadow-xl border-t border-border data-[state=closed]:animate-slide-out-to-bottom data-[state=open]:animate-slide-in-from-bottom"
             style={{ zIndex: 9999 }}
             aria-describedby={undefined}
           >
             <div className="mb-4 flex items-center justify-between">
-              <Dialog.Title className="text-lg font-semibold">Filter Issues</Dialog.Title>
+              <Dialog.Title className="text-lg font-semibold text-foreground">
+                Filter Issues
+              </Dialog.Title>
               <Dialog.Close asChild>
                 <button
-                  className="flex h-11 w-11 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800"
+                  className="flex h-11 w-11 items-center justify-center rounded-lg text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
                   aria-label="Close filters"
                 >
                   <HugeiconsIcon icon={Cancel01Icon} className="h-5 w-5" />
@@ -450,27 +454,78 @@ export function MapFilters({ totalCount, filteredCount }: MapFiltersProps) {
     );
   }
 
-  // Desktop: Render sidebar
+  // Desktop: Render toggle button + dropdown panel overlay
   return (
-    <aside
-      className="fixed right-0 top-15 z-30 h-[calc(100vh-60px)] w-70 overflow-y-auto border-l border-gray-200 bg-white pb-20 pt-4 px-4 dark:border-gray-800 dark:bg-gray-900"
-      aria-label="Map filters"
-    >
-      <h2 className="mb-4 flex items-center gap-2 text-lg font-semibold">
-        <HugeiconsIcon icon={FilterIcon} className="h-5 w-5" />
-        Filters
-      </h2>
+    <>
+      {/* Filter Toggle Button */}
+      <button
+        onClick={() => setIsDesktopOpen(!isDesktopOpen)}
+        className={cn(
+          'fixed right-4 top-20 flex h-12 items-center gap-2 rounded-xl px-4 shadow-lg border transition-all duration-200',
+          isDesktopOpen
+            ? 'bg-primary text-primary-foreground border-primary'
+            : 'bg-card text-foreground border-border hover:border-primary/50'
+        )}
+        style={{ zIndex: 1000 }}
+        aria-label={isDesktopOpen ? 'Close filters' : 'Open filters'}
+        aria-expanded={isDesktopOpen}
+      >
+        <HugeiconsIcon icon={isDesktopOpen ? Cancel01Icon : FilterIcon} className="h-5 w-5" />
+        <span className="font-medium">Filters</span>
+        {hasActiveFilters && !isDesktopOpen && (
+          <span className="flex h-5 w-5 items-center justify-center rounded-full bg-primary text-xs text-primary-foreground">
+            {filters.categories.length +
+              filters.statuses.length +
+              (filters.dateRange !== 'all' ? 1 : 0)}
+          </span>
+        )}
+      </button>
 
-      <FilterContent
-        filters={localFilters}
-        onCategoryToggle={handleCategoryToggle}
-        onStatusToggle={handleStatusToggle}
-        onDateChange={handleDateChange}
-        onClear={handleClear}
-        totalCount={totalCount}
-        filteredCount={filteredCount}
-      />
-    </aside>
+      {/* Backdrop */}
+      {isDesktopOpen && (
+        <div
+          className="fixed inset-0 bg-black/30 backdrop-blur-sm transition-opacity"
+          style={{ zIndex: 9998 }}
+          onClick={() => setIsDesktopOpen(false)}
+          aria-hidden="true"
+        />
+      )}
+
+      {/* Filter Panel - positioned as independent overlay */}
+      {isDesktopOpen && (
+        <aside
+          className="fixed right-4 top-36 w-80 max-h-[calc(100vh-180px)] overflow-y-auto rounded-xl border border-border bg-card shadow-2xl p-5"
+          style={{ zIndex: 9999 }}
+          aria-label="Map filters"
+          role="dialog"
+          aria-modal="true"
+        >
+          <div className="mb-4 flex items-center justify-between">
+            <h2 className="flex items-center gap-2 text-lg font-semibold text-foreground">
+              <HugeiconsIcon icon={FilterIcon} className="h-5 w-5" />
+              Filters
+            </h2>
+            <button
+              onClick={() => setIsDesktopOpen(false)}
+              className="flex h-8 w-8 items-center justify-center rounded-full text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
+              aria-label="Close filters"
+            >
+              <HugeiconsIcon icon={Cancel01Icon} className="h-5 w-5" />
+            </button>
+          </div>
+
+          <FilterContent
+            filters={localFilters}
+            onCategoryToggle={handleCategoryToggle}
+            onStatusToggle={handleStatusToggle}
+            onDateChange={handleDateChange}
+            onClear={handleClear}
+            totalCount={totalCount}
+            filteredCount={filteredCount}
+          />
+        </aside>
+      )}
+    </>
   );
 }
 

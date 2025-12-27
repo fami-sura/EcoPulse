@@ -183,12 +183,12 @@ export function VerificationList({
   // Empty state
   if (!loading && verifications.length === 0) {
     return (
-      <section className="rounded-xl border border-dashed border-gray-300 bg-gray-50 p-6 text-center">
-        <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-gray-100">
-          <HugeiconsIcon icon={CheckmarkCircle02Icon} size={24} className="text-gray-400" />
+      <section className="rounded-xl border border-dashed border-border bg-muted/50 p-6 text-center">
+        <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-muted">
+          <HugeiconsIcon icon={CheckmarkCircle02Icon} size={24} className="text-muted-foreground" />
         </div>
-        <p className="font-medium text-gray-600">No verifications yet</p>
-        <p className="text-sm text-gray-500">Be the first to verify this issue!</p>
+        <p className="font-medium text-foreground">No verifications yet</p>
+        <p className="text-sm text-muted-foreground">Be the first to verify this issue!</p>
       </section>
     );
   }
@@ -196,16 +196,16 @@ export function VerificationList({
   // Loading state
   if (loading) {
     return (
-      <section className="rounded-xl border border-gray-200 bg-white p-4">
+      <section className="rounded-xl border border-border bg-card p-4">
         <div className="animate-pulse space-y-4">
           <div className="flex items-center gap-3">
-            <div className="h-10 w-10 rounded-full bg-gray-200" />
+            <div className="h-10 w-10 rounded-full bg-muted" />
             <div className="flex-1">
-              <div className="h-4 w-32 rounded bg-gray-200" />
-              <div className="mt-1 h-3 w-24 rounded bg-gray-200" />
+              <div className="h-4 w-32 rounded bg-muted" />
+              <div className="mt-1 h-3 w-24 rounded bg-muted" />
             </div>
           </div>
-          <div className="h-32 rounded-lg bg-gray-200" />
+          <div className="h-32 rounded-xl bg-muted" />
         </div>
       </section>
     );
@@ -214,25 +214,25 @@ export function VerificationList({
   // Error state
   if (error) {
     return (
-      <section className="rounded-xl border border-red-200 bg-red-50 p-4 text-center">
-        <p className="text-red-600">{error}</p>
+      <section className="rounded-xl border border-destructive/20 bg-destructive/10 p-4 text-center">
+        <p className="text-destructive">{error}</p>
       </section>
     );
   }
 
   return (
     <>
-      <section className="rounded-xl border border-green-200 bg-green-50 overflow-hidden">
+      <section className="rounded-xl border border-primary/20 bg-primary/5 overflow-hidden">
         {/* Header */}
-        <div className="flex items-center gap-3 p-4 border-b border-green-100">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-100">
-            <HugeiconsIcon icon={CheckmarkCircle02Icon} size={20} className="text-green-600" />
+        <div className="flex items-center gap-3 p-4 border-b border-primary/10">
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+            <HugeiconsIcon icon={CheckmarkCircle02Icon} size={20} className="text-primary" />
           </div>
           <div>
-            <h3 className="font-semibold text-green-800">
+            <h3 className="font-semibold text-primary">
               {verifications.length} {verifications.length === 1 ? 'Verification' : 'Verifications'}
             </h3>
-            <p className="text-sm text-green-700">
+            <p className="text-sm text-primary/80">
               {verificationCount >= 2
                 ? 'Community verified ✓'
                 : `${2 - verificationCount} more needed to verify`}
@@ -241,13 +241,13 @@ export function VerificationList({
         </div>
 
         {/* Photo Gallery - Horizontal scroll */}
-        <div className="overflow-x-auto bg-white p-3 border-b border-green-100">
+        <div className="overflow-x-auto bg-card p-3 border-b border-primary/10">
           <div className="flex gap-2">
             {verifications.map((verification) => (
               <button
                 key={verification.id}
                 onClick={() => openLightbox(verification.photo_url)}
-                className="relative h-24 w-24 shrink-0 overflow-hidden rounded-lg ring-2 ring-green-200 hover:ring-green-400 transition-all"
+                className="relative h-24 w-24 shrink-0 overflow-hidden rounded-xl ring-2 ring-primary/20 hover:ring-primary transition-all"
               >
                 <Image
                   src={verification.photo_url}
@@ -262,7 +262,7 @@ export function VerificationList({
         </div>
 
         {/* Verifier List */}
-        <div className="divide-y divide-green-100 bg-white">
+        <div className="divide-y divide-primary/10 bg-card">
           {verifications.map((verification) => {
             const distance =
               verification.lat && verification.lng
@@ -280,7 +280,7 @@ export function VerificationList({
                 {/* Verifier Info */}
                 <div className="flex items-start gap-3">
                   {/* Avatar */}
-                  <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full bg-gray-100">
+                  <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full bg-muted">
                     {verification.verifier?.avatar_url ? (
                       <Image
                         src={verification.verifier.avatar_url}
@@ -291,17 +291,21 @@ export function VerificationList({
                       />
                     ) : (
                       <div className="flex h-full w-full items-center justify-center">
-                        <HugeiconsIcon icon={User03Icon} size={20} className="text-gray-400" />
+                        <HugeiconsIcon
+                          icon={User03Icon}
+                          size={20}
+                          className="text-muted-foreground"
+                        />
                       </div>
                     )}
                   </div>
 
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 flex-wrap">
-                      <span className="font-medium text-gray-900">
+                      <span className="font-medium text-foreground">
                         @{verification.verifier?.username || 'anonymous'}
                       </span>
-                      <span className="flex items-center gap-1 text-sm text-gray-500">
+                      <span className="flex items-center gap-1 text-sm text-muted-foreground">
                         <HugeiconsIcon icon={Clock01Icon} size={14} />
                         {formatRelativeTime(verification.created_at)}
                       </span>
@@ -312,7 +316,7 @@ export function VerificationList({
                       <div
                         className={cn(
                           'flex items-center gap-1 mt-1 text-sm',
-                          isFar ? 'text-amber-600' : 'text-gray-500'
+                          isFar ? 'text-warning' : 'text-muted-foreground'
                         )}
                       >
                         <HugeiconsIcon icon={Location01Icon} size={14} />
@@ -328,7 +332,7 @@ export function VerificationList({
 
                     {/* Note */}
                     {verification.note && (
-                      <p className="mt-2 text-gray-700 text-sm leading-relaxed">
+                      <p className="mt-2 text-foreground/80 text-sm leading-relaxed">
                         {verification.note}
                       </p>
                     )}

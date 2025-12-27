@@ -163,7 +163,7 @@ export function ProfileEditForm({ profile }: ProfileEditFormProps) {
         <div className="relative">
           <Avatar className="w-24 h-24">
             <AvatarImage src={avatarUrl || undefined} alt={`${profile.username}'s avatar`} />
-            <AvatarFallback className="text-2xl bg-green-100 text-green-700">
+            <AvatarFallback className="text-2xl bg-primary/10 text-primary">
               {getInitials(profile.username)}
             </AvatarFallback>
           </Avatar>
@@ -172,17 +172,13 @@ export function ProfileEditForm({ profile }: ProfileEditFormProps) {
             type="button"
             onClick={() => fileInputRef.current?.click()}
             disabled={isUploadingAvatar}
-            className="absolute bottom-0 right-0 bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-full p-2 shadow-sm hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors disabled:opacity-50"
+            className="absolute bottom-0 right-0 bg-card border-2 border-border rounded-full p-2 shadow-sm hover:bg-muted transition-colors disabled:opacity-50"
             aria-label={t('avatar.change')}
           >
             {isUploadingAvatar ? (
-              <div className="w-4 h-4 border-2 border-gray-400 border-t-transparent rounded-full animate-spin" />
+              <div className="w-4 h-4 border-2 border-muted-foreground/30 border-t-primary rounded-full animate-spin" />
             ) : (
-              <HugeiconsIcon
-                icon={Camera01Icon}
-                size={16}
-                className="text-gray-600 dark:text-gray-400"
-              />
+              <HugeiconsIcon icon={Camera01Icon} size={16} className="text-muted-foreground" />
             )}
           </button>
 
@@ -196,7 +192,7 @@ export function ProfileEditForm({ profile }: ProfileEditFormProps) {
           />
         </div>
 
-        <p className="text-sm text-gray-500 dark:text-gray-400">{t('avatar.hint')}</p>
+        <p className="text-sm text-muted-foreground">{t('avatar.hint')}</p>
       </div>
 
       {/* Bio Field */}
@@ -210,7 +206,7 @@ export function ProfileEditForm({ profile }: ProfileEditFormProps) {
           className="min-h-24 resize-none"
           maxLength={MAX_BIO_LENGTH}
         />
-        <p className="text-sm text-gray-500 dark:text-gray-400 text-right">
+        <p className="text-sm text-muted-foreground text-right">
           {t('characterCount', { current: bio.length, max: MAX_BIO_LENGTH })}
         </p>
       </div>
@@ -222,7 +218,7 @@ export function ProfileEditForm({ profile }: ProfileEditFormProps) {
           <HugeiconsIcon
             icon={Location01Icon}
             size={18}
-            className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+            className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground"
             aria-hidden="true"
           />
           <Input

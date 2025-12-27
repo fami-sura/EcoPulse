@@ -44,7 +44,7 @@ const ReportForm = dynamic<{ onSuccess?: (reportId: string) => void; onCancel?: 
     ssr: false,
     loading: () => (
       <div className="flex h-64 items-center justify-center">
-        <div className="h-8 w-8 animate-spin rounded-full border-4 border-gray-200 border-t-green-600" />
+        <div className="h-8 w-8 animate-spin rounded-full border-4 border-muted-foreground/20 border-t-primary" />
       </div>
     ),
   }
@@ -75,14 +75,14 @@ export function IssueMap() {
       role="region"
       aria-label="Environmental issues map"
     >
-      {/* Map with pins */}
-      <div className="h-full lg:pr-70">
+      {/* Map with pins - full width, no sidebar margin */}
+      <div className="h-full w-full">
         <IssueMapClient>
           <IssuePinLayer />
         </IssueMapClient>
       </div>
 
-      {/* Filters (mobile: FAB + sheet, desktop: sidebar) */}
+      {/* Filters (mobile: FAB + sheet, desktop: toggle sidebar) */}
       <MapFilters filteredCount={pins.length} />
 
       {/* Report FAB - hidden when report form is open */}
@@ -107,11 +107,8 @@ export function IssueMap() {
             aria-labelledby="report-form-title"
           >
             <div className="flex min-h-full items-center justify-center p-4">
-              <div className="relative w-full max-w-lg rounded-xl bg-white p-6 shadow-2xl dark:bg-gray-900">
-                <h2
-                  id="report-form-title"
-                  className="mb-4 text-xl font-bold text-gray-900 dark:text-gray-100"
-                >
+              <div className="relative w-full max-w-lg rounded-xl bg-card p-6 shadow-2xl border border-border">
+                <h2 id="report-form-title" className="mb-4 text-xl font-bold text-foreground">
                   Report an Issue
                 </h2>
                 <ReportForm onSuccess={handleReportSuccess} onCancel={handleReportCancel} />

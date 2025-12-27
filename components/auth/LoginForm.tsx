@@ -1,11 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import { useRouter } from 'next/navigation';
 import { standardSchemaResolver } from '@hookform/resolvers/standard-schema';
 import { z } from 'zod';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { createClient } from '@/lib/supabase/client';
 import { useAuthStore } from '@/stores/authStore';
 import { Button } from '@/components/ui/button';
@@ -45,10 +44,20 @@ interface LoginFormProps {
   redirectTo?: string;
 }
 
-export function LoginForm({ redirectTo = '/' }: LoginFormProps) {
+export function LoginForm({ redirectTo = '/profile' }: LoginFormProps) {
   const t = useTranslations('auth');
-  const router = useRouter();
+  const locale = useLocale();
   const { setUser, setProfile, sessionId, setSessionId } = useAuthStore();
+  const [redirectTimeoutId, setRedirectTimeoutId] = useState<NodeJS.Timeout | null>(null);
+
+  // Cleanup timeout on unmount to prevent memory leaks
+  useEffect(() => {
+    return () => {
+      if (redirectTimeoutId) {
+        clearTimeout(redirectTimeoutId);
+      }
+    };
+  }, [redirectTimeoutId]);
 
   const [showPassword, setShowPassword] = useState(false);
   const [serverError, setServerError] = useState<string | null>(null);
@@ -149,14 +158,18 @@ export function LoginForm({ redirectTo = '/' }: LoginFormProps) {
         // Show claim result briefly, then redirect
         const performRedirect = () => {
           setIsRedirecting(true);
-          // Use router.push + refresh to ensure middleware runs and auth state is synced
-          router.push(redirectTo);
-          router.refresh();
+          // Use window.location.href for full page navigation
+          // This ensures cookies are properly read and auth state is synced
+          const targetPath = redirectTo.startsWith('/') ? redirectTo : `/${redirectTo}`;
+          // Build locale-aware URL
+          const localePath = locale === 'en' ? targetPath : `/${locale}${targetPath}`;
+          window.location.href = localePath;
         };
 
         if (claimedReports) {
           // Show success message for 2 seconds, then redirect
-          setTimeout(performRedirect, 2000);
+          const timeoutId = setTimeout(performRedirect, 2000);
+          setRedirectTimeoutId(timeoutId);
         } else {
           // Redirect immediately
           performRedirect();
@@ -180,7 +193,7 @@ export function LoginForm({ redirectTo = '/' }: LoginFormProps) {
         <div
           role="status"
           aria-live="polite"
-          className="p-3 text-sm text-green-600 bg-green-50 border border-green-200 rounded-md"
+          className="p-3 text-sm text-primary bg-primary/10 border border-primary/20 rounded-xl"
         >
           {t('conversion.success', {
             count: claimResult.count,
@@ -194,7 +207,7 @@ export function LoginForm({ redirectTo = '/' }: LoginFormProps) {
         <div
           id="server-error"
           role="alert"
-          className="p-3 text-sm text-red-600 bg-red-50 border border-red-200 rounded-md"
+          className="p-3 text-sm text-destructive bg-destructive/10 border border-destructive/20 rounded-xl"
         >
           {serverError}
         </div>
@@ -221,7 +234,7 @@ export function LoginForm({ redirectTo = '/' }: LoginFormProps) {
           />
         </div>
         {errors.email && (
-          <p id="email-error" className="text-sm text-red-600" role="alert">
+          <p id="email-error" className="text-sm text-destructive" role="alert">
             {errors.email.message}
           </p>
         )}
@@ -265,7 +278,7 @@ export function LoginForm({ redirectTo = '/' }: LoginFormProps) {
           </button>
         </div>
         {errors.password && (
-          <p id="password-error" className="text-sm text-red-600" role="alert">
+          <p id="password-error" className="text-sm text-destructive" role="alert">
             {errors.password.message}
           </p>
         )}

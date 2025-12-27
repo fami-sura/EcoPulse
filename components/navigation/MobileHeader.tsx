@@ -135,12 +135,12 @@ export function MobileHeader() {
   };
 
   return (
-    <header className="sticky top-0 z-50 flex h-15 items-center justify-between border-b border-gray-200 bg-white px-4 lg:hidden">
+    <header className="sticky top-0 z-50 flex h-15 items-center justify-between border-b border-border bg-background/95 backdrop-blur-md px-4 lg:hidden">
       {/* Left: Hamburger Menu */}
       <MobileMenu />
 
       {/* Center: Logo with Official Brand Mark */}
-      <Link href="/" className="flex items-center" aria-label="EcoPulse - Go to homepage">
+      <Link href="/map" className="flex items-center" aria-label="EcoPulse - Go to Map">
         <EcoPulseLogo size="sm" />
       </Link>
 
@@ -159,8 +159,9 @@ export function MobileHeader() {
               aria-controls={showUserDropdown ? 'mobile-user-menu-dropdown' : undefined}
               className={cn(
                 'flex h-11 w-11 items-center justify-center rounded-full',
-                'hover:bg-gray-100',
-                'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2'
+                'hover:bg-muted',
+                'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2',
+                'transition-colors'
               )}
             >
               {profile?.avatar_url ? (
@@ -172,7 +173,7 @@ export function MobileHeader() {
                   className="h-8 w-8 rounded-full object-cover"
                 />
               ) : (
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-green-100 text-green-600">
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary">
                   <HugeiconsIcon icon={UserIcon} size={18} aria-hidden="true" />
                 </div>
               )}
@@ -186,7 +187,7 @@ export function MobileHeader() {
                 <div
                   id="mobile-user-menu-dropdown"
                   className={cn(
-                    'absolute right-0 top-full mt-2 w-56 rounded-xl bg-white shadow-xl border border-gray-200',
+                    'absolute right-0 top-full mt-2 w-56 rounded-xl bg-background shadow-xl border border-border',
                     'py-2 z-50'
                   )}
                   role="menu"
@@ -195,11 +196,11 @@ export function MobileHeader() {
                   onKeyDown={handleKeyDown}
                 >
                   {/* User Info */}
-                  <div className="px-4 py-3 border-b border-gray-100">
-                    <p className="text-sm font-medium text-gray-900 truncate">
+                  <div className="px-4 py-3 border-b border-border">
+                    <p className="text-sm font-medium text-foreground truncate">
                       {profile?.username || user.email?.split('@')[0] || 'User'}
                     </p>
-                    <p className="text-xs text-gray-500 truncate">{user.email}</p>
+                    <p className="text-xs text-muted-foreground truncate">{user.email}</p>
                   </div>
 
                   {/* Profile Link */}
@@ -210,9 +211,9 @@ export function MobileHeader() {
                     href="/profile"
                     onClick={closeMenu}
                     className={cn(
-                      'flex items-center gap-3 px-4 py-3 text-sm text-gray-700',
-                      'hover:bg-gray-50 active:bg-gray-100 focus:outline-none focus:bg-gray-100',
-                      focusedIndex === 0 && 'bg-gray-100'
+                      'flex items-center gap-3 px-4 py-3 text-sm text-foreground',
+                      'hover:bg-muted active:bg-muted/80 focus:outline-none focus:bg-muted',
+                      focusedIndex === 0 && 'bg-muted'
                     )}
                     role="menuitem"
                     tabIndex={focusedIndex === 0 ? 0 : -1}
@@ -229,9 +230,9 @@ export function MobileHeader() {
                     href="/profile/settings"
                     onClick={closeMenu}
                     className={cn(
-                      'flex items-center gap-3 px-4 py-3 text-sm text-gray-700',
-                      'hover:bg-gray-50 active:bg-gray-100 focus:outline-none focus:bg-gray-100',
-                      focusedIndex === 1 && 'bg-gray-100'
+                      'flex items-center gap-3 px-4 py-3 text-sm text-foreground',
+                      'hover:bg-muted active:bg-muted/80 focus:outline-none focus:bg-muted',
+                      focusedIndex === 1 && 'bg-muted'
                     )}
                     role="menuitem"
                     tabIndex={focusedIndex === 1 ? 0 : -1}
@@ -241,7 +242,7 @@ export function MobileHeader() {
                   </Link>
 
                   {/* Divider */}
-                  <div className="my-1 border-t border-gray-100" role="separator" />
+                  <div className="my-1 border-t border-border" role="separator" />
 
                   {/* Logout Button */}
                   <button
@@ -251,9 +252,9 @@ export function MobileHeader() {
                     onClick={handleLogout}
                     disabled={isLoggingOut}
                     className={cn(
-                      'flex w-full items-center gap-3 px-4 py-3 text-sm text-red-600',
-                      'hover:bg-red-50 active:bg-red-100 disabled:opacity-50 focus:outline-none focus:bg-red-50',
-                      focusedIndex === 2 && 'bg-red-50'
+                      'flex w-full items-center gap-3 px-4 py-3 text-sm text-destructive',
+                      'hover:bg-destructive/10 active:bg-destructive/20 disabled:opacity-50 focus:outline-none focus:bg-destructive/10',
+                      focusedIndex === 2 && 'bg-destructive/10'
                     )}
                     role="menuitem"
                     tabIndex={focusedIndex === 2 ? 0 : -1}

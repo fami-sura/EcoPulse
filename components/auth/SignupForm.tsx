@@ -4,9 +4,10 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { standardSchemaResolver } from '@hookform/resolvers/standard-schema';
 import { z } from 'zod';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { createClient } from '@/lib/supabase/client';
 import { useAuthStore } from '@/stores/authStore';
+import { claimAnonymousReports } from '@/app/actions/claimAnonymousReports';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -49,16 +50,20 @@ interface SignupFormProps {
   redirectTo?: string;
 }
 
-export function SignupForm({ redirectTo = '/' }: SignupFormProps) {
+export function SignupForm({ redirectTo = '/profile' }: SignupFormProps) {
   const t = useTranslations('auth');
   const tCommon = useTranslations('common');
-  const { setUser } = useAuthStore();
+  const locale = useLocale();
+  const { setUser, setProfile, sessionId, setSessionId } = useAuthStore();
 
   const [showPassword, setShowPassword] = useState(false);
   const [serverError, setServerError] = useState<string | null>(null);
   const [verificationSent, setVerificationSent] = useState(false);
   const [submittedEmail, setSubmittedEmail] = useState('');
-
+  const [claimResult, setClaimResult] = useState<{
+    count: number;
+    points: number;
+  } | null>(null);
   const signupSchema = createSignupSchema((key) => t(key));
 
   const {
@@ -116,23 +121,70 @@ export function SignupForm({ redirectTo = '/' }: SignupFormProps) {
           setUser(authData.user);
 
           // Create user profile in database
-          const { error: profileError } = await supabase.from('users').insert({
-            id: authData.user.id,
-            email: data.email,
-            username: data.username,
-            role: 'member',
-            points: 0,
-          });
+          const { data: profile, error: profileError } = await supabase
+            .from('users')
+            .insert({
+              id: authData.user.id,
+              email: data.email,
+              username: data.username,
+              role: 'member',
+              points: 0,
+            })
+            .select()
+            .single();
 
           if (profileError && !profileError.message.includes('duplicate')) {
             console.error('Profile creation error:', profileError);
           }
 
+          // Set profile in store
+          if (profile) {
+            setProfile({
+              id: profile.id,
+              email: profile.email,
+              username: profile.username,
+              avatar_url: profile.avatar_url,
+              role: profile.role,
+              points: profile.points,
+            });
+          }
+
+          // Claim anonymous reports if session ID exists
+          if (sessionId) {
+            try {
+              const result = await claimAnonymousReports(sessionId);
+              if (result.success && result.claimedCount > 0) {
+                setClaimResult({
+                  count: result.claimedCount,
+                  points: result.pointsAwarded || 0,
+                });
+                // Clear session ID after successful claim
+                setSessionId('');
+
+                // Update profile points if we claimed reports
+                if (profile && result.pointsAwarded) {
+                  setProfile({
+                    ...profile,
+                    points: (profile.points || 0) + result.pointsAwarded,
+                  });
+                }
+              }
+            } catch (claimError) {
+              console.error('Error claiming anonymous reports:', claimError);
+              // Don't block signup if claim fails
+            }
+          }
+
           // If we have a session, redirect after a short delay
           // Full page navigation to ensure cookies are read
-          setTimeout(() => {
-            window.location.replace(redirectTo);
-          }, 1500);
+          const performRedirect = () => {
+            const targetPath = redirectTo.startsWith('/') ? redirectTo : `/${redirectTo}`;
+            const localePath = locale === 'en' ? targetPath : `/${locale}${targetPath}`;
+            window.location.href = localePath;
+          };
+
+          // Show claim result for 2 seconds if we claimed reports, otherwise redirect immediately
+          setTimeout(performRedirect, claimResult ? 2000 : 1500);
         }
       }
     } catch (error) {
@@ -145,13 +197,22 @@ export function SignupForm({ redirectTo = '/' }: SignupFormProps) {
   if (verificationSent) {
     return (
       <div className="text-center space-y-4" role="status" aria-live="polite">
-        <div className="mx-auto w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
-          <HugeiconsIcon icon={Mail02Icon} className="w-6 h-6 text-green-600" aria-hidden="true" />
+        <div className="mx-auto w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+          <HugeiconsIcon icon={Mail02Icon} className="w-6 h-6 text-primary" aria-hidden="true" />
         </div>
         <h2 className="text-lg font-semibold text-foreground">{t('verification.title')}</h2>
         <p className="text-muted-foreground">
           {t('verification.description', { email: submittedEmail })}
         </p>
+        {/* Show claim result if reports were claimed */}
+        {claimResult && (
+          <div className="p-3 text-sm text-primary bg-primary/10 border border-primary/20 rounded-xl">
+            {t('conversion.success', {
+              count: claimResult.count,
+              points: claimResult.points,
+            })}
+          </div>
+        )}
         <p className="text-sm text-muted-foreground">{t('verification.checkSpam')}</p>
         <Button variant="outline" onClick={() => setVerificationSent(false)} className="mt-4">
           {tCommon('back')}
@@ -172,7 +233,7 @@ export function SignupForm({ redirectTo = '/' }: SignupFormProps) {
         <div
           id="server-error"
           role="alert"
-          className="p-3 text-sm text-red-600 bg-red-50 border border-red-200 rounded-md"
+          className="p-3 text-sm text-destructive bg-destructive/10 border border-destructive/20 rounded-xl"
         >
           {serverError}
         </div>
@@ -199,7 +260,7 @@ export function SignupForm({ redirectTo = '/' }: SignupFormProps) {
           />
         </div>
         {errors.email && (
-          <p id="email-error" className="text-sm text-red-600" role="alert">
+          <p id="email-error" className="text-sm text-destructive" role="alert">
             {errors.email.message}
           </p>
         )}
@@ -229,7 +290,7 @@ export function SignupForm({ redirectTo = '/' }: SignupFormProps) {
           {t('signup.usernameHint')}
         </p>
         {errors.username && (
-          <p id="username-error" className="text-sm text-red-600" role="alert">
+          <p id="username-error" className="text-sm text-destructive" role="alert">
             {errors.username.message}
           </p>
         )}
@@ -271,7 +332,7 @@ export function SignupForm({ redirectTo = '/' }: SignupFormProps) {
           {t('signup.passwordHint')}
         </p>
         {errors.password && (
-          <p id="password-error" className="text-sm text-red-600" role="alert">
+          <p id="password-error" className="text-sm text-destructive" role="alert">
             {errors.password.message}
           </p>
         )}

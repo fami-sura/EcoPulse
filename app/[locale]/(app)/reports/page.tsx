@@ -1,35 +1,27 @@
 import { Suspense } from 'react';
 import { getTranslations } from 'next-intl/server';
 import { createClient } from '@/lib/supabase/server';
-import ReportsListClient from '@/app/[locale]/reports/ReportsListClient';
+import ReportsListClient from './ReportsListClient';
 
 interface ReportsPageProps {
   params: Promise<{ locale: string }>;
 }
 
 /**
- * Fetch user's reports from Supabase
+ * Fetch all public reports from Supabase
+ * This shows ALL reports in the system (not just user's reports)
  */
-async function getUserReports(userId: string | null) {
+async function getAllReports() {
   const supabase = await createClient();
 
-  let query = supabase
+  const { data, error } = await supabase
     .from('issues')
     .select(
-      'id, photos, lat, lng, address, category, severity, status, note, created_at, verification_count'
+      'id, photos, lat, lng, address, category, severity, status, note, created_at, verification_count, is_flagged'
     )
-    .order('created_at', { ascending: false });
-
-  // For authenticated users, fetch by user_id
-  // For anonymous users, this will return empty (they need to log in to see reports)
-  if (userId) {
-    query = query.eq('user_id', userId);
-  } else {
-    // Return empty for anonymous - they need to sign in
-    return [];
-  }
-
-  const { data, error } = await query.limit(50);
+    .eq('is_flagged', false) // Only show non-flagged reports
+    .order('created_at', { ascending: false })
+    .limit(100); // Limit to 100 most recent reports
 
   if (error) {
     console.error('Error fetching reports:', error);
@@ -47,18 +39,19 @@ export default async function ReportsPage({ params }: ReportsPageProps) {
     data: { user },
   } = await supabase.auth.getUser();
 
-  const reports = await getUserReports(user?.id || null);
+  // Fetch ALL public reports (not just user's reports)
+  const reports = await getAllReports();
 
   // Get translations on the server
   const t = await getTranslations('reports');
   const tNav = await getTranslations('navigation');
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       <Suspense
         fallback={
           <div className="flex items-center justify-center py-20">
-            <div className="h-8 w-8 animate-spin rounded-full border-2 border-gray-300 border-t-green-600" />
+            <div className="h-8 w-8 animate-spin rounded-full border-2 border-muted-foreground/30 border-t-primary" />
           </div>
         }
       >

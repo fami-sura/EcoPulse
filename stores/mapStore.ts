@@ -29,6 +29,7 @@ export interface MapPin {
   created_at: string;
   note: string | null;
   address: string | null;
+  verification_count: number;
 }
 
 export interface MapFilters {

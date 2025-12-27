@@ -82,7 +82,7 @@ function MicrosoftIcon({ className }: { className?: string }) {
   );
 }
 
-export function OAuthButtons({ redirectTo = '/', className }: OAuthButtonsProps) {
+export function OAuthButtons({ redirectTo = '/profile', className }: OAuthButtonsProps) {
   const t = useTranslations('auth');
   const [loadingProvider, setLoadingProvider] = useState<'google' | 'azure' | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -121,7 +121,7 @@ export function OAuthButtons({ redirectTo = '/', className }: OAuthButtonsProps)
       {error && (
         <div
           role="alert"
-          className="p-3 text-sm text-red-600 bg-red-50 border border-red-200 rounded-md"
+          className="p-3 text-sm text-destructive bg-destructive/10 border border-destructive/20 rounded-xl"
         >
           {error}
         </div>
@@ -137,7 +137,7 @@ export function OAuthButtons({ redirectTo = '/', className }: OAuthButtonsProps)
         aria-busy={loadingProvider === 'google'}
       >
         {loadingProvider === 'google' ? (
-          <div className="h-5 w-5 animate-spin rounded-full border-2 border-gray-300 border-t-gray-600" />
+          <div className="h-5 w-5 animate-spin rounded-full border-2 border-muted-foreground/30 border-t-foreground" />
         ) : (
           <GoogleIcon className="h-5 w-5" />
         )}
@@ -156,7 +156,7 @@ export function OAuthButtons({ redirectTo = '/', className }: OAuthButtonsProps)
         aria-busy={loadingProvider === 'azure'}
       >
         {loadingProvider === 'azure' ? (
-          <div className="h-5 w-5 animate-spin rounded-full border-2 border-gray-300 border-t-gray-600" />
+          <div className="h-5 w-5 animate-spin rounded-full border-2 border-muted-foreground/30 border-t-foreground" />
         ) : (
           <MicrosoftIcon className="h-5 w-5" />
         )}

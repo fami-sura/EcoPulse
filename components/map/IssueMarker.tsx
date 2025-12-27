@@ -11,7 +11,7 @@
  * - pending: Gray (#6B7280)
  * - verified: Green (#10B981) with checkmark badge
  * - in_progress: Blue (#3B82F6)
- * - resolved: Green with checkmark (#22C55E)
+ * - resolved: Violet with checkmark (#8B5CF6)
  *
  * Story 2.1.6 - Verification Status Badge on Map Pins
  *
@@ -62,7 +62,7 @@ function getStatusColor(status: IssueStatus): string {
     case 'pending':
       return '#6B7280'; // Gray
     case 'verified':
-      return '#10B981'; // Emerald
+      return '#8B5CF6'; // Violet
     case 'in_progress':
       return '#3B82F6'; // Blue
     case 'resolved':
